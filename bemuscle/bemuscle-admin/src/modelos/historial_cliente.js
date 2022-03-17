@@ -1,5 +1,5 @@
 const historial_cliente = (sequelize, type) => {
-    return sequelize.define({
+    return sequelize.define('historial_cliente',{
         historial_cliente_id: {
             type: type.INTEGER,
             primaryKey: true,

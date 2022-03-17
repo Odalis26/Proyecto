@@ -26,6 +26,7 @@
     "mysql2-promise": "^0.1.4",
     "passport": "^0.5.2",
     "passport-local": "^1.0.0",
+    "path": "^0.12.7",
     "sequelize": "^6.17.0",
     "timeago.js": "^4.0.2"
   },

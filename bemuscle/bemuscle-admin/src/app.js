@@ -1,12 +1,12 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-const exphbs = require('express-handlebars');
+const exphbs = require('express-handlebars')
 const session = require('express-session');
 const passport = require('passport');
 const flash = require('connect-flash'); 
 const mysqlstore = require('express-mysql-session')(session);
-const bodyparser = require('body-parser');
+const bodyparser = require('body-parser'); 
 
 const { database } = require('./keys'); 
 
@@ -60,5 +60,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //routers
 app.use(require('./rutas/index.ruta'))
+
 
 module.exports = app;

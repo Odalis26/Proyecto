@@ -3,7 +3,7 @@ const LocalStrategy = require("passport-local").Strategy;
 
 const orm = require('../configuracion_base_datos/base.orm')
 const sql = require('../configuracion_base_datos/base.sql')
-const helpers = require("./helpers");
+const helpers = require("./helper");
 
 
 passport.use(
