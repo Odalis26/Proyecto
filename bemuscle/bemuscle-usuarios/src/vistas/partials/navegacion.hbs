@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/css/navegacion.css">
+{{#if user}}
+<nav>
+  <div id="nav1">
+    <a id="nav" href="/clientes/lista/{{user.idUsuarios}}"> Clientes</a>
+  </div>
+  <div id="nav2">
+    <a href="/ProductoEntrada/lista/{{user.idUsuarios}}"> Inventario</a>
+  </div>
+  <div id="nav3">
+    <a href="/proveedor/lista/{{user.idUsuarios}}"> Proveedores</a>
+  </div>
+  <div id="nav4">
+    <a href="/tienda/lista/{{user.idUsuarios}}"> Tienda</a>
+  </div>
+  <div id="nav5">
+    <a href="/CerrarSecion">Cierre la Sesión</a>
+  </div>
+</nav>
+{{/if}}
