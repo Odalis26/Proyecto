@@ -15,7 +15,7 @@ passport.use(
       passReqToCallback: true
     },
     async (req, username, password, done) => {
-      const rows = await orm.usuarios.findOne({ where: { username: username } });
+      const rows = await orm.usuario.findOne({ where: { username: username } });
       if (rows) {
         const user = rows;
         const validPassword = await helpers.matchPassword(
@@ -47,14 +47,19 @@ passport.use(
       passReqToCallback: true
     },
     async (req, username, password, done) => {
-      const usuarios = await orm.usuarios.findOne({ where: { username: username } });
+      const usuarios = await orm.usuario.findOne({ where: { username: username } });
       if (usuarios === null) {
+        const { cedula, nombre, apellido, edad } = req.body
         let nuevoUsuario = {
           username,
-          password
+          password,
+          cedula,
+          nombre,
+          apellido,
+          edad
         };
         nuevoUsuario.password = await helpers.encryptPassword(password);
-        const resultado = await orm.usuarios.create(nuevoUsuario);
+        const resultado = await orm.usuario.create(nuevoUsuario);
         nuevoUsuario.id = resultado.insertId;
         return done(null, nuevoUsuario);
       } else {
@@ -63,12 +68,17 @@ passport.use(
           if (username == usuario.username) {
             done(null, false, req.flash("message", "El nombre de usuario ya existe."))
           } else {
+            const { cedula, nombre, apellido, edad } = req.body
             let nuevoUsuario = {
               username,
-              password
+              password,
+              cedula,
+              nombre,
+              apellido,
+              edad
             };
             nuevoUsuario.password = await helpers.encryptPassword(password);
-            const resultado = await orm.usuarios.create(nuevoUsuario);
+            const resultado = await orm.usuario.create(nuevoUsuario);
             nuevoUsuario.id = resultado.insertId;
             return done(null, nuevoUsuario);
           }
