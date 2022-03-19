@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/login/login.css">
+<form action="/detalleRutina/Editar/{{user.idUsuarios}}" method="post">
+
+    <div id="contenido">
+        <div id="titulo">
+            <p>Login</p>
+        </div>
+        {{#each lista}}
+        <div id="consejos">
+            <label>Consejos:</label>
+            <input name="consejos" id="consejo" checked type="text" value="{{consejos}}">
+        </div>
+        {{/each}}
+        <div id="editar">
+            <button type="submit">Editar</button>
+        </div>
+    </div>
+</form>

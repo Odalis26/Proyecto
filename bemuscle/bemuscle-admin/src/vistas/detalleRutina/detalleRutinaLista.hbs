@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/css/login/login.css">
+<form action="/detalleRutina/Lista/{{user.idUsuarios}}" method="get">
+
+    <div id="contenido">
+<div class="row">
+    {{#each lista}}
+    <div id="tarjetas">
+        <div id="consejo">
+            <p> {{consejos}}</p>
+        </div>
+        <div id="eliminar">
+           <a href="/detalleRutina/Eliminar/{{detalle_rutina_id}}"> Eliminar</a> 
+        </div>
+        <div id="Editar">
+           <a href="/detalleRutina/Editar/{{detalle_rutina_id}}">Editar</a> 
+        </div>
+
+
+    </div>
+    {{/each}}
+</div>
+</form>

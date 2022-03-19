@@ -1,0 +1,98 @@
+@font-face{
+    font-family:Fuentechida;
+    src:url(fonts/OleoScript-Regular.ttf);
+    }
+        body{
+            background-image: url(/img/fondo1.png);
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-attachment:fixed;
+        }
+        .contenido{
+            transition: 2s;
+            margin-top: 100px;
+            width: 30%;
+            box-shadow: 0px 0px 40px rgb(120, 241, 250),0px 0px 80px rgba(256,256,256 ,1);
+        }
+    
+        .contenido:hover{
+            transition: .8s;
+            background-color: rgba(0,0,0,.5);
+        }
+    
+    
+    .logo{
+            height: 85px;
+            margin-top: 30px;
+    
+        }
+        
+     .espaciado{
+            margin-top: 40px;
+        }
+    
+        fieldset{
+            transition: 2s;
+            margin-bottom: 50px;
+            border-color: rgb(0, 153, 255);
+            border-style: groove;
+            border-width: 5px;
+            border-radius: 20px;
+        }
+        
+    
+        contenido
+        titulo
+        detalle_rutina_id
+        label
+        detalle_rutina
+        consejos
+        consejo
+        agregar
+       p{
+            
+            color:rgb(17, 17, 17);
+            text-align: center;
+            font-family: fuentechida;
+        }
+      
+        .Input{
+            transition: .8s;
+            background-color: rgba(0,0,0,.5);
+            color: white;
+            border-color:#006;
+        border-bottom-color:white;
+            border-bottom-style:groove;
+        border-left:none;
+        border-right:none;
+        border-top:none;
+            border-width: 4px;
+            
+        }
+    
+        .Input:hover{
+            transition: .8s;
+        background-color:rgba(55,71,79 ,.5);
+        box-shadow:inset;
+            border-bottom-color:rgb(0, 153, 255);
+        }
+        
+        .Input:focus{
+            transition: .8s;
+        border-bottom-color:rgb(0, 153, 255);
+        }
+    
+    
+    
+        @media screen and (max-width:750px) {
+            
+            .logo{
+                height: 50px;
+    
+            }
+            .formulario{
+                transition: 2s;
+                width: 95%;
+                margin-top: 10px;
+            }
+        }
