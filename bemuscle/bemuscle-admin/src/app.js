@@ -62,6 +62,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('./rutas/index.ruta'))
 app.use(require('./rutas/login.ruta'))
 app.use('/ejercicio',require('./rutas/ejercicio.ruta'))
-
+app.use("/historialCliente", require('./rutas/historialCliente.ruta'))
 
 module.exports = app;
