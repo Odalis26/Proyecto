@@ -56,10 +56,10 @@ ejercicioctl.editar = async (req, res) => {
     }
     await orm.ejercicio.findOne({ where: { ejercicio_id: id } })
         .then(actualizarEjercicio => {
-            actualizarEjercicio.update(nuevoEjercicio)
+            actualizarEjercicio.update(nuevodetalleEjercicio)
             req.flash('success', 'Se editó correctamente')
 
-            res.redirect('/ejercicio/lista/' + id);
+            res.redirect('/detalleEjercicio/lista/' + id);
         })
 }
 

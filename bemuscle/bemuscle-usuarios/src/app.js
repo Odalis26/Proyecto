@@ -8,7 +8,7 @@ const flash = require('connect-flash');
 const mysqlstore = require('express-mysql-session')(session);
 const bodyparser = require('body-parser');
 
-const { database } = require('./keys'); 
+const { database } =  require('./keys'); 
 
 const app = express(); 
 require('./lib/passport');
