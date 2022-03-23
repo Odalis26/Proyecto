@@ -11,10 +11,11 @@ ejercicioctl.mostrar = (req, res) => {
 ejercicioctl.mandar = async (req, res) => {
 
     const id = req.user.idUsuarios
-    const { nombre_ejercicio, descripcion } = req.body
+    const { nombre_ejercicio, descripcion, calificacion } = req.body
     const nuevoEjercicio = {
         nombre_ejercicio,
         descripcion,
+        calificacion,
         usuarioIdUsuarios: id
     }
     await orm.ejercicio.create(nuevoEjercicio)
@@ -25,7 +26,7 @@ ejercicioctl.mandar = async (req, res) => {
 
 ejercicioctl.listar = async (req, res) => {
     const id = req.user.idUsuarios
-    const lista = await sql.query('select * from ejercicios where usuarioIdUsuarios = ?', [id])
+    const lista = await sql.query('select * from ejercicios ')
     res.render('ejercicio/ejercicioLista', { lista })
 
 }
@@ -40,27 +41,23 @@ ejercicioctl.eliminar = async (req, res) => {
 }
 
 ejercicioctl.traer = async (req, res) => {
-    const id = req.user.idUsuarios
-    const lista = await sql.query('select * from ejercicios where usuarioIdUsuarios = ?', [id])
+    const id = req.params.id
+    const lista = await sql.query('select * from ejercicios where ejercicio_id = ?', [id])
     res.render('ejercicio/ejercicioEditar', { lista })
-
 }
 
 ejercicioctl.editar = async (req, res) => {
-
-    const id = req.user.idUsuarios
-    const { nombre_ejercicio, descripcion } = req.body
+    const ids = req.user.idUsuarios
+    const id = req.params.id
+    const { nombre_ejercicio, descripcion, calificacion } = req.body
     const nuevoEjercicio = {
         nombre_ejercicio,
         descripcion,
+        calificacion,
     }
-    await orm.ejercicio.findOne({ where: { ejercicio_id: id } })
-        .then(actualizarEjercicio => {
-            actualizarEjercicio.update(nuevoEjercicio)
-            req.flash('success', 'Se editó correctamente')
-
-            res.redirect('/ejercicio/lista/' + id);
-        })
+await sql.query('update ejercicios set ? where ejercicio_id = ?', [nuevoEjercicio,id])
+    req.flash('success', 'Se editó correctamente')
+    res.redirect('/ejercicio/lista/' + ids);
 }
 
 module.exports = ejercicioctl

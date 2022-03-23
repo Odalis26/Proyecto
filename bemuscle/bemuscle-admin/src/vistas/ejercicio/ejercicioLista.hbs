@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="../../public/css/ejercicio/ejercicio.css">
+<form action="/ejercicio/Lista/{{user.idUsuarios}}" method="get">
+
+    <div id="contenido">
+<div class="row">
+    {{#each lista}}
+    <div id="tarjetas">
+        <div id="nombre_ejercicios">
+            <p> {{nombre_ejercicio}}</p>
+        </div>
+        <div id="descripciones">
+            <p> {{descripcion}}</p>
+        </div>
+        <div id="calificaciones">
+            <p> {{calificacion}}</p>
+        </div>
+        <div id="eliminar">
+           <a href="/ejercicio/Eliminar/{{ejercicio_id}}"> Eliminar</a> 
+        </div>
+        <div id="Editar">
+           <a href="/ejercicio/Editar/{{ejercicio_id}}">Editar</a> 
+        </div>
+
+    </div>
+    {{/each}}
+</div>
+</form>
+

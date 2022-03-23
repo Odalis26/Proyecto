@@ -1,18 +1,17 @@
 const express = require('express');
 const rutas = express.Router()
 
-const {mostrar, mandar, listar, eliminar, traer, editar} = require('../controladores/ejercicio.controlador')
-
+const {mostrar,  mandar, listar, eliminar, traer, editar}= require('../controladores/ejercicio.controlador')
 const {isLoggedIn} = require('../lib/auth')
-
-rutas.get('/agregar/', isLoggedIn, mostrar)
-rutas.post('/agregar/', isLoggedIn, mandar)
-rutas.get('/lista/:id', isLoggedIn, listar)
-rutas.get('/eliminar/:id', isLoggedIn, eliminar)
-rutas.get('/editar/:id', isLoggedIn, traer)
-rutas.post('/editar/:id', isLoggedIn, editar)
+rutas.get('/Agregar/', isLoggedIn, mostrar)
+rutas.post('/Agregar/', isLoggedIn, mandar)
+rutas.get('/Lista/:id', isLoggedIn, listar)
+rutas.get('/Eliminar/:id', isLoggedIn, eliminar)
+rutas.get('/Editar/:id', isLoggedIn, traer)
+rutas.post('/Editar/:id', isLoggedIn, editar)
 
 module.exports = rutas
+
 
 
 
