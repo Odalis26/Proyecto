@@ -1,5 +1,5 @@
 const clasificacion = (sequelize, type)=>{
-    return sequelize.define('clasicaciones', {
+    return sequelize.define('clasificaciones', {
         clasificacion_id: {
             type: type.INTEGER,
             primaryKey: true,
