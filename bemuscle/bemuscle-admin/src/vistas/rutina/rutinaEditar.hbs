@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/rutina/rutina.css">
+ {{#each lista}}
+<form action="/rutina/Editar/{{rutina_id}}" method="post">
+ {{/each}}
+    <div id="contenido">
+        <div id="titulo">
+            <p>Rutina</p>
+        </div>
+        {{#each lista}}
+        <div id="video_rutina">
+            <label>Video de la rutina:</label>
+            <input name="video_rutina" id="video_rutina" checked type="text" value="{{video_rutina}}">
+        </div>
+        <div id="tiempo_rutina">
+            <label>Tiempo de la rutina:</label>
+            <input name="tiempo_rutina" id="tiempo_rutina" checked type="text" value="{{tiempo_rutina}}">
+        </div>
+        <div id="descripcion">
+            <label>Descripcion:</label>
+            <input name="descripcion" id="descripcion" checked type="text" value="{{descripcion}}">
+        </div>
+        <div id="progreso">
+            <label>Progreso:</label>
+            <input name="progreso" id="progreso" checked type="text" value="{{progreso}}">
+        </div>
+        {{/each}}
+        <div id="editar">
+            <button type="submit">Editar</button>
+        </div>
+    </div>
+</form>

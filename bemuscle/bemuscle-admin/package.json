@@ -22,6 +22,7 @@
     "express-session": "^1.17.2",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
+    "mysql-promise": "^5.0.0",
     "mysql2": "^2.3.3",
     "mysql2-promise": "^0.1.4",
     "passport": "^0.5.2",

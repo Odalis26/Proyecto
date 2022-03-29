@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/css/rutina/rutina.css">
+<form action="/rutina/Lista/{{user.idUsuarios}}" method="get">
+
+    <div id="contenido">
+
+<div class="row">
+    {{#each lista}}
+    <div id="tarjetas">
+        <div id="video_rutina">
+            <p> {{video_rutina}}</p>
+        </div>
+        <div id="tiempo_rutina">
+            <p> {{tiempo_rutina}}</p>
+        </div>
+        <div id="descripcion">
+            <p> {{descripcion}}</p>
+        </div>
+        <div id="progreso">
+            <p> {{progreso}}</p>
+        </div>
+        <div id="eliminar">
+           <a href="/rutina/Eliminar/{{rutina_id}}">Eliminar</a> 
+        </div>
+        <div id="Editar">
+           <a href="/rutina/Editar/{{rutina_id}}">Editar</a> 
+        </div>
+
+
+    </div>
+    {{/each}}
+</div>
+</form>
