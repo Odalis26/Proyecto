@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="/css/login/login.css">
+<form action="/historialCliente/Lista/{{user.idUsuarios}}" method="get">
+
+    <div id="historialCliente">
+        <div class="row">
+            {{#each lista}}
+            <div id="tarjetas">
+                <div id="lesion_ocea">
+                    <p> {{lesion_ocea}}</p>
+                </div>
+                <div id="lesion_muscular">
+                    <p> {{lesion_muscular}}</p>
+                </div>
+                <div id="enfermedad_cardiovascular">
+                    <p> {{enfermedad_cardiovascular}}</p>
+                </div>
+                <div id="actividad_deportiva">
+                    <p> {{actividad_deportiva}}</p>
+                </div>
+                <div id="embarazo">
+                    <p> {{embarazo}}</p>
+                </div>
+                <div id="enfermedad">
+                    <p> {{enfermedad}}</p>
+                </div>
+                <div id="eliminar">
+                    <a href="/historialCliente/Eliminar/{{historial_cliente_id}}"> Eliminar</a>
+                </div>
+                <div id="Editar">
+                    <a href="/historialCliente/Editar/{{historial_cliente_id}}">Editar</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+
+    </div>
+
+</form>

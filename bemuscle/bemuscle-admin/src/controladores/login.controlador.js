@@ -1,8 +1,11 @@
 const loginctl = {}
 const passport = require('passport')
+const sql = require('../configuracion_base_datos/base.sql')
 
-loginctl.mostrar = (req, res) => {
-    res.render('login/login');
+loginctl.mostrar = async(req, res) => {
+    const id = req.params.id
+    const usuario= await sql.query('select * from usuarios where idUsuarios=?',[id])
+    res.render('login/login', {usuario});
 }
 
 loginctl.mostrarRegistro = (req, res) => {

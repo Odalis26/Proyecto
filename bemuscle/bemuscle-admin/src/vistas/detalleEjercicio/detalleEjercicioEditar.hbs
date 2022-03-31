@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/bemuscle/bemuscle-admin/src/public/css/detalle_ejercicio/detalleEjercicio.css">
+
+ {{#each lista}}
+<form action="/detalleEjercicio/Editar/{{detalle_ejercicio_id}}" method="post">
+ {{/each}}
+    <div id="contenido">
+        <div id="titulo">
+            <p>Login</p>
+        </div>
+        {{#each lista}}
+        <div id="comentario">
+            <label>Comentario:</label>
+            <input name="comentarios" id="comentario" checked type="text" value="{{comentarios}}">
+        </div>
+        {{/each}}
+        <div id="editar">
+            <button type="submit">Editar</button>
+        </div>
+    </div>
+</form>
