@@ -12,14 +12,10 @@
     max-height: 100%;
     position: absolute;
     top: 0%;
+    background-color: #fffafa;
+
 }
 
-#fondo img {
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 #img{
     position: absolute;
@@ -39,22 +35,28 @@
 }
 
 #contenedor{
-    background-color: brown;
+    background-color: #fffafa;
     position: absolute;
     top: 40%;
     width: 100%;
     height: 100%;
     max-width: 35%;
-    max-height: 50%;
+    max-height: 45%;
     left: 37%;
     text-align: center;
+    border: 2px dashed #03f2fa;   
+    border-top: 5px solid #fffafa;   
+    border-bottom: 5px solid #fffafa;  
+    border: 2px dashed #03f2fa;   
+    padding: 2%; 
+
 }
 
 #vista {
     width: 10%;
     height: 10%; 
     position: absolute;
-    top: 38%;
+    top: 50%;
     left: 88%;
 
 }
@@ -74,14 +76,14 @@ border-color: transparent;
 
 #username{
  position: absolute;
-    top: 19%;
+    top: 30%;
     width: 80%;
     left: 10%; 
 }
 
 #password{
  position: absolute;
-    top: 38%;
+    top: 50%;
     width: 80%;
     left: 10%; 
 }
@@ -92,7 +94,7 @@ input{
 
 #boton{
     position: absolute;
-    top: 60%;
+    top: 70%;
     width: 80%;
     left: 10%; 
 }
