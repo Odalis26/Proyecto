@@ -1,3 +1,76 @@
-form {
-    padding: 5%;
+
+.datatable{
+    background-color: black;
+    width: 800px;
+}
+
+thead{
+    
+    border-bottom: solid 3px gray;
+    
+    
+}
+
+th{
+  
+    color: #0099CC;
+}
+
+.cuerpo{
+    margin-top: 10px;
+    color: white;
+}
+td{
+    color: #E93939;
+    margin-left: 25px;
+    border-bottom: solid 2px grey;
+}
+
+p{
+   
+    color: white;
+    margin-top: 10px;
+    margin-left:10px;
+    margin-right: 15px;
+
+}
+
+h6{
+    
+    margin-top: 7px;
+    margin-left:10px;
+    align-items: center;
+}
+
+
+#editar {
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid #0099CC;
+    background: transparent;
+    color: #0099CC;
+}
+
+#editar:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+#eliminar {
+    background-color: bisque;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid #E93939;
+    background: transparent;
+    color: #E93939;
+ 
+
+}
+
+#eliminar:hover {
+    background-color: #E93939;
+    color: white;
+    cursor: pointer;
 }
