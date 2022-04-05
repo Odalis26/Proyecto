@@ -1,12 +1,23 @@
+/* .datatable-container{
+    background-color: teal;
+  
+    
+} */
 
 .datatable{
     background-color: black;
+    margin-left: 13%;
+   
     width: 800px;
+    
+   
+    
 }
 
 thead{
     
     border-bottom: solid 3px gray;
+    
     
     
 }

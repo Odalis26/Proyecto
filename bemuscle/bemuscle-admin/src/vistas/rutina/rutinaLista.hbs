@@ -2,39 +2,58 @@
 <link rel="stylesheet" href="../../public/css/rutina/rutina.css">
 <link rel="stylesheet" href="/css/rutina/rutina.css">
 
-<div class="container">
-    <div class="datatable-container">
-    <table class="datatable">
-        <thead>
-            <tr>
-                <th><h6>Video Rutina &nbsp; &nbsp; &nbsp;</h6></th>
-                <th><h6>Tiempo Rutina &nbsp; &nbsp; &nbsp;</h6> </th>
-                <th><h6>Descripcion &nbsp; &nbsp; &nbsp;</h6> </th>
-                <th><h6>Progreso &nbsp; &nbsp; &nbsp;</h6></th>
-                <th><h6>Opciones &nbsp; &nbsp; &nbsp;</h6></th>
+<body>
 
-            </tr>
-        </thead>
-        <tbody class="cuerpo">
-            {{#each lista}}
+    {{!-- LISTA DE DATOS DE LA TABLA RUTINA --}}
+    <div class="container"><br>
+        <div class="datatable-container"><br>
+            <table class="datatable">
+                <thead>
+                    <tr>
+                        <th>
+                            <h6>Video Rutina &nbsp; &nbsp; &nbsp;</h6>
+                        </th>
+                        <th>
+                            <h6>Tiempo Rutina &nbsp; &nbsp; &nbsp;</h6>
+                        </th>
+                        <th>
+                            <h6>Descripcion &nbsp; &nbsp; &nbsp;</h6>
+                        </th>
+                        <th>
+                            <h6>Progreso &nbsp; &nbsp; &nbsp;</h6>
+                        </th>
+                        <th>
+                            <h6>Opciones &nbsp; &nbsp; &nbsp;</h6>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="cuerpo">
+                    {{#each lista}}
 
-        <tr>
-            <td><p>{{this.video_rutina}}</p></td>
-            <td><p> {{this.tiempo_rutina}}</p></td>
-            <td><p>{{this.descripcion}}</p></td>
-            <td><p>{{this.progreso}}</p></td>
-            <td>
-                <a href="/rutina/Editar/{{rutina_id}}" type="button" class="btn" id="editar">Editar</a>
-                
-            </td>
-            <td>
-                <a href="/rutina/Eliminar/{{rutina_id}}" type="button" class="btn" id="eliminar">Eliminar</a>
-            </td>
-            {{/each}}
-        </tr>
-        </tbody>
-    </table>
-
-
-</div>
-</div>
+                    <tr>
+                        <td>
+                            <p>{{this.video_rutina}}</p>
+                        </td>
+                        <td>
+                            <p> {{this.tiempo_rutina}}</p>
+                        </td>
+                        <td>
+                            <p>{{this.descripcion}}</p>
+                        </td>
+                        <td>
+                            <p>{{this.progreso}}</p>
+                        </td>
+                        <td>
+                            <a href="/rutina/Editar/{{rutina_id}}" type="button" class="btn" id="editar">Editar</a>
+                        </td>
+                        <td>
+                            <a href="/rutina/Eliminar/{{rutina_id}}" type="button" class="btn"
+                                id="eliminar">Eliminar</a>
+                        </td>
+                        {{/each}}
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
