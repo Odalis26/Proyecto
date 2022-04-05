@@ -7,7 +7,7 @@ const rutina = (sequelize, type) => {
         },
         video_rutina: type.STRING,
         tiempo_rutina: type.STRING,
-        descripcion: type.STRING,
+        descripcion: type.STRING(2500),
         progreso: type.STRING,
 
         creacionRutina: {

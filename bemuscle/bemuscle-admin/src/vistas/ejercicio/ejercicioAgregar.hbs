@@ -13,9 +13,21 @@
             <label> descripcion: </label>
             <input name="descripcion" id="descripciones" checked type="text">
         </div>
-        <div id="calificacion">
-            <label> calificacion: </label>
-            <input name="calificacion" id="calificaciones" checked type="text">
+        <div id="Clasificacion">
+            <label> categoría: </label>
+            <select name="a" id="clasificacion">
+                {{#each clasificacicion}}
+                <option value="{{clasificacion_id}}">{{nombre_clasificacion}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div id="Subclasificacion">
+            <label> Beneficio: </label>
+            <select name="subclasificacion" id="subclasificacion">
+                {{#each subclasificacion}}
+                <option value="{{sub_clasificacion_id}}">{{nombre_sub_clasificacion}}</option>
+                {{/each}}
+            </select>
         </div>
         <div id="agregar">
             <button type="submit">Agregar</button>

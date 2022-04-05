@@ -11,14 +11,14 @@ clasificacionctl.mostrar = (req, res) => {
 clasificacionctl.mandar = async (req, res) => {
 
     const id = req.user.idUsuarios
-    const { nombre_clasificacion} = req.body
+    const { nombre_clasificacion, descripcion_clasificacion} = req.body
     const nuevoClasificacion = {
         nombre_clasificacion,
+        descripcion_clasificacion,
         usuarioIdUsuarios: id
     }
     await orm.clasificacion.create(nuevoClasificacion)
     req.flash('success', 'Se guardó correctamente')
-
     res.redirect('/clasificacion/lista/' + id);
 }
 
@@ -47,9 +47,10 @@ clasificacionctl.traer = async (req, res) => {
 clasificacionctl.editar = async (req, res) => {
     const ids = req.user.idUsuarios
     const id = req.params.id
-    const { nombre_clasificacion} = req.body
+    const { nombre_clasificacion, descripcion_clasificacion} = req.body
     const nuevoClasificacion = {
         nombre_clasificacion,
+        descripcion_clasificacion
     }
 await sql.query('update clasificaciones set ? where clasificacion_id = ?', [nuevoClasificacion,id])
     req.flash('success', 'Se editó correctamente')

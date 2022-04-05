@@ -11,9 +11,10 @@ subClasificacionctl.mostrar = (req, res) => {
 subClasificacionctl.mandar = async (req, res) => {
 
     const id = req.user.idUsuarios
-    const { nombre_sub_clasificacion } = req.body
+    const { nombre_sub_clasificacion, descripcion_sub_clasificacion } = req.body
     const nuevoSubClasificacion = {
         nombre_sub_clasificacion,
+        descripcion_sub_clasificacion,
         usuarioIdUsuarios: id
     }
     await orm.subClasificacion.create(nuevoSubClasificacion)
@@ -47,9 +48,10 @@ subClasificacionctl.traer = async (req, res) => {
 subClasificacionctl.editar = async (req, res) => {
     const ids = req.user.idUsuarios
     const id = req.params.id
-    const { nombre_sub_clasificacion} = req.body
+    const { nombre_sub_clasificacion, descripcion_sub_clasificacion} = req.body
     const nuevoSubClasificacion = {
         nombre_sub_clasificacion,
+        descripcion_sub_clasificacion
     }
 await sql.query('update sub_clasificaciones set ? where sub_clasificacion_id = ?', [nuevoSubClasificacion,id])
     req.flash('success', 'Se editó correctamente')

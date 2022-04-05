@@ -4,18 +4,22 @@ const orm = require('../configuracion_base_datos/base.orm')
 
 const sql = require('../configuracion_base_datos/base.sql')
 
-ejercicioctl.mostrar = (req, res) => {
-    res.render('ejercicio/ejercicioAgregar');
+ejercicioctl.mostrar = async (req, res) => {
+    const clasificacicion = await sql.query('select * from clasificaciones')
+    const subclasificacion = await sql.query('select * from sub_clasificaciones')
+
+    res.render('ejercicio/ejercicioAgregar', { clasificacicion, subclasificacion });
 }
 
 ejercicioctl.mandar = async (req, res) => {
 
     const id = req.user.idUsuarios
-    const { nombre_ejercicio, descripcion, calificacion } = req.body
+    const { nombre_ejercicio, descripcion, a, subclasificacion } = req.body
     const nuevoEjercicio = {
         nombre_ejercicio,
         descripcion,
-        calificacion,
+        clasificacioneClasificacionId: a,
+        subClasificacioneSubClasificacionId: subclasificacion,
         usuarioIdUsuarios: id
     }
     await orm.ejercicio.create(nuevoEjercicio)
@@ -49,13 +53,12 @@ ejercicioctl.traer = async (req, res) => {
 ejercicioctl.editar = async (req, res) => {
     const ids = req.user.idUsuarios
     const id = req.params.id
-    const { nombre_ejercicio, descripcion, calificacion } = req.body
+    const { nombre_ejercicio, descripcion } = req.body
     const nuevoEjercicio = {
         nombre_ejercicio,
         descripcion,
-        calificacion,
     }
-await sql.query('update ejercicios set ? where ejercicio_id = ?', [nuevoEjercicio,id])
+    await sql.query('update ejercicios set ? where ejercicio_id = ?', [nuevoEjercicio, id])
     req.flash('success', 'Se editó correctamente')
     res.redirect('/ejercicio/lista/' + ids);
 }

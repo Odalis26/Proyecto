@@ -1,8 +1,9 @@
-#contenido{
+#contenido {
     width: 100%;
     height: 100%;
     max-width: 100%;
     max-height: 100%;
+
 }
 
 #fondo {
@@ -12,14 +13,13 @@
     max-height: 100%;
     position: absolute;
     top: 0%;
-    background-color: #fffafa;
-
+    background-color: #0c0c0c;
 }
 
 
-#img{
+#img {
     position: absolute;
-    top: 10%; 
+    top: 10%;
     left: 43%;
     width: 100%;
     height: 100%;
@@ -27,14 +27,25 @@
     max-height: 23%;
 }
 
-#img img{
+#img img {
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#contenedor{
+#titulo {
+    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+    color: #00ffff;
+    font-style: oblique;
+    font-size: 50px;
+    font-variant: small-caps;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+#contenedor {
     background-color: #fffafa;
     position: absolute;
     top: 40%;
@@ -42,26 +53,31 @@
     height: 100%;
     max-width: 35%;
     max-height: 45%;
-    left: 37%;
+    left: 33%;
     text-align: center;
-    border: 2px dashed #03f2fa;   
-    border-top: 5px solid #fffafa;   
-    border-bottom: 5px solid #fffafa;  
-    border: 2px dashed #03f2fa;   
-    padding: 2%; 
+    border-top: 5px solid #fffafa;
+    border-bottom: 5px solid #fffafa;
+    border: 4px ridge #03f2fa;
+    padding: 2%;
+    background-color: #111111;
+    box-shadow: 3px 3px 1px #03f2fa,
+        5px 5px 2px #02b6bd,
+        8px 8px 3px #08aeb4,
+        18px 18px 13px #022ffa;
+    box-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7;
 
 }
 
 #vista {
     width: 10%;
-    height: 10%; 
+    height: 10%;
     position: absolute;
     top: 50%;
     left: 88%;
 
 }
 
-#vista img{
+#vista img {
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -69,38 +85,60 @@
     border-radius: 20px;
 }
 
-#vista button{
-background-color: transparent;
-border-color: transparent;
+#vista button {
+    background-color: transparent;
+    border-color: transparent;
 }
 
-#username{
- position: absolute;
+#username {
+    position: absolute;
     top: 30%;
     width: 80%;
-    left: 10%; 
+    left: 10%;
 }
 
-#password{
- position: absolute;
+#password {
+    position: absolute;
     top: 50%;
     width: 80%;
-    left: 10%; 
+    left: 10%;
 }
 
-input{
+input {
     width: 100%;
+    border-color: #006;
+    border-bottom-color: #006;
+    border-bottom-style: groove;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-width: 4px;
+    box-shadow: 0px 0px 5px #03f2fa, 0px 0px 10px #11eff7;
+
 }
 
-#boton{
+input:hover {
+    transition: .8s;
+    border-bottom-color: #00d9ff;
+    box-shadow: 0px 0px 5px #080808, 0px 0px 10px #050505;
+
+}
+
+input:focus {
+    transition: .8s;
+    background-color: #080808;
+    box-shadow: 0px 0px 5px #f4f8f8, 0px 0px 10px #f3f8f8;
+    border-bottom-color: #00d9ff;
+    color: #f4f8f8;
+}
+
+#boton {
     position: absolute;
     top: 70%;
     width: 80%;
-    left: 10%; 
+    left: 10%;
 }
 
-button{
+button {
     width: 100%;
 }
-
-
