@@ -1,0 +1,48 @@
+#contenido{
+    width: 70%;
+    height: 70%;
+    max-width: 70%;
+    max-height: 70%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(31, 93, 239);
+}
+
+li {
+    float: left;
+}
+
+
+li a {
+
+
+
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+li a:hover {
+    background-color: rgb(111, 233, 239);
+}
+button{
+    color: rgb(0, 0, 0);
+    width:15%;  
+}
+
+body{
+    background-image: url(../img/111.jpg);
+}
+
+.container{
+    background-color:rgba(20, 193, 209, 0.497);
+    width:45%;
+    height: 50%;
+}
