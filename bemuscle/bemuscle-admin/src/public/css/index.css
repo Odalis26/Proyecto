@@ -9,7 +9,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(31, 93, 239);
+    background-color: hsla(228, 80%, 54%, 0.859);
 }
 
 li {
@@ -30,19 +30,23 @@ li a {
 
 
 li a:hover {
-    background-color: rgb(111, 233, 239);
+    background-color: #FDFEFE;
 }
 button{
-    color: rgb(0, 0, 0);
+    color: #000000;
     width:15%;  
 }
 
 body{
-    background-image: url(../img/111.jpg);
+    background-image: url(../img/gimnasios.jpg);
+    border-width: 20%;
+}
+body::after{
+    background-color: #e8131348;
 }
 
 .container{
-    background-color:rgba(20, 193, 209, 0.497);
+    background-color:rgba(44, 232, 213, 0.599);
     width:45%;
     height: 50%;
 }
