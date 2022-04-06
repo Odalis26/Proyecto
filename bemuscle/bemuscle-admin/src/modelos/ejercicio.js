@@ -7,7 +7,7 @@ const ejercicio = (sequelize, type) => {
             autoIncrement: true
         },
         nombre_ejercicio: type.STRING,
-        descripcion: type.STRING,
+        descripcion: type.STRING(2500),
         calificacion: type.STRING,
         creacionEjercicio:{
             type: 'TIMESTAMP',

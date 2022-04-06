@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/css/clasificacion/clasificacion.css">
+{{#each lista}}
+<form action="/clasificacion/Editar/{{clasificacion_id}}" method="post">
+    {{/each}}
+    <div id="contenido" class="row g-3">
+        <div id="titulo">
+            <p>Clasificacion</p>
+        </div>
+        {{#each lista}}
+        <label>Nombre: </label>
+        <div id="nombre_clasificacion" class="col-auto">
+            <input name="nombre_clasificacion" class="form-control" id="nombre_clasificaciones" checked type="text"
+                value="{{nombre_clasificacion}}">
+        </div>
+        <label>Descripción: </label>
+        <div id="descripcion_clasificacion" class="col-auto">
+            <input name="descripcion_clasificacion" class="form-control" id="descripcion_clasificaciones" checked
+                type="text">
+        </div>
+        {{/each}}
+        <div id="editar" class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Editar</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/css/clasificacion/clasificacion.css">
+<form action="/clasificacion/Agregar/{{user.idUsuarios}}" method="post">
+    
+    <div id="contenido">
+        <div id="titulo">
+            <p>Clasificacion</p>
+        </div>
+        <label>Nombre: </label>
+        <div id="nombre_clasificacion">
+            <input name="nombre_clasificacion">
+        </div>
+        <label>Descripción: </label>
+        <div id="descripcion_clasificacion" class="col-auto">
+            <input name="descripcion_clasificacion" class="form-control" id="descripcion_clasificaciones" checked
+                type="text">
+        </div>
+        <div id="agregar" class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Agregar</button>
+        </div>
+    </div>
+    
+</form>

@@ -1,33 +1,30 @@
 <link rel="stylesheet" href="/css/rutina/rutina.css">
-<form action="/rutina/Agregar" method="post">
+<form action="/rutina/Agregar/{{user.idUsuarios}}" method="post">
 
-    <div id="contenido">
+    <div id="contenido" class="row">
         <div id="titulo">
-            <p>Rutina</p>
+            <p>Rutinas</p>
         </div>
-
+        <label>video_rutina: </label>
         <div id="video_rutina">
-            <label>Video Rutina:</label>
-            <input name="video_rutina" id="video_rutina" checked type="string">
+            <input name="video_rutina" id="video_rutinas" checked type="text">
         </div>
 
+        <label>tiempo_rutina: </label>
         <div id="tiempo_rutina">
-            <label>Tiempo de la rutina:</label>
-            <input name="tiempo_rutina" id="tiempo_rutina" checked type="string">
+            <input name="tiempo_rutina" id="tiempo_rutinas" checked type="text">
         </div>
 
+        <label>descripcion: </label>
         <div id="descripcion">
-            <label>Descripcion:</label>
-            <input name="descripcion" id="descripcion" checked type="string">
+            <input name="descripcion" id="descripciones" checked type="text">
         </div>
 
-        
+        <label>progreso: </label>
         <div id="progreso">
-            <label>Progreso:</label>
-            <input name="progreso" id="progreso" checked type="string">
+            <input name="progreso" id="progresos" checked type="text">
         </div>
-
-
+        
         <div id="agregar">
             <button type="submit">Agregar</button>
         </div>

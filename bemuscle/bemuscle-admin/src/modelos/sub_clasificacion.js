@@ -5,7 +5,8 @@ const sub_clasificacion = (sequelize, type) => {
             primaryKey: true,
             autoIncrement: true
         },
-        nombre_sub_clasificacion: type.INTEGER,
+        nombre_sub_clasificacion: type.STRING,
+        descripcion_sub_clasificacion: type.STRING(2500),
         creacionSubClasificacion: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
