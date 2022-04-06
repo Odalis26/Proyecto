@@ -14,7 +14,7 @@ ul {
 }
 
 h1 {
-    color: #11eff7;
+    color: #ffffff;
     
 }
 
@@ -26,7 +26,7 @@ li a {
     display: block;
     color: #FDFEFE;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 16px;
     text-decoration: none;
 }
 
@@ -50,29 +50,17 @@ body::after {
 }
 
 .container {
-    background-color: #00000048;
-    width: 45%;
-    height: 50%;
-    box-shadow: 0px 0px 40px #028a8f, 0px 0px 80px #07aab0;
-}
-
-/**/
-#contenedor {
-    background-color: #fffafa;
+    background-color: #000000;
     position: absolute;
     top: 20%;
-    width: 100%;
-    height: 100%;
-    max-width: 40%;
-    max-height: 50%;
+    width: 45%;
+    height: 50%;
     left: 30%;
     box-shadow: 0px 0px 40px #028a8f, 0px 0px 80px #07aab0;
-    text-align: center;
     border-top: 5px solid #fffafa;
     border-bottom: 5px solid #fffafa;
     border: 4px ridge #03f2fa;
-    padding: 2%;
-    background-color: #e9c2c2;
+    background-color: #000000;
 
 }
 
@@ -87,9 +75,8 @@ label {
     font-size: 30px;
     font-variant: small-caps;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     text-align: center;
-
 }
 
 input {
@@ -118,11 +105,4 @@ input:focus {
     box-shadow: 0px 0px 5px #f4f8f8, 0px 0px 10px #f3f8f8;
     border-bottom-color: #00d9ff;
     color: #f4f8f8;
-}
-
-verificacion {
-    position: absolute;
-    top: 53%;
-    width: 80%;
-    left: 10%;
 }
