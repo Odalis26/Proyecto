@@ -48,7 +48,7 @@
     max-width: 40%;
     max-height: 50%;
     left: 30%;
-    box-shadow: 0px 0px 40px #028a8f, 0px 0px 80px #07aab0;
+    box-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7;
     text-align: center;
     border-top: 5px solid #fffafa;
     border-bottom: 5px solid #fffafa;
@@ -61,20 +61,20 @@
         text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
         color: #00ffff;
         font-style: oblique;
-        font-size: 22px;
+        font-size: 30px;
         font-variant: small-caps;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         letter-spacing: 10px;
         text-align: center;
 }
     
-#nombre_sub_clasificacion{
+#nombre_clasificacion{
  position: absolute;
     top: 53%;
     width: 80%;
     left: 10%; 
 }
-#agregar {
+#editar {
     position: absolute;
     top: 75%;
     width: 80%;

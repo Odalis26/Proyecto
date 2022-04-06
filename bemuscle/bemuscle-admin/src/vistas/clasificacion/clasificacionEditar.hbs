@@ -1,20 +1,25 @@
-<link rel="stylesheet" href="/css/clasificacion/clasificacion.css">
+<link rel="stylesheet" href="/css/clasificacion/clasificacionEditar.css">
 {{#each lista}}
 <form action="/clasificacion/Editar/{{clasificacion_id}}" method="post">
     {{/each}}
-    <div id="contenido" >
-        <div id="titulo">
-            <p>Clasificacion</p>
+    <div id="contenido">
+        <div id="fondo">
+            <img src="https://cdn.forbes.co/2022/01/pexels-victor-freitas-841130.jpg" alt="">
         </div>
-        {{#each lista}}
-        <label>Nombre: </label>
-        <div id="nombre_clasificacion">
-            <input name="nombre_clasificacion" id="nombre_clasificaciones" checked type="text"
-                value="{{nombre_clasificacion}}">
-        </div>
-        {{/each}}
-        <div id="editar"  >
-            <button type="submit" >Editar</button>
+        <div id="contenedor">
+            <div id="titulo">
+                <p>Clasificacion</p>
+            </div>
+            {{#each lista}}
+            <label>Nombre: </label>
+            <div id="nombre_clasificacion">
+                <input name="nombre_clasificacion" id="nombre_clasificaciones" checked type="text"
+                    value="{{nombre_clasificacion}}">
+            </div>
+            {{/each}}
+            <div id="editar">
+                <button type="submit">Editar</button>
+            </div>
         </div>
     </div>
 </form>

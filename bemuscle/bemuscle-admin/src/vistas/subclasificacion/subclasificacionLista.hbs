@@ -1,9 +1,15 @@
-<link rel="stylesheet" href="/css/subclasificacion/subclasificacion.css">
+<link rel="stylesheet" href="/css/subclasificacion/subclasificacionLista.css">
 <form action="/subclasificacion/Lista/{{user.idUsuarios}}" method="get">
 
+    <div id="fondo">
+        <img src="https://cdn.forbes.co/2022/01/pexels-victor-freitas-841130.jpg" alt="">
+    </div>
     <div id="contenido">
         {{#each lista}}
         <div id="tarjetas">
+            <div id="titulo">
+                <p>Subclasificación N° {{sub_clasificacion_id}}</p>
+            </div>
             <div id="nombre_sub_clasificaciones">
                 <p> {{nombre_sub_clasificacion}}</p>
             </div>
