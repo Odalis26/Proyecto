@@ -1,4 +1,7 @@
 <link rel="stylesheet" href="/bemuscle/bemuscle-admin/src/public/css/detalle_ejercicio/detalleEjercicio.css">
+<script src="js/jquery-2.1.4.js" type="text/javascript"></script>
+<link href="bootstrap/bootstrap.min.css" rel="stylesheet" />
+<link href="bootstrap/bootstrap-theme.css" rel="stylesheet" />
 
  {{#each lista}}
 <form action="/detalleEjercicio/Editar/{{detalle_ejercicio_id}}" method="post">
@@ -8,13 +11,20 @@
             <p>Login</p>
         </div>
         {{#each lista}}
+        <div class="form-floating">
         <div id="comentario">
-            <label>Comentario:</label>
-            <input name="comentarios" id="comentario" checked type="text" value="{{comentarios}}">
+            <label for="floatingTextarea2"> Comentario:</label>
+            <input name="comentarios" class="form-control" placeholder="Coloca tu comentario gracias" id="floatingTextarea2" style="height: 100px" id="comentario" checked type="text" value="{{comentarios}}">
+        </div>
         </div>
         {{/each}}
         <div id="editar">
-            <button type="submit">Editar</button>
+            <button type="submit" class="btn btn-outline-success">Editar</button>
+            
         </div>
     </div>
+
+</div>
 </form>
+
+
