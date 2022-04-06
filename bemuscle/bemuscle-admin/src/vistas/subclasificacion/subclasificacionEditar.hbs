@@ -4,19 +4,19 @@
 {{#each lista}}
 <form action="/subclasificacion/Editar/{{sub_clasificacion_id}}" method="post">
     {{/each}}
-    <div id="contenido" class="row g-3">
+    <div id="contenido">
         <div id="titulo">
             <p>Subclasificacion</p>
         </div>
         {{#each lista}}
         <label>Nombre: </label>
-        <div id="nombre_sub_clasificacion" class="col-auto">
-            <input name="nombre_sub_clasificacion" class="form-control" id="nombre_sub_clasificaciones" checked type="text"
+        <div id="nombre_sub_clasificacion">
+            <input name="nombre_sub_clasificacion" id="nombre_sub_clasificaciones" checked type="text"
                 value="{{nombre_sub_clasificacion}}">
         </div>
         {{/each}}
-        <div id="editar" class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Editar</button>
+        <div id="editar">
+            <button type="submit">Editar</button>
         </div>
     </div>
 </form>
