@@ -1,7 +1,7 @@
 const express = require('express');
 const rutas = express.Router()
 
-const {mostrar,  mandar, listar, eliminar, traer, editar}= require('../controladores/clasificacion.controlador')
+const {mostrar,  mandar, listar, eliminar, traer, editar}= require('../controladores/historialcliente.controlador')
 const {isLoggedIn} = require('../lib/auth')
 rutas.get('/Agregar/', isLoggedIn, mostrar)
 rutas.post('/Agregar/', isLoggedIn, mandar)

@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="/css/historialCliente/historialClienteLista.css">
+<form action="/historialCliente/Lista/{{user.idUsuarios}}" method="get">
+
+    <div id="contenido">
+        <div class="row">
+            {{#each lista}}
+            <div id="tarjetas">
+                <div id="titulo">
+                    <p>Historial Cliente {{historial_cliente_id}}</p>
+                </div>
+
+                <div>
+                    <div id="lesion_ocea">
+                        <p> {{lesion_ocea}}</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div id="lesion_muscular">
+                        <p> {{lesion_muscular}}</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div id="enfermedad_cardiovascular">
+                        <p> {{enfermedad_cardiovascular}}</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div id="actividad_deportiva">
+                        <p> {{actividad_deportiva}}</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div id="embarazo">
+                        <p> {{embarazo}}</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div id="enfermedad">
+                        <p> {{enfermedad}}</p>
+                    </div>
+                </div>
+
+                <div id="Editar">
+                    <a href="/historialCliente/Editar/{{historial_cliente_id}}" type="button">Editar</a>
+                </div>
+                <div id="eliminar">
+                    <a href="/historialCliente/Eliminar/{{historial_cliente_id}}" type="button">Eliminar</a>
+                </div>
+            </div>
+
+        </div>
+        {{/each}}
+    </div>
+</form>

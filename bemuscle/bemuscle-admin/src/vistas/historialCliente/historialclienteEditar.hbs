@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="/css/historialCliente/historialClienteEditar.css">
+{{#each lista}}
+<form action="/historialCliente/Editar/{{historial_cliente_id}}" method="post">
+    {{/each}}
+    <div id="contenido">
+        <div id="titulo">
+            <p>Historial Cliente</p>
+        </div>
+        {{#each lista}}
+          
+        <label>Lesion ocea: </label>
+        <div id="lesion_ocea">
+            <input name="lesion_ocea" id="lesionOc" checked type="text"
+                value="{{lesion_ocea}}">
+        </div>
+
+        <label>Lesion muscular: </label>
+        <div id="lesion_muscular">
+            <input name="lesion_muscular" id="lesionmus" checked type="text"
+                value="{{lesion_muscular}}">
+        </div>
+    
+        <label>Enfermedad cardiovascular: </label>
+        <div id="enfermedad_cardiovascular">
+            <input name="enfermedad_cardiovascular"  id="enfermedadcar" checked type="text"
+                value="{{enfermedad_cardiovascular}}">
+        </div>
+
+        <label>Actividad deportiva: </label>
+        <div id="actividad_deportiva">
+            <input name="actividad_deportiva" id="deportiva" checked type="text"
+                value="{{actividad_deportiva}}">
+        </div>
+
+        <label>Embarazo: </label>
+        <div id="embarazo">
+            <input name="embarazo" id="Embarazo" checked type="text"
+                value="{{embarazo}}">
+        </div>
+
+        <label>Enfermedad: </label>
+        <div id="enfermedad">
+            <input name="enfermedad" id="Enfermedad" checked type="text"
+                value="{{enfermedad}}">
+        </div>
+         
+        {{/each}}
+        <div id="editar" >
+            <button type="submit">Editar</button>
+        </div>
+    </div>
+</form>
