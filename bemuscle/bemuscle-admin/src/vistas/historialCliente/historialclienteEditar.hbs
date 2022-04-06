@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="/css/login/login.css">
-<form action="/historialCliente/Editar/{{user.idUsuarios}}" method="post">
-
+{{#each lista}}
+<form action="/historialCliente/Editar/{{historial_cliente_id}}" method="post">
+    {{/each}}
     <div id="historialCliente">
         <div id="historial">
             <p>Historial del cliente</p>

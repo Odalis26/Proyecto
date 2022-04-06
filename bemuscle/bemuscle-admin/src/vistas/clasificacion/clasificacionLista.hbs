@@ -11,14 +11,18 @@
                 <div id="nombre_clasificaciones">
                     <p> {{nombre_clasificacion}}</p>
                 </div>
+                <div id="descripcion_clasificaciones">
+                    <p> {{descripcion_clasificacion}}</p>
+                </div>
                 <div id="Editar">
                     <a href="/clasificacion/Editar/{{clasificacion_id}}" type="button">Editar</a>
                 </div>
                 <div id="eliminar" class="col">
                     <a href="/clasificacion/Eliminar/{{clasificacion_id}}" type="button">Eliminar</a>
                 </div>
-
             </div>
             {{/each}}
         </div>
+    </div>
+
 </form>
