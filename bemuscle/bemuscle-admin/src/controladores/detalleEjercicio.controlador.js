@@ -6,7 +6,6 @@ detalleEjercicioctl.mostrar= async(req, res)=>{
     res.render('detalleEjercicio/detalleEjercicioAgregar')
 }
 detalleEjercicioctl.mandar = async (req, res) => {
-
     const id = req.user.idUsuarios
     const {  comentario } = req.body
     const nuevoDetalleEjercicio = {

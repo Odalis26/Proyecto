@@ -4,17 +4,22 @@ const orm = require('../configuracion_base_datos/base.orm')
 
 const sql = require('../configuracion_base_datos/base.sql')
 
-ejercicioctl.mostrar = (req, res) => {
-    res.render('ejercicio/ejercicioAgregar');
+ejercicioctl.mostrar = async (req, res) => {
+    const clasificacicion = await sql.query('select * from clasificaciones')
+    const subclasificacion = await sql.query('select * from sub_clasificaciones')
+
+    res.render('ejercicio/ejercicioAgregar', { clasificacicion, subclasificacion });
 }
 
 ejercicioctl.mandar = async (req, res) => {
 
     const id = req.user.idUsuarios
-    const { nombre_ejercicio, descripcion } = req.body
+    const { nombre_ejercicio, descripcion, a, subclasificacion } = req.body
     const nuevoEjercicio = {
         nombre_ejercicio,
         descripcion,
+        clasificacioneClasificacionId: a,
+        subClasificacioneSubClasificacionId: subclasificacion,
         usuarioIdUsuarios: id
     }
     await orm.ejercicio.create(nuevoEjercicio)
@@ -25,7 +30,7 @@ ejercicioctl.mandar = async (req, res) => {
 
 ejercicioctl.listar = async (req, res) => {
     const id = req.user.idUsuarios
-    const lista = await sql.query('select * from ejercicios where usuarioIdUsuarios = ?', [id])
+    const lista = await sql.query('select * from ejercicios ')
     res.render('ejercicio/ejercicioLista', { lista })
 
 }
@@ -40,27 +45,22 @@ ejercicioctl.eliminar = async (req, res) => {
 }
 
 ejercicioctl.traer = async (req, res) => {
-    const id = req.user.idUsuarios
-    const lista = await sql.query('select * from ejercicios where usuarioIdUsuarios = ?', [id])
+    const id = req.params.id
+    const lista = await sql.query('select * from ejercicios where ejercicio_id = ?', [id])
     res.render('ejercicio/ejercicioEditar', { lista })
-
 }
 
 ejercicioctl.editar = async (req, res) => {
-
-    const id = req.user.idUsuarios
+    const ids = req.user.idUsuarios
+    const id = req.params.id
     const { nombre_ejercicio, descripcion } = req.body
     const nuevoEjercicio = {
         nombre_ejercicio,
         descripcion,
     }
-    await orm.ejercicio.findOne({ where: { ejercicio_id: id } })
-        .then(actualizarEjercicio => {
-            actualizarEjercicio.update(nuevoEjercicio)
-            req.flash('success', 'Se editó correctamente')
-
-            res.redirect('/ejercicio/lista/' + id);
-        })
+    await sql.query('update ejercicios set ? where ejercicio_id = ?', [nuevoEjercicio, id])
+    req.flash('success', 'Se editó correctamente')
+    res.redirect('/ejercicio/lista/' + ids);
 }
 
 module.exports = ejercicioctl

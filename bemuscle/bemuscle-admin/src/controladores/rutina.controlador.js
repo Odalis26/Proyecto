@@ -11,9 +11,9 @@ rutinactl.mostrar = (req, res) => {
 rutinactl.mandar = async (req, res) => {
 
     const id = req.user.idUsuarios
-    const { video_rutina,tiempo_rutina, descripcion, progreso } = req.body
+    const { video_rutina, tiempo_rutina, descripcion, progreso} = req.body
     const nuevaRutina = {
-        video_rutina,
+        video_rutina, 
         tiempo_rutina, 
         descripcion, 
         progreso,
@@ -27,7 +27,7 @@ rutinactl.mandar = async (req, res) => {
 
 rutinactl.listar = async (req, res) => {
     const id = req.user.idUsuarios
-    const lista = await sql.query('select * from rutinas where usuarioIdUsuarios = ?', [id])
+    const lista = await sql.query('select * from rutinas ')
     res.render('rutina/rutinaLista', { lista })
 
 }
@@ -42,29 +42,24 @@ rutinactl.eliminar = async (req, res) => {
 }
 
 rutinactl.traer = async (req, res) => {
-    const id = req.user.idUsuarios
-    const lista = await sql.query('select * from rutinas where usuarioIdUsuarios = ?', [id])
+    const id = req.params.id
+    const lista = await sql.query('select * from rutinas where rutina_id = ?', [id])
     res.render('rutina/rutinaEditar', { lista })
-
 }
 
 rutinactl.editar = async (req, res) => {
-
-    const id = req.user.idUsuarios
-    const { video_rutina,tiempo_rutina, descripcion, progreso  } = req.body
+    const ids = req.user.idUsuarios
+    const id = req.params.id
+    const { video_rutina, tiempo_rutina, descripcion, progreso} = req.body
     const nuevaRutina = {
-        video_rutina,
-        tiempo_rutina,
+        video_rutina, 
+        tiempo_rutina, 
         descripcion, 
-        progreso ,
+        progreso,
     }
-    await orm.rutina.findOne({ where: { rutina_id: id } })
-        .then(actualizarRutina => {
-            actualizarRutina.update(nuevaRutina)
-            req.flash('success', 'Se editó correctamente')
-
-            res.redirect('/rutina/lista/' + id);
-        })
+await sql.query('update rutinas set ? where rutina_id = ?', [nuevaRutina,id])
+    req.flash('success', 'Se editó correctamente')
+    res.redirect('/rutina/lista/' + ids);
 }
 
 module.exports = rutinactl
