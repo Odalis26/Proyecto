@@ -5,18 +5,19 @@ input {
 }
 
 button {
-    background-color: #0662f7;
+    background-color: rgb(215, 215, 232);
     text-align: center;
     font-style: italic;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     cursor: pointer;
     border-radius: 20px;
-    color: antiquewhite;
+    color: white;
     display: block;
 }
 
 button:focus {
     border-radius: 5px solid white;
+    top: 120%;
 }
 
 a {
