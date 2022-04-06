@@ -1,28 +1,46 @@
-<link rel="stylesheet" href="../../public/css/ejercicio/ejercicio.css">
+<link rel="stylesheet" href="/css/ejercicio/ejercicio.css">
+<style>
+    body {
+     
+        font-size: 15px;
+    }
+
+    .pixel {
+        background-color: rgb(19, 20, 20);
+        width: 200px;
+    }
+    p{
+        border-style: solid;
+        border-width: 3px;
+        border-color: black;
+    }
+    div{
+        margin-left: 5px;
+    }
+</style>
 <form action="/ejercicio/Lista/{{user.idUsuarios}}" method="get">
-
+    <div id="Caja"></div>
     <div id="contenido">
-<div class="row">
-    {{#each lista}}
-    <div id="tarjetas">
-        <div id="nombre_ejercicios">
-            <p> {{nombre_ejercicio}}</p>
+        <div class="row">
+            {{#each lista}}
+            <div id="tarjetas">
+                <div id="nombre_ejercicios">
+                    <p style="color: blue"> {{nombre_ejercicio}}</p>
+                </div>
+                <div id="descripciones">
+                    <p style="color: blue"> {{descripcion}}</p>
+                </div>
+                <div id="calificaciones">
+                    <p style="color: blue"> {{calificacion}}</p>
+                </div>
+                <div id="eliminar">
+                    <a href="/ejercicio/Eliminar/{{ejercicio_id}}"> Eliminar</a>
+                </div>
+                <div id="Editar">
+                    <a href="/ejercicio/Editar/{{ejercicio_id}}">Editar</a>
+                </div>
+            </div>
+            {{/each}}
         </div>
-        <div id="descripciones">
-            <p> {{descripcion}}</p>
-        </div>
-        <div id="calificaciones">
-            <p> {{calificacion}}</p>
-        </div>
-        <div id="eliminar">
-           <a href="/ejercicio/Eliminar/{{ejercicio_id}}"> Eliminar</a> 
-        </div>
-        <div id="Editar">
-           <a href="/ejercicio/Editar/{{ejercicio_id}}">Editar</a> 
-        </div>
-
     </div>
-    {{/each}}
-</div>
 </form>
-
