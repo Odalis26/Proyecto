@@ -1,110 +1,150 @@
-@font-face{
-    font-family:Fuentechida;
-    src:url(fonts/OleoScript-Regular.ttf);
-    }
-        body{
-            background-image: url(/img/fondo1.png);
-            background-size:cover;
-            background-repeat: no-repeat;
-            background-attachment:fixed;
-        }
-        .formulario{
-            transition: 2s;
-            margin-top: 100px;
-            width: 30%;
-            box-shadow: 0px 0px 40px rgb(120, 241, 250),0px 0px 80px rgba(256,256,256 ,1);
-        }
-    
-        .formulario:hover{
-            transition: .8s;
-            background-color: rgba(0,0,0,.5);
-        }
-    
-    
-    .logo{
-            height: 85px;
-            margin-top: 30px;
-            margin-left: 170px;
-        }
-        
-     .espaciado{
-            margin-top: 40px;
-        }
-    
-        fieldset{
-            transition: 2s;
-            margin-bottom: 50px;
-            border-color:  rgb(5, 248, 228);
-            border-style: groove;
-            border-width: 0.5px;
-            border-radius: 20px;
-            background-color: rgba(234, 250, 249, 0);
-            margin-left: 40px;
-            width: 800px;
-            padding-left: 40px;
-            padding-right: 30px;
-        }
-        
-    
-    
-       #usuarios{
-            
-            color:white;
-            text-align: center;
-            font-family: cursive;
-        }
-        #contraseñas{
-            
-            color:white;
-            text-align: center;
-            font-family: cursive;
-        }
-      
-      
-        h3,h4{
-            
-            color:white;
-            text-align: center;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        }
-      
-        .Input{
-            transition: .8s;
-            background-color: rgba(0,0,0,.5);
-            color: white;
-            border-color:#006;
-        border-bottom-color:white;
-            border-bottom-style:groove;
-        border-left:none;
-        border-right:none;
-        border-top:none;
-            border-width: 4px;
-            
-        }
-    
-        .Input:hover{
-            transition: .8s;
-        background-color:rgba(55,71,79 ,.5);
-        box-shadow:inset;
-            border-bottom-color:rgb(0, 153, 255);
-        }
-        
-        .Input:focus{
-            transition: .8s;
-        border-bottom-color:rgb(0, 153, 255);
-        }
-    
-    
-    
-        @media screen and (max-width:750px) {
-            
-            .logo{
-                height: 50px;
-    
-            }
-            .formulario{
-                transition: 2s;
-                width: 95%;
-                margin-top: 10px;
-            }
-        }
+#contenido {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+#fondo {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0%;
+}
+
+#fondo img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#img {
+    position: absolute;
+    top: 5%;
+    left: 41%;
+    width: 100%;
+    height: 100%;
+    max-width: 15%;
+    max-height: 5%;
+}
+
+#img img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 40px #feffff, 0px 0px 80px #f1f5f5;
+    border: 2px ridge #f0f6f7;
+    height: auto;
+}
+
+h1 {
+    text-shadow: 0px 0px 40px #eff5f5, 0px 0px 80px #d7f0f0, 3px 3px 80px #eaf2f2;
+    color: #fbfbfb;
+    font-style: oblique;
+    font-size: 35px;
+    font-variant: small-caps;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#contenedor {
+    background-color: #fffafa;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    height: 100%;
+    max-width: 40%;
+    max-height: 70%;
+    left: 30%;
+    text-align: center;
+    border: 4px ridge #03f2fa;
+    padding: 2%;
+    background-color: #111111;
+    box-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7;
+
+}
+
+#vista {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    top: 30%;
+    left: 88%;
+}
+
+#vista img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+#vista button {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+
+label {
+    text-shadow: 0px 0px 40px #f0f8f8, 0px 0px 80px #d3d8d8, 3px 3px 80px #cee0e0;
+    color: #f1f7f7;
+    font-style: oblique;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 20px;
+    width: 40%;
+}
+
+input {
+
+    border-bottom-color: #006;
+    border-bottom-style: groove;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-width: 4px;
+    box-shadow: 0px 0px 5px #03f2fa, 0px 0px 10px #11eff7;
+    box-sizing: border-box;
+    resize: none;
+    text-decoration: none;
+    width: 40%;
+    height: 10%;
+}
+
+input:hover {
+    transition: .8s;
+    border-bottom-color: #00d9ff;
+    box-shadow: 0px 0px 5px #080808, 0px 0px 10px #050505;
+
+}
+
+input:focus {
+    transition: .8s;
+    background-color: #080808;
+    box-shadow: 0px 0px 5px #f4f8f8, 0px 0px 10px #f3f8f8;
+    border-bottom-color: #00d9ff;
+    color: #f4f8f8;
+}
+
+#guardado {
+    position: absolute;
+    top: 90%;
+    width: 80%;
+    left: 10%;
+    text-decoration: none;
+}
+
+button {
+    width: 100%;
+    text-decoration: none;
+}
