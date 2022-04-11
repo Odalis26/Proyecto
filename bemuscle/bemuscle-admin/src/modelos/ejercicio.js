@@ -9,18 +9,20 @@ const ejercicio = (sequelize, type) => {
         nombre_ejercicio: type.STRING,
         descripcion: type.STRING(2500),
         calificacion: type.STRING,
-        creacionEjercicio:{
+        creacionEjercicio: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        actualizacionEjercicio:{
+        actualizacionEjercicio: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
-    },{
-        timestamps: false,
-    })
+        
+    },
+        {
+            timestamps: false,
+        })
 }
 module.exports = ejercicio
