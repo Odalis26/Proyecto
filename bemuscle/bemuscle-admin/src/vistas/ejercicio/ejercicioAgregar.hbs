@@ -1,36 +1,45 @@
-<link rel="stylesheet" href="css/ejercicio/ejercicio.css">
-<form action="/ejercicio/Agregar" method="post">
+<link rel="stylesheet" href="/css/ejercicio/ejercicioAgregar.css">
+<form action="/ejercicio/Agregar/{{user.idUsuarios}}" method="post">
 
     <div id="contenido">
-        <div id="titulo">
-            <p>Ejercicio</p>
+        <div id="fondo">
+            <img src="/img/FondoF.png" alt="">
         </div>
-        <div id="nombre_ejercicio">
-            <label> Ejercicio: </label>
-            <input name="nombre_ejercicio" id="nombre_ejercicios" checked type="text">
-        </div>
-        <div id="descripcion">
-            <label> descripcion: </label>
-            <input name="descripcion" id="descripciones" checked type="text">
-        </div>
-        <div id="Clasificacion">
-            <label> categoría: </label>
-            <select name="a" id="clasificacion">
-                {{#each clasificacicion}}
-                <option value="{{clasificacion_id}}">{{nombre_clasificacion}}</option>
-                {{/each}}
-            </select>
-        </div>
-        <div id="Subclasificacion">
-            <label> Beneficio: </label>
-            <select name="subclasificacion" id="subclasificacion">
-                {{#each subclasificacion}}
-                <option value="{{sub_clasificacion_id}}">{{nombre_sub_clasificacion}}</option>
-                {{/each}}
-            </select>
-        </div>
-        <div id="agregar">
-            <button type="submit">Agregar</button>
+        <div id="contenedor">
+            <div id="titulo">
+                <p>Ejercicio</p>
+            </div>
+
+            <div>
+                <label id="nombre_ejercicio"> Ejercicio: </label>
+                <input name="nombre_ejercicio" id="nombre_ejercicios" checked type="text">
+            </div>
+
+            <div>
+                <label id="descripcion"> descripcion: </label>
+                <input name="descripcion" id="descripciones" checked type="text">
+            </div>
+
+            <div>
+                <label id="clasificacion"> categoría: </label>
+                <select name="a" id="clasificaciones">
+                    {{#each clasificacicion}}
+                    <option value="{{clasificacion_id}}">{{nombre_clasificacion}}</option>
+                    {{/each}}
+                </select>
+            </div>
+
+            <div>
+                <label id="subclasificacion"> Beneficio: </label>
+                <select name="subclasificacion" id="subclasificaciones">
+                    {{#each subclasificacion}}
+                    <option value="{{sub_clasificacion_id}}">{{nombre_sub_clasificacion}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div id="agregar">
+                <button type="submit">Agregar</button>
+            </div>
         </div>
     </div>
 </form>
