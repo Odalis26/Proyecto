@@ -1,19 +1,10 @@
-#contenido {
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-}
-
 #fondo {
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
     position: absolute;
     top: 0%;
-    background-color: #fffafa;
-
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 #fondo img {
@@ -23,154 +14,79 @@
     background-size: cover;
 }
 
-#img {
+#contenido {
     position: absolute;
-    top: 10%;
-    left: 43%;
-    width: 100%;
-    height: 100%;
-    max-width: 23%;
-    max-height: 23%;
+    top: 13%;
+    left: 3%;
+    width: 94%;
+    height: auto;
 }
 
-#img img {
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+.row {
+    gap: 1.5%;
+    row-gap: 20px;
 }
 
-#contenedor {
-    background-color: #fffafa;
-    position: absolute;
-    top: 10%;
+#tarjetas {
+    color: #f9faf9;
     width: 100%;
-    height: 100%;
-    max-width: 40%;
-    max-height: 80%;
-    left: 30%;
-    box-shadow: 0px 0px 40px #028a8f, 0px 0px 80px #07aab0;
+    height: auto;
+    max-width: 28%;
+    max-height: auto;
+    background-color: #111;
     text-align: center;
-    border-top: 5px solid #fffafa;
-    border-bottom: 5px solid #fffafa;
-    border: 4px ridge #03f2fa;
-    padding: 2%;
-    background-color: #111111;
-
-}
-
-#titulo {
-    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
-    color: #00ffff;
-    font-style: oblique;
-    font-size: 50px;
-    font-variant: small-caps;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: 10px;
-    text-align: center;
-
-}
-
- #nombre_ejercicios{
-    position: absolute;
-    top: 31%;
-    width: 80%;
-    left: 10%;
- }
-
- #nombre_ejercicio{
-    position: absolute;
-    top: 21%;
-    width: 80%;
-    left: 10%;
- }
- 
- #descripciones {
-    position: absolute;
-    top: 70%;
-    width: 80%;
-    left: 10%;
-}
-
-#descripcion {
-    position: absolute;
-    top: 60%;
-    width: 80%;
-    left: 10%;
-}
-
-#calificaciones{
-    position: absolute;
-    top: 50%;
-    width: 80%;
-    left: 10%;
-}
-
-#calificacion{
-    position: absolute;
-    top: 41%;
-    width: 80%;
-    left: 10%;
-}
-
-#editar {
-    position: absolute;
-    top: 85%;
-    width: 80%;
-    left: 10%;
-}
-
-label {
-    position: absolute;
-    top: 10%;
-    width: 80%;
-    left: 10%;
-    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
-    color: #fefefe;
-    font-style: oblique;
-    font-size: 25px;
-    font-variant: small-caps;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: 10px;
-    text-align: center;
-
-}
-
-input {
-    width: 100%;
-    border-color: #006;
-    border-bottom-color: #006;
-    border-bottom-style: groove;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-width: 4px;
+    animation-duration: 4s;
+    animation-name: slidein;
+    padding-top: 2em;
+    padding-right: 4em;
+    padding-bottom: 2em;
+    padding-left: 3em;
+    border: 1px ridge #fbfbfb;
     box-shadow: 0px 0px 5px #03f2fa, 0px 0px 10px #11eff7;
 
 }
 
-input:hover {
-    transition: .8s;
-    border-bottom-color: #00d9ff;
-    box-shadow: 0px 0px 5px #080808, 0px 0px 10px #050505;
+@keyframes slidein {
+    from {
+        margin-left: 8%;
+        width: 6%
+    }
 
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
 }
 
-input:focus {
-    transition: .8s;
-    background-color: #080808;
-    box-shadow: 0px 0px 5px #f4f8f8, 0px 0px 10px #f3f8f8;
-    border-bottom-color: #00d9ff;
-    color: #f4f8f8;
-}
-
-#boton {
+#editar {
+    margin-left: 0%;
     position: absolute;
-    top: 70%;
-    width: 80%;
-    left: 10%;
+    color: #30e7e4;
+    text-decoration: none;
 }
 
-button {
-    width: 100%;
+#eliminar {
+    margin-left: 0%;
+    position: absolute;
+    color: #30e7e4;
+    text-decoration: none;
 }
+
+a {
+    color: #30e7e4;
+    border: 1px solid #333333;
+    border-top-style: dotted;
+    border-right-width: 10px;
+    border-bottom-color: #faf9f9;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #faf9f9;
+    border: 1px solid #333333;
+    border-top-style: dotted;
+    border-right-width: 20px;
+    border-bottom-color: #30e7e4;
+    text-decoration: none;
+}
+
