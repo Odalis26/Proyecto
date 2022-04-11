@@ -82,8 +82,9 @@ form {
        top: 28%;
        width: 80%;
        left: 10%; 
-   }
-#agregar {
+}
+
+#editar {
     position: absolute;
     top: 80%;
     width: 80%;

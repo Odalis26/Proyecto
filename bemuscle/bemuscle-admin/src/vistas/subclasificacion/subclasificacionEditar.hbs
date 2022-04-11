@@ -1,25 +1,32 @@
-<link rel="stylesheet" href="/css/subclasificacion/subclasificacion.css">
+<link rel="stylesheet" href="/css/subclasificacion/subclasificacionEditar.css">
 {{#each lista}}
 <form action="/subclasificacion/Editar/{{sub_clasificacion_id}}" method="post">
     {{/each}}
-    <div id="contenido" class="row g-3">
-        <div id="titulo">
-            <p>Subclasificacion</p>
+    <div id="contenido">
+        <div id="fondo">
+            <img src="/img/111.png" alt="">
         </div>
-        {{#each lista}}
-        <label>Nombre: </label>
-        <div id="nombre_sub_clasificacion" class="col-auto">
-            <input name="nombre_sub_clasificacion" class="form-control" id="nombre_sub_clasificaciones" checked
-                type="text" value="{{nombre_sub_clasificacion}}">
-        </div>
-        <label>Descripción: </label>
-        <div id="descripcion_sub_clasificacion" class="col-auto">
-            <input name="descripcion_sub_clasificacion" class="form-control" id="descripcion_sub_clasificaciones" checked
-                type="text" value="{{descripcion_sub_clasificacion}}">
-        </div>
-        {{/each}}
-        <div id="editar" class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Editar</button>
+        <div id="contenedor">
+            <div id="titulo">
+                <p>Subclasificacion</p>
+            </div>
+            {{#each lista}}
+
+            <div id="nombre_sub_clasificacion">
+                <label>Nombre: </label>
+                <input name="nombre_sub_clasificacion" id="nombre_sub_clasificaciones" checked type="text"
+                    value="{{nombre_sub_clasificacion}}">
+            </div>
+
+            <div id="descripcion_sub_clasificacion">
+                <label>Descripción: </label>
+                <input name="descripcion_sub_clasificacion" id="descripcion_sub_clasificaciones" checked type="text"
+                    value="{{descripcion_sub_clasificacion}}">
+            </div>
+            {{/each}}
+            <div id="editar">
+                <button type="submit" >Editar</button>
+            </div>
         </div>
     </div>
 </form>

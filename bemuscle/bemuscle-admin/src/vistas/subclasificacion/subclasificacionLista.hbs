@@ -1,29 +1,30 @@
-<link rel="stylesheet" href="/css/subclasificacion/subclasificacion.css">
+<link rel="stylesheet" href="/css/subclasificacion/subclasificacionLista.css">
 <form action="/subclasificacion/Lista/{{user.idUsuarios}}" method="get">
-
+<div id="fondo">
+    <img src="/img/111.png" alt="">
+</div>
     <div id="contenido">
-        <div class="list-group list-group-flush">
+        <div class="row">
             {{#each lista}}
-            <div id="tarjetas" class="list-group-item">
-                <div class="container px-4">
-                    <div class="row gx-5">
-                        <div id="nombre_sub_clasificaciones" class="col-6">
-                            <p> {{nombre_sub_clasificacion}}</p>
-                        </div>
-                        <div id="descripcion_sub_clasificaciones" class="col-6">
-                            <p> {{descripcion_sub_clasificacion}}</p>
-                        </div>
-                        <div id="Editar" class="col">
-                            <a href="/subclasificacion/Editar/{{sub_clasificacion_id}}" type="button"
-                                class="btn btn-warning">Editar</a>
-                        </div>
-                        <div id="eliminar" class="col">
-                            <a href="/subclasificacion/Eliminar/{{sub_clasificacion_id}}" type="button"
-                                class="btn btn-danger"> Eliminar</a>
-                        </div>
-                    </div>
+            <div id="tarjetas">
+                <div id="titulo">
+                    <p>Categoria N° {{sub_clasificacion_id}}</p>
+                </div>
+                <div id="nombre_sub_clasificaciones">
+                    <p> {{nombre_sub_clasificacion}}</p>
+                </div>
+                <div id="descripcion_sub_clasificaciones">
+                    <p> {{descripcion_sub_clasificacion}}</p>
+                </div>
+                <div id="Editar">
+                    <a href="/subclasificacion/Editar/{{sub_clasificacion_id}}" type="button">Editar</a>
+                </div>
+                <div id="eliminar" class="col">
+                    <a href="/subclasificacion/Eliminar/{{sub_clasificacion_id}}" type="button">Eliminar</a>
                 </div>
             </div>
             {{/each}}
         </div>
+    </div>
+
 </form>
