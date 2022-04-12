@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/proyecto/proyectoAgregar.css">
+<!--<link rel="stylesheet" href="/css/proyecto/proyectoAgregar.css">-->
 <form action="/proyecto/Agregar/" method="post">
 
     <div id="contenido">
@@ -7,7 +7,9 @@
         </div>
         <div id="contenedor">
             <div id="titulo">
-                <p>Proyecto</p>
+                {{#each lista}}
+                <p>Proyecto N° <input type="text" name="numero" id="numero" value="{{'MAX(proyecto_id)'}}"></p>
+                {{/each}}
             </div>
             <div id="nombre_proyecto">
                 <label>nombre: </label>
@@ -25,10 +27,22 @@
                 <label>vision: </label>
                 <input name="vision" id="visiones" checked type="text">
             </div>
+            <div id="objetivos">
+                <label>Objetivos:</label>
+                <input type="text" id="numeros" placeholder="Ingrese su número de objetivos" checked>
+            </div>
 
+            <div id="listaObjetivos"></div>
+
+            <div id="boton">
+                <button type="button" onclick="objetivos.crear()">Crear Objetivos</button>
+            </div>
             <div id="agregar">
                 <button type="submit">Agregar</button>
             </div>
         </div>
     </div>
 </form>
+
+<script src="/js/objetivos.js"></script>
+<script src="/js/numero.js"></script>
