@@ -1,38 +1,44 @@
-<link rel="stylesheet" href="/css/rutina/rutina.css">
+<link rel="stylesheet" href="/css/rutina/rutinaEditar.css">
 {{#each lista}}
+
 <form action="/rutina/Editar/{{rutina_id}}" method="post">
     {{/each}}
+
+
     <div id="contenido" class="row">
-        <div id="titulo">
-            <p>Rutina</p>
+        <div id="fondo">
+            <img src="/img/istockphoto-947343978-170667a.png" alt="">
         </div>
-        {{#each lista}}
-        <label>video_rutina: </label>
-        <div id="video_rutina">
-            <input name="video_rutina" id="video_rutinas" checked
-                type="text">
-        </div>
+        <div id="contenedor">
 
-        <label>tiempo_rutina: </label>
-        <div id="tiempo_rutina">
-            <input name="tiempo_rutina" id="tiempo_rutinas" checked
-                type="text">
-        </div>
+            <div id="titulo">
+                <p>Rutina</p>
+            </div>
+            {{#each lista}}
+            <label id="video">video rutina: </label>
+            <div id="video_rutina">
+                <input name="video_rutina" id="video_rutinas" checked type="text">
+            </div>
 
-         <label>descripcion: </label>
-        <div id="descripcion">
-            <input name="descripcion" id="descripciones" checked
-                type="text">
-        </div>
+            <label id="tiempo">tiempo rutina: </label>
+            <div id="tiempo_rutina">
+                <input name="tiempo_rutina" id="tiempo_rutinas" checked type="text">
+            </div>
 
-           <label>progreso: </label>
-        <div id="progreso">
-            <input name="progreso" id="progresos" checked
-                type="text">
-        </div>
-        {{/each}}
-        <div id="editar" >
-            <button type="submit">Editar</button>
+            <label id="descripcionc">descripcion: </label>
+            <div id="descripcion">
+                <input name="descripcion" id="descripciones" checked type="text">
+            </div>
+
+            <label id="progresoc">progreso: </label>
+            <div id="progreso">
+                <input name="progreso" id="progresos" checked type="text">
+            </div>
+            {{/each}}
+
+            <div id="editar">
+                <button type="submit">Editar</button>
+            </div>
         </div>
     </div>
 </form>
