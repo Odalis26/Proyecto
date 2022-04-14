@@ -1,10 +1,10 @@
 const express = require('express');
 const rutas = express.Router()
 
-const {mostrar,  mandar, listar, eliminar, traer, editar}= require('../controladores/clasificacion.controlador')
+const {mostrar,  mandar, listar, eliminar, traer, editar}= require('../controladores/proyecto.controlador')
 const {isLoggedIn} = require('../lib/auth')
-rutas.get('/Agregar/:id', isLoggedIn, mostrar)
-rutas.post('/Agregar/:id', isLoggedIn, mandar)
+rutas.get('/Agregar/', isLoggedIn, mostrar)
+rutas.post('/Agregar/', isLoggedIn, mandar)
 rutas.get('/Lista/:id', isLoggedIn, listar)
 rutas.get('/Eliminar/:id', isLoggedIn, eliminar)
 rutas.get('/Editar/:id', isLoggedIn, traer)

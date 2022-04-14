@@ -1,18 +1,20 @@
-const clasificacion = (sequelize, type)=>{
-    return sequelize.define('clasificaciones', {
-        clasificacion_id: {
+const proyecto = (sequelize, type)=>{
+    return sequelize.define('proyectos', {
+        proyecto_id: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        nombre_clasificacion: type.STRING,
-        descripcion_clasificacion: type.STRING(2500),
-        creacionClasificacion:{
+        nombre_proyecto: type.STRING,
+        descripcion_proyecto: type.STRING(2500),
+        mision: type.STRING(2500),
+        vision: type.STRING(2500),
+        creacionproyecto:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        actualizacionClasificacion:{
+        actualizacionproyecto:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -22,4 +24,4 @@ const clasificacion = (sequelize, type)=>{
     })
 }
 
-module.exports= clasificacion
+module.exports= proyecto
