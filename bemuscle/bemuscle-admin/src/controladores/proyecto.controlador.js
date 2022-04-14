@@ -21,9 +21,9 @@ proyectoctl.mandar = async (req, res) => {
         usuarioIdUsuarios: id
     }
     await orm.proyecto.create(nuevoProyecto)
-    for (let i = 0; i < objetivos.length; i++) {
+   /* for (let i = 0; i < objetivos.length; i++) {
         await sql.query('insert into detalle_proyectos(objetivo, proyectoProyectoId) values(?,?)', [objetivos[i], numero])
-    }
+    }*/
     req.flash('success', 'Se guardó correctamente')
 
     res.redirect('/proyecto/lista/' + id);

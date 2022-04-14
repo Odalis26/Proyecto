@@ -5,11 +5,11 @@
     <img src="/img/111.png" alt="">
 </div>
 <div id="contenido">
-    <div class="row">
+    <div id="contenedor">
         {{#each lista}}
-        <div id="tarjetas">
+  
             <div id="titulo">
-                <p>Proyecto N° {{proyecto_id}}</p>
+                <h1>Proyecto N° {{proyecto_id}}</h1>
             </div>
             <div id="nombre_proyectos">
                 <p> {{nombre_proyecto}}</p>
@@ -26,16 +26,16 @@
             <div id="Editar">
                 <a href="/proyecto/Editar/{{proyecto_id}}" type="button">Editar</a>
             </div>
-            <div id="eliminar">
+            <div id="Eliminar">
                 <a href="/proyecto/Eliminar/{{proyecto_id}}" type="button">Eliminar</a>
             </div>
 
-        </div>
-        {{/each}}
+
+       <!-- {{/each}}
         {{#each listaDetalle}}
         <div id="objetivos">
             <p> {{objetivo}}</p>
         </div>
-        {{/each}}
+        {{/each}}-->
     </div>
 </div>
