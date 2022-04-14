@@ -1,40 +1,54 @@
-<link rel="stylesheet" href="/css/login/login.css">
+<link rel="stylesheet" href="/css/historialCliente/historialClienteEditar.css">
 {{#each lista}}
 <form action="/historialCliente/Editar/{{historial_cliente_id}}" method="post">
     {{/each}}
-    <div id="historialCliente">
-        <div id="historial">
-            <p>Historial del cliente</p>
+    <div id="contenido">
+        <div id="fondo">
+            <img src="/img/111.png" alt="">
         </div>
-         {{#each lista}}
-        <div id="lesion_ocea">
-            <label>Lesion ocea:</label>
-            <input name="lesion_ocea" id="lesionOc" checked type="text" value="{{lesion_ocea}}">
-        </div>
-        <div id="lesion_muscular">
-            <label>Lesion muscular:</label>
-            <input name="lesion_muscular" id="lesionmus" checked type="text" value="{{lesion_muscular}}">
-        </div>
-        <div id="enfermedad_cardiovascular">
-            <label>Enfermedad cardiovascular:</label>
-            <input name="enfermedad_cardiovascular" id="enfermedadcar" checked type="text"value="{{enfermedad_cardiovascular}}">
-        </div>
-        <div id="actividad_deportiva">
-            <label>Actividad deportiva:</label>
-            <input name="actividad_deportiva" id="deportiva" checked type="text" value="{{actividad_deportiva}}">
-        </div>
-        <div id="embarazo">
-            <label>Embarazo:</label>
-            <input name="embarazo" id="Embarazo" checked type="text" value="{{embarazo}}">
-        </div>
-        <div id="enfermedad">
-            <label>Enfermedad:</label>
-            <input name="enfermedad" id="Enfermedad" checked type="text" value="{{enfermedad}}">
-        </div>
-         {{/each}}
-        <div id="editar">
-            <button type="submit">Editar</button>
+
+        <div id="contenedor">
+
+            <div id="titulo">
+                <h1>Historial Cliente</h1>
+            </div>
+            {{#each lista}}
+
+            <div id="lesion_ocea">
+                <label>Lesion Ocea: </label>
+                <input name="lesion_ocea" id="lesionOc" checked type="text" value="{{lesion_ocea}}">
+            </div>
+
+            <div id="lesion_muscular">
+                <label>Lesion Muscular: </label>
+                <input name="lesion_muscular" id="lesionmus" checked type="text" value="{{lesion_muscular}}">
+            </div>
+
+            <div id="enfermedad_cardiovascular">
+                <label>Enfermedad Cardiovascular: </label>
+                <input name="enfermedad_cardiovascular" id="enfermedadcar" checked type="text"
+                    value="{{enfermedad_cardiovascular}}">
+            </div>
+
+            <div id="actividad_deportiva">
+                <label>Actividad Deportiva:</label>
+                <input name="actividad_deportiva" id="deportiva" checked type="text" value="{{actividad_deportiva}}">
+            </div>
+
+            <div id="embarazo">
+                <label>Embarazo:</label>
+                <input name="embarazo" id="Embarazo" checked type="text" value="{{embarazo}}">
+            </div>
+
+            <div id="enfermedad">
+                <label>Enfermedad:</label>
+                <input name="enfermedad" id="Enfermedad" checked type="text" value="{{enfermedad}}">
+            </div>
+
+            {{/each}}
+            <div id="editar">
+                <button type="submit">Editar</button>
+            </div>
         </div>
     </div>
-
 </form>
