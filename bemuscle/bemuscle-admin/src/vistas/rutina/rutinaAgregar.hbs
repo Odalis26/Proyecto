@@ -1,32 +1,38 @@
-<link rel="stylesheet" href="/css/rutina/rutina.css">
+<link rel="stylesheet" href="/css/rutina/rutinaAgregar.css">
 <form action="/rutina/Agregar/{{user.idUsuarios}}" method="post">
 
-    <div id="contenido" class="row">
-        <div id="titulo">
-            <p>Rutinas</p>
+<div id="contenido" class="row">
+<div id="fondo">
+            <img src="/img/FondoF.png" alt="">
         </div>
-        <label>video_rutina: </label>
-        <div id="video_rutina">
-            <input name="video_rutina" id="video_rutinas" checked type="text">
-        </div>
+        <div id="contenedor">
 
-        <label>tiempo_rutina: </label>
-        <div id="tiempo_rutina">
-            <input name="tiempo_rutina" id="tiempo_rutinas" checked type="text">
-        </div>
+            <div id="titulo">
+                <p>Rutinas</p>
+            </div>
+            <label id="video">video rutina: </label>
+            <div id="video_rutina">
+                <input name="video_rutina" id="video_rutinas" checked type="text">
+            </div>
 
-        <label>descripcion: </label>
-        <div id="descripcion">
-            <input name="descripcion" id="descripciones" checked type="text">
-        </div>
+            <label id="tiempo">tiempo rutina: </label>
+            <div id="tiempo_rutina">
+                <input name="tiempo_rutina" id="tiempo_rutinas" checked type="text">
+            </div>
 
-        <label>progreso: </label>
-        <div id="progreso">
-            <input name="progreso" id="progresos" checked type="text">
-        </div>
-        
-        <div id="agregar">
-            <button type="submit">Agregar</button>
+            <label id="descripcionc">descripcion: </label>
+            <div id="descripcion">
+                <input name="descripcion" id="descripciones" checked type="text">
+            </div>
+
+            <label id="progresoc">progreso: </label>
+            <div id="progreso">
+                <input name="progreso" id="progresos" checked type="text">
+            </div>
+
+            <div id="agregar">
+                <button type="submit">Agregar</button>
+            </div>
         </div>
     </div>
 </form>

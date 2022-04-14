@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/ejercicio/ejercicioAgregar.css">
+<!--<link rel="stylesheet" href="/css/ejercicio/ejercicioAgregar.css">-->
 <form action="/ejercicio/Agregar" method="post">
 
     <div id="contenido">
@@ -7,11 +7,14 @@
         </div>
         <div id="contenedor">
             <div id="titulo">
-                <p>Ejercicio</p>
+                {{#each lista}}
+                <p>Ejercicio <input type="text" name="numero" id="numero" value="{{'MAX(ejercicio_id)'}}">
+                </p>
+                {{/each}}
             </div>
 
             <div>
-                <label id="nombre_ejercicio"> Ejercicio: </label>
+                <label id="nombre_ejercicio"> Nombre: </label>
                 <input name="nombre_ejercicio" id="nombre_ejercicios" checked type="text">
             </div>
 
@@ -37,9 +40,20 @@
                     {{/each}}
                 </select>
             </div>
-            <div id="agregar">
+           <!--< <div id="comentarios">
+                <label>Comentarios:</label>
+                <input type="text" id="numeros" placeholder="Ingrese su número de comentarios" checked>
+            </div> -->
+
+            <!--<<div id="listaComentarios"></div>-->
+
+           <!--< <div id="boton">
+                <button type="button" onclick="comentarios.crear()">Crear Comentarios</button>
+            </div> -->
+           <!--< <div id="agregar">
                 <button type="submit">Agregar</button>
-            </div>
+            </div>-->
         </div>
     </div>
-</form>
+</form><script src="/js/comentarios.js"></script>
+<script src="/js/numero.js"></script> 

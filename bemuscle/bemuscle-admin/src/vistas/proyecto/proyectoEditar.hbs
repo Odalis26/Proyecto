@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/proyecto/proyectoEditar.css">
+{{#each lista}}
+<form action="/proyecto/Editar/{{proyecto_id}}" method="post">
+    {{/each}}
+    <div id="contenido">
+       <div id="fondo">
+            <img src="/img/FondoF.png" alt="">
+        </div>
+        <div id="contenedor">
+            <div id="titulo">
+                <p>Proyecto</p>
+            </div>
+            {{#each lista}}
+
+            <div id="nombre_proyecto">
+                <label>nombre: </label>
+                <input name="nombre_proyecto" id="nombre_proyectos" checked type="text" value="{{nombre_proyecto}}">
+            </div>
+            <div id="descripcion_proyecto">
+                <label>descripcion: </label>
+                <input name="descripcion_proyecto" id="descripcion_proyectos" checked type="text"
+                    value="{{descripcion_proyecto}}">
+            </div>
+            <div id="mision">
+                <label>mision: </label>
+                <input name="mision" id="misiones" checked type="text" value="{{mision}}">
+            </div>
+            <div id="vision">
+                <label>vision: </label>
+                <input name="vision" id="visiones" checked type="text" value="{{vision}}">
+            </div>
+            {{/each}}
+            <div id="editar">
+                <button type="submit">Editar</button>
+            </div>
+        </div>
+    </div>
+</form>

@@ -22,4 +22,4 @@ const clasificacion = (sequelize, type)=>{
     })
 }
 
-module.exports= clasificacion
+module.exports= clasificacion 

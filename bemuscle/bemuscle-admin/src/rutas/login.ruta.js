@@ -8,7 +8,7 @@ rutas.get('/login/:id', mostrar)
 rutas.post('/login', login)
 rutas.get('/registro', mostrarRegistro)
 rutas.post('/registro', registro)
-rutas.get('/cerrarsesion', cerrarSesion)
+rutas.get('/CerrarSecion', cerrarSesion)
 
 
 

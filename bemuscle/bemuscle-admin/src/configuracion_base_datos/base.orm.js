@@ -22,6 +22,8 @@ const ejercicioModelo = require('../modelos/ejercicio')
 const historialClienteModelo = require('../modelos/historial_cliente')
 const rutinaModelo = require('../modelos/rutina')
 const subClasificacionModelo = require('../modelos/sub_clasificacion')
+const proyectoModelo = require('../modelos/proyecto')
+const detalleProyectoModelo = require('../modelos/detalle_proyecto')
 
 const sequelize = new Sequelize(
   'bemuscle',
@@ -61,6 +63,8 @@ const ejercicio= ejercicioModelo(sequelize, Sequelize)
 const historialCliente= historialClienteModelo(sequelize, Sequelize)
 const rutina= rutinaModelo(sequelize, Sequelize)
 const subClasificacion= subClasificacionModelo(sequelize, Sequelize)
+const proyecto= proyectoModelo(sequelize, Sequelize)
+const detalleProyecto= detalleProyectoModelo(sequelize, Sequelize)
 
 usuario.hasMany(ejercicio)
 ejercicio.belongsTo(usuario)
@@ -70,8 +74,8 @@ usuario.hasMany(historialCliente)
 historialCliente.belongsTo(usuario)
 ejercicio.hasMany(rutina)
 rutina.belongsTo(ejercicio)
-clasificacion.hasMany(ejercicio)
-ejercicio.belongsTo(clasificacion)
+ejercicio.hasMany(clasificacion)
+clasificacion.belongsTo(ejercicio)
 ejercicio.hasMany(historialCliente)
 historialCliente.belongsTo(ejercicio)
 ejercicio.hasMany(detalleEjercicio)
@@ -80,8 +84,10 @@ rutina.hasMany(detalleRutina)
 detalleRutina.belongsTo(rutina)
 clasificacion.hasMany(subClasificacion)
 subClasificacion.belongsTo(clasificacion)
-subClasificacion.hasMany(ejercicio)
-ejercicio.belongsTo(subClasificacion)
+proyecto.hasMany(detalleProyecto)
+detalleProyecto.belongsTo(proyecto)
+usuario.hasMany(proyecto)
+proyecto.belongsTo(usuario)
 
 
   module.exports = {
@@ -92,5 +98,7 @@ ejercicio.belongsTo(subClasificacion)
     ejercicio,
     historialCliente,
     rutina,
-    subClasificacion
+    subClasificacion,
+    proyecto,
+    detalleProyecto
   }
