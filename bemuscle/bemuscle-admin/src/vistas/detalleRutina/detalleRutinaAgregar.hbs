@@ -1,17 +1,23 @@
-<link rel="stylesheet" href="/css/detalleRutina/detalleRutina.css">
-<form action="/detalleRutina/Agregar" method="post">
+<link rel="stylesheet" href="/css/detalleRutina/detalleRutinaAgregar.css">
+<form action="/detalleRutina/Agregar/{{user.idUsuarios}}" method="post">
 
-    <div id="contenido" class="row g-3">
-        <div id="titulo">
-            <p>Detalle Rutina</p>
+    <div id="contenido">
+        <div id="fondo">
+            <img src="/img/111.png" alt="">
         </div>
-        <label>Consejos: </label>
-        <div id="consejos" class="col-auto">
-            <input name="consejos" class="form-control" id="consejo" checked
-                type="text">
+        <div id="contenedor">
+
+            <div id="titulo">
+                <p>Detalle Rutina</p>
+            </div>
+            <label>Consejos: </label>
+            <div id="consejos">
+                <input name="consejos" id="consejo" checked type="text">
+            </div>
+            <div id="agregar">
+                <button type="submit">Agregar</button>
+            </div>
         </div>
-        <div id="agregar" class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Agregar</button>
-        </div>
+
     </div>
 </form>

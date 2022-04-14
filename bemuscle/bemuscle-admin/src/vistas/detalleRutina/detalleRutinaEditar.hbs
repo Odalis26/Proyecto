@@ -1,22 +1,26 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/detalleRutina/detalleRutina.css">
+<link rel="stylesheet" href="/css/detalleRutina/detalleRutinaEditar.css">
 {{#each lista}}
 <form action="/detalleRutina/Editar/{{detalle_rutina_id}}" method="post">
     {{/each}}
-    <div id="contenido" class="row g-3">
-        <div id="titulo">
-            <p>Detalle Rutina</p>
+    <div id="contenido">
+        <div id="fondo">
+            <img src="/img/111.png" alt="">
         </div>
-        {{#each lista}}
-        <label>Consejos: </label>
-        <div id="consejos" class="col-auto">
-            <input name="consejos" class="form-control" id="consejo" checked type="text"
-                value="{{consejos}}">
-        </div>
-        {{/each}}
-        <div id="editar"  class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Editar</button>
+        <div id="contenedor">
+
+            <div id="titulo">
+                <p>Detalle Rutina</p>
+            </div>
+            {{#each lista}}
+            <label>Consejos: </label>
+            <div id="consejos">
+                <input name="consejos"id="consejo" checked type="text" value="{{consejos}}">
+            </div>
+            {{/each}}
+            <div id="editar">
+                <button type="submit">Editar</button>
+            </div>
         </div>
     </div>
+
 </form>

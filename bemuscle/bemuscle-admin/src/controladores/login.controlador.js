@@ -13,7 +13,7 @@ loginctl.mostrarRegistro = (req, res) => {
 }
 
 loginctl.login = passport.authenticate('local.signin', {
-    successRedirect: '/ejercicio/agregar/',
+    successRedirect: '/ejercicio/Agregar/1',
     failureRedirect: '/login',
     failureFlash: true,
 })
