@@ -147,8 +147,6 @@ input:focus {
 
 button {
     width: 100%;
-    background-color: #4CAF50;
-    /* Green */
     border: none;
     color: #f6fbfb;
     padding: 15px 32px;

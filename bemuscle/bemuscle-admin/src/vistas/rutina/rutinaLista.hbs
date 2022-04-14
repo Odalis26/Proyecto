@@ -1,21 +1,19 @@
-<link rel="stylesheet" href="/css/rutina/rutina.css">
+<link rel="stylesheet" href="/css/rutina/rutinaLista.css">
 <form action="/rutina/Lista/{{user.idUsuarios}}" method="get">
 </form>
 <div id="fondo">
-            <img src="/img/FondoF.png" alt="">
-        </div>
+    <img src="/img/FondoF.png" alt="">
+</div>
 
 <div id="contenido">
     <div class="row">
-
-
-
-
         {{#each lista}}
 
         <div id="tarjetas">
 
-
+            <div id="titulo">
+                <p>Rutinas N° {{rutina_id}}</p>
+            </div>
 
             <div id="video_rutinas">
                 <p> {{video_rutina}}</p>
@@ -39,12 +37,8 @@
             <div id="eliminar">
                 <a href="/rutina/Eliminar/{{rutina_id}}" type="button">Eliminar</a>
             </div>
-
-
         </div>
         {{/each}}
-
-
     </div>
 
 </div>

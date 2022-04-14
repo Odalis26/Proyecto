@@ -54,7 +54,7 @@
     border-top: 5px solid #fffafa;
     border-bottom: 5px solid #fffafa;
     border: 4px ridge #03f2fa;
-    padding: 2%;
+    padding: 5%;
     background-color: #111111;
 
 }
@@ -90,7 +90,7 @@
 /*letras*/
     {
     margin-top: -100%;
- margin-left: -40%;
+    margin-left: -40%;
 }
 
 #video_rutina
@@ -108,16 +108,16 @@
 /*letras*/
     {
     margin-top: 5%;
-margin-left: -40%;
+    margin-left: -40%;
 }
 
 #tiempo_rutina
 
 /*input*/
     {
-        margin-top: -7%;
+    margin-top: -7%;
     margin-left: 60%;
-     z-index: 1;
+    z-index: 1;
 }
 
 #descripcionc
@@ -162,10 +162,6 @@ margin-left: -40%;
 
     z-index: 1;
 }
-
-
-
-
 
 label {
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;

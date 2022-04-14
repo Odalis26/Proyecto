@@ -18,7 +18,6 @@ indexctl.verificar = async (req, res) => {
             await sql.query('insert into clasificaciones(nombre_clasificacion) values("CON PESAS")')
             await sql.query('insert into clasificaciones(nombre_clasificacion) values("DINÁMICOS")')
             await sql.query('insert into clasificaciones(nombre_clasificacion) values("FLEXIONES")')
-            await sql.query('CREATE  VIEW lista_proyectos AS SELECT p.*, d.* from proyectos p JOIN detalle_proyectos d ON d.proyectoProyectoId = p.proyecto_id')
         }
     }
     const subclasificacion = await sql.query('select * from sub_clasificaciones')

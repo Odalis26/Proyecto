@@ -5,7 +5,7 @@ input {
 }
 
 button {
-    background-color: #0662f7;
+    background-color: #023990;
     text-align: center;
     font-style: italic;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -13,6 +13,8 @@ button {
     border-radius: 20px;
     color: antiquewhite;
     display: block;
+    box-shadow: 0px 0px 5px #f2f6f6, 0px 0px 10px #f7fbfb;
+
 }
 
 button:focus {

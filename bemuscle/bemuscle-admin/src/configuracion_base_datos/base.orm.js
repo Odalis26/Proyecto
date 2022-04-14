@@ -15,16 +15,15 @@ mysql.createConnection({
 })
 
 const usuarioModelo = require('../modelos/usuario')
-const clasificacionModelo = require('../modelos/clasificacion')
+const proyectoModelo = require('../modelos/proyecto')
 const detalleEjercicioModelo = require('../modelos/detalle_ejercicio')
 const detalleRutinaModelo = require('../modelos/detalle_rutina')
 const ejercicioModelo = require('../modelos/ejercicio')
 const historialClienteModelo = require('../modelos/historial_cliente')
 const rutinaModelo = require('../modelos/rutina')
+const clasificacionModelo = require('../modelos/clasificacion')
 const subClasificacionModelo = require('../modelos/sub_clasificacion')
-const proyectoModelo = require('../modelos/proyecto')
-const detalleProyectoModelo = require('../modelos/detalle_proyecto')
-
+ 
 const sequelize = new Sequelize(
   'bemuscle',
   'root',
@@ -56,49 +55,42 @@ sequelize.sync({ force: false })
 
 
 const usuario = usuarioModelo(sequelize, Sequelize)
-const clasificacion= clasificacionModelo(sequelize, Sequelize)
+const proyecto= proyectoModelo(sequelize, Sequelize)
 const detalleEjercicio= detalleEjercicioModelo(sequelize, Sequelize)
 const detalleRutina= detalleRutinaModelo(sequelize, Sequelize)
 const ejercicio= ejercicioModelo(sequelize, Sequelize)
 const historialCliente= historialClienteModelo(sequelize, Sequelize)
 const rutina= rutinaModelo(sequelize, Sequelize)
+const clasificacion= clasificacionModelo(sequelize, Sequelize)
 const subClasificacion= subClasificacionModelo(sequelize, Sequelize)
-const proyecto= proyectoModelo(sequelize, Sequelize)
-const detalleProyecto= detalleProyectoModelo(sequelize, Sequelize)
 
-usuario.hasMany(ejercicio)
-ejercicio.belongsTo(usuario)
+usuario.hasMany(proyecto)
+proyecto.belongsTo(usuario)
 usuario.hasMany(rutina)
 rutina.belongsTo(usuario)
 usuario.hasMany(historialCliente)
 historialCliente.belongsTo(usuario)
 ejercicio.hasMany(rutina)
 rutina.belongsTo(ejercicio)
-ejercicio.hasMany(clasificacion)
-clasificacion.belongsTo(ejercicio)
+
 ejercicio.hasMany(historialCliente)
 historialCliente.belongsTo(ejercicio)
 ejercicio.hasMany(detalleEjercicio)
 detalleEjercicio.belongsTo(ejercicio)
 rutina.hasMany(detalleRutina)
 detalleRutina.belongsTo(rutina)
+ejercicio.hasMany(clasificacion)
+clasificacion.belongsTo(ejercicio)
 clasificacion.hasMany(subClasificacion)
 subClasificacion.belongsTo(clasificacion)
-proyecto.hasMany(detalleProyecto)
-detalleProyecto.belongsTo(proyecto)
-usuario.hasMany(proyecto)
-proyecto.belongsTo(usuario)
-
 
   module.exports = {
     usuario,
-    clasificacion,
     detalleEjercicio,
     detalleRutina,
     ejercicio,
     historialCliente,
     rutina,
-    subClasificacion,
     proyecto,
-    detalleProyecto
+    clasificacion
   }

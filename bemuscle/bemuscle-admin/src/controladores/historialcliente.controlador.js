@@ -4,20 +4,20 @@ const orm = require('../configuracion_base_datos/base.orm')
 
 const sql = require('../configuracion_base_datos/base.sql')
 
-historialclientectl.mostrar = (req, res) => {
+historialclientectl.mostrar = async (req, res) => {
     res.render('historialCliente/historialclienteAgregar');
 }
 
 historialclientectl.mandar = async (req, res) => {
 
     const id = req.user.idUsuarios
-    const { lesion_ocea, lesion_muscular, enfermedad_cardiovascular, actividad_deportiva, embarazo, enfermedad} = req.body
+    const { lesion_ocea, lesion_muscular, enfermedad_cardiovascular, actividad_deportiva, embarazo, enfermedad } = req.body
     const nuevoHistorialCliente = {
-        lesion_ocea, 
-        lesion_muscular, 
-        enfermedad_cardiovascular, 
-        actividad_deportiva, 
-        embarazo, 
+        lesion_ocea,
+        lesion_muscular,
+        enfermedad_cardiovascular,
+        actividad_deportiva,
+        embarazo,
         enfermedad,
         usuarioIdUsuarios: id
     }
@@ -52,16 +52,16 @@ historialclientectl.traer = async (req, res) => {
 historialclientectl.editar = async (req, res) => {
     const ids = req.user.idUsuarios
     const id = req.params.id
-    const { lesion_ocea, lesion_muscular, enfermedad_cardiovascular, actividad_deportiva, embarazo, enfermedad} = req.body
+    const { lesion_ocea, lesion_muscular, enfermedad_cardiovascular, actividad_deportiva, embarazo, enfermedad } = req.body
     const nuevoHistorialCliente = {
-        lesion_ocea, 
-        lesion_muscular, 
-        enfermedad_cardiovascular, 
-        actividad_deportiva, 
-        embarazo, 
+        lesion_ocea,
+        lesion_muscular,
+        enfermedad_cardiovascular,
+        actividad_deportiva,
+        embarazo,
         enfermedad
     }
-await sql.query('update historial_clientes set ? where historial_cliente_id = ?', [nuevoHistorialCliente,id])
+    await sql.query('update historial_clientes set ? where historial_cliente_id = ?', [nuevoHistorialCliente, id])
     req.flash('success', 'Se editó correctamente')
     res.redirect('/historialCliente/lista/' + ids);
 }

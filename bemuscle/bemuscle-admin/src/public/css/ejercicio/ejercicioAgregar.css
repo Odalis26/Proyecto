@@ -126,6 +126,35 @@
     left: 10%;
 }
 
+select {
+    width: 100%;
+    border-color: #006;
+    border-bottom-color: #006;
+    border-bottom-style: groove;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-width: 4px;
+    box-shadow: 0px 0px 5px #03f2fa, 0px 0px 10px #11eff7;
+
+}
+
+select:hover {
+    transition: .8s;
+    border-bottom-color: #00d9ff;
+    box-shadow: 0px 0px 5px #080808, 0px 0px 10px #050505;
+
+}
+
+select:focus {
+    transition: .8s;
+    background-color: #080808;
+    box-shadow: 0px 0px 5px #f4f8f8, 0px 0px 10px #f3f8f8;
+    border-bottom-color: #00d9ff;
+    color: #f4f8f8;
+}
+
+
 #agregar {
     position: absolute;
     top: 85%;
