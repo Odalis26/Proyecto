@@ -1,38 +1,50 @@
 <link rel="stylesheet" href="/css/rutina/rutina.css">
-<form action="/historialCliente/Lista/{{user.idUsuarios}}" method="get">
-
-    <div id="contenido">
-        <div>
-            {{#each lista}}
-            <div id="tarjetas" >
-                <div class="container">
-                    <div class="row">
-                        <div id="video_rutinas">
-                            <p> {{video_rutina}}</p>
-                        </div>
-
-                        <div id="tiempo_rutinas">
-                            <p> {{tiempo_rutina}}</p>
-                        </div>
-
-                        <div id="descripciones">
-                            <p> {{descripcion}}</p>
-                        </div>
-
-                        <div id="progresos">
-                            <p> {{progreso}}</p>
-                        </div>
-
-                        <div id="Editar">
-                            <a href="/rutina/Editar/{{rutina_id}}" type="button">Editar</a>
-                        </div>
-                        <div id="eliminar">
-                            <a href="/rutina/Eliminar/{{rutina_id}}" type="button">Eliminar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{/each}}
-        </div>
-    </div>
+<form action="/rutina/Lista/{{user.idUsuarios}}" method="get">
 </form>
+<div id="fondo">
+    <img src="/img/istockphoto-947343978-170667a.png" alt="">
+</div>
+
+<div id="contenido">
+    <div class="row">
+
+
+
+
+        {{#each lista}}
+
+        <div id="tarjetas">
+
+
+
+            <div id="video_rutinas">
+                <p> {{video_rutina}}</p>
+            </div>
+
+            <div id="tiempo_rutinas">
+                <p> {{tiempo_rutina}}</p>
+            </div>
+
+            <div id="descripciones">
+                <p> {{descripcion}}</p>
+            </div>
+
+            <div id="progresos">
+                <p> {{progreso}}</p>
+            </div>
+
+            <div id="Editar">
+                <a href="/rutina/Editar/{{rutina_id}}" type="button">Editar</a>
+            </div>
+            <div id="eliminar">
+                <a href="/rutina/Eliminar/{{rutina_id}}" type="button">Eliminar</a>
+            </div>
+
+
+        </div>
+        {{/each}}
+
+
+    </div>
+
+</div>

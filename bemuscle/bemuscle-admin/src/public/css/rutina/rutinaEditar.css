@@ -1,0 +1,219 @@
+#contenido{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#fondo {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0%;
+    background-color: #fffafa;
+
+}
+#fondo img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#img{
+    position: absolute;
+    top: 10%; 
+    left: 43%;
+    width: 100%;
+    height: 100%;
+    max-width: 23%;
+    max-height: 23%;
+}
+
+#img img{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#contenedor{
+    background-color: #fffafa;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    height: 100%;
+    max-width: 50%;
+    max-height: 60%;
+    left: 30%;
+    box-shadow: 0px 0px 40px #028a8f, 0px 0px 80px #07aab0;
+    text-align: center;
+    border-top: 5px solid #fffafa;
+    border-bottom: 5px solid #fffafa;
+    border: 4px ridge #03f2fa;
+    padding: 2%;
+    background-color: #111111;
+
+}
+#titulo {
+        text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+        color: #00ffff;
+        font-style: oblique;
+        font-size: 50px;
+        font-variant: small-caps;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        letter-spacing: 10px;
+        text-align: center;
+        margin-top: -7% ;
+}
+    
+#consejos{
+ position: absolute;
+    top: 53%;
+    width: 80%;
+    left: 10%; 
+}
+#editar {
+    position: absolute;
+    top: 84%;
+    width: 80%;
+    left: 10%;
+}
+#video
+
+/letras/
+    {
+    margin-top: -10%;
+ margin-left: -20%;
+}
+
+#video_rutina
+
+/input/
+    {
+    margin-left: 60%;
+    margin-top: -2%;
+
+    z-index: 1;
+}
+
+#tiempo
+
+/letras/
+    {
+    margin-top: -2%;
+margin-left: -18%;
+}
+
+#tiempo_rutina
+
+/input/
+    {
+        margin-top: 5%;
+    margin-left: 60%;
+     z-index: 1;
+}
+
+#descripcionc
+
+/letras/
+    {
+
+    margin-top: 7%;
+
+    margin-left: -22%;
+
+}
+
+#descripcion
+
+/input/
+    {
+    margin-top: 5%;
+
+    margin-left: 60%;
+    z-index: 1;
+}
+
+#progresoc
+
+/letras/
+    {
+
+    margin-top: 17%;
+
+    margin-left: -27%;
+
+}
+
+#progreso
+
+/input/
+    {
+    margin-top: 5%;
+
+    margin-left: 40%;
+
+    z-index: 1;
+}
+
+
+
+
+
+label{
+    position: absolute;
+    top: 33%;
+    width: 80%;
+    left: 10%;
+    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+    color: #fefefe;
+    font-style: oblique;
+    font-size: 30px;
+    font-variant: small-caps;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 10px;
+    text-align: center;
+
+}
+
+input {
+    width: 230px;
+    border-color: #006;
+    border-bottom-color: #006;
+    border-bottom-style: groove;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-width: 4px;
+    box-shadow: 0px 0px 5px #03f2fa, 0px 0px 10px #11eff7;
+
+}
+
+    input:hover {
+        transition: .8s;
+        border-bottom-color: #00d9ff;
+        box-shadow: 0px 0px 5px #080808, 0px 0px 10px #050505;
+    
+    }
+    
+    input:focus {
+        transition: .8s;
+        background-color: #080808;
+        box-shadow: 0px 0px 5px #f4f8f8, 0px 0px 10px #f3f8f8;
+        border-bottom-color: #00d9ff;
+        color: #f4f8f8;
+    }
+
+#boton{
+    position: absolute;
+    top: 70%;
+    width: 80%;
+    left: 10%; 
+}
+
+button{
+    width: 100%;
+}
