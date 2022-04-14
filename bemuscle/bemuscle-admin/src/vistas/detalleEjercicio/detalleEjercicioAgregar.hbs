@@ -1,17 +1,22 @@
-<link rel="stylesheet" href="/css/detalle_ejercicio/detalleEjercicio.css">
+<link rel="stylesheet" href="/css/detalle_ejercicio/detalleEjercicioAgregar.css">
 <form action="/detalleEjercicio/Agregar/{{user.idUsuarios}}" method="post">
-
     <div id="contenido">
-        <div id="titulo">
-            <p>Detalle Ejercicio</p>
+        <div id="fondo">
+            <img src="/img/111.png" alt="">
         </div>
-        <div id="consejos">
-            <label>Consejos:</label>
-            <input name="consejos" id="consejo" checked type="text">
+        <div id="contenedor">
+            <div id="titulo">
+                <p>Detalle Ejercicio</p>
+            </div>
+            <div id="comentario">
+                <label>Comentario:</label>
+                <input name="comentario" id="comentar" checked type="text">
+            </div>
+            <div id="agregar">
+                <button type="submit">Agregar</button>
+            </div>
         </div>
-        <div id="agregar">
-            <button type="submit">Agregar</button>
-        </div>
+
     </div>
 
 </form>

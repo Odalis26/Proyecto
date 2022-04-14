@@ -27,7 +27,7 @@ detalleEjercicioctl.listar = async (req, res) => {
 detalleEjercicioctl.eliminar = async (req, res) => {
     const id = req.params.id
     const ids = req.user.idUsuarios
-    await orm.detalleRutina.destroy({ where: { detalle_rutina_id: id } })
+    await orm.detalleEjercicio.destroy({ where: { detalle_ejercicio_id: id } })
     req.flash('success', 'Se eliminó correctamente')
     res.redirect('/detalleEjercicio/lista/' + ids);
 
@@ -47,13 +47,10 @@ detalleEjercicioctl.editar = async (req, res) => {
     const nuevoDetalleEjercicio = {
         comentario
     }
-    await orm.detalleEjercicio.findOne({ where: { detalle_ejercicio_id: id } })
-        .then(actualizardetalleEjercicio => {
-            actualizardetalleEjercicio.update(nuevoDetalleEjercicio)
-            req.flash('success', 'Se editó correctamente')
-
-            res.redirect('/detalleEjercicio/lista/' + ids);
-        })
+    await sql.query('update detalle_ejercicios set ? where detalle_ejercicio_id = ?', [nuevoDetalleEjercicio,id])
+    req.flash('success', 'Se editó correctamente')
+    res.redirect('/detalleEjercicio/lista/' + ids);
 }
+
 
 module.exports = detalleEjercicioctl

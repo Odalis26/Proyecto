@@ -1,19 +1,25 @@
-<link rel="stylesheet" href="/css/detalle_ejercicio/detalleEjercicio.css">
- {{#each lista}}
+<link rel="stylesheet" href="/css/detalle_ejercicio/detalleEjercicioEditar.css">
+{{#each lista}}
 <form action="/detalleEjercicio/Editar/{{detalle_ejercicio_id}}" method="post">
- {{/each}}
+    {{/each}}
     <div id="contenido">
-        <div id="titulo">
-            <p>Detalle Ejercicio</p>
+
+        <div id="fondo">
+            <img src="/img/111.png" alt="">
         </div>
-        {{#each lista}}
-        <div id="comentario">
-            <label>Comentario:</label>
-            <input name="comentarios" id="comentario" checked type="text" value="{{comentarios}}">
-        </div>
-        {{/each}}
-        <div id="editar">
-            <button type="submit">Editar</button>
+        <div id="contenedor">
+            <div id="titulo">
+                <p>Detalle Ejercicio</p>
+            </div>
+            {{#each lista}}
+            <div id="comentario">
+                <label>Comentario:</label>
+                <input name="comentario" id="comentar" checked type="text" value="{{comentario}}">
+            </div>
+            {{/each}}
+            <div id="editar">
+                <button type="submit">Editar</button>
+            </div>
         </div>
     </div>
 </form>

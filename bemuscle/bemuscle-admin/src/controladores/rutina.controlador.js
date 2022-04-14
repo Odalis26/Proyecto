@@ -4,14 +4,15 @@ const orm = require('../configuracion_base_datos/base.orm')
 
 const sql = require('../configuracion_base_datos/base.sql')
 
-rutinactl.mostrar = (req, res) => {
-    res.render('rutina/rutinaAgregar');
+rutinactl.mostrar = async(req, res) => {
+    const lista = await sql.query('select MAX(rutina_id)from rutinas ')
+    res.render('rutina/rutinaAgregar',{lista});
 }
 
 rutinactl.mandar = async (req, res) => {
 
     const id = req.user.idUsuarios
-    const { video_rutina, tiempo_rutina, descripcion, progreso} = req.body
+    const { video_rutina, tiempo_rutina, descripcion, progreso,consejos} = req.body
     const nuevaRutina = {
         video_rutina, 
         tiempo_rutina, 
@@ -20,6 +21,10 @@ rutinactl.mandar = async (req, res) => {
         usuarioIdUsuarios: id
     }
     await orm.rutina.create(nuevaRutina)
+    for (let i = 0; i < consejos.length; i++) {
+        await sql.query('insert into detalle_rutinas(consejos, rutinaRutinaId) values(?,?)', [consejos[i]])
+    }
+    
     req.flash('success', 'Se guardó correctamente')
 
     res.redirect('/rutina/lista/' + id);
@@ -28,7 +33,9 @@ rutinactl.mandar = async (req, res) => {
 rutinactl.listar = async (req, res) => {
     const id = req.user.idUsuarios
     const lista = await sql.query('select * from rutinas ')
-    res.render('rutina/rutinaLista', { lista })
+    const listaDetalleRutinas = await sql.query('select * from detalle_rutinas')
+
+    res.render('rutina/rutinaLista', { lista, listaDetalleRutinas })
 
 }
 
