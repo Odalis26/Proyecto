@@ -3,31 +3,31 @@
 <form action="/proyecto/Editar/{{proyecto_id}}" method="post">
     {{/each}}
     <div id="contenido">
-       <div id="fondo">
+        <div id="fondo">
             <img src="/img/FondoF.png" alt="">
         </div>
         <div id="contenedor">
+
             <div id="titulo">
                 <p>Proyecto</p>
             </div>
             {{#each lista}}
 
             <div id="nombre_proyecto">
-                <label>nombre: </label>
+                <label>Nombre: </label>
                 <input name="nombre_proyecto" id="nombre_proyectos" checked type="text" value="{{nombre_proyecto}}">
             </div>
             <div id="descripcion_proyecto">
                 <label>descripcion: </label>
-                <input name="descripcion_proyecto" id="descripcion_proyectos" checked type="text"
-                    value="{{descripcion_proyecto}}">
+                <input name="descripcion_proyecto" id="descripcion_proyectos" checked type="text" value="{{descripcion_proyecto}}">
             </div>
             <div id="mision">
-                <label>mision: </label>
-                <input name="mision" id="misiones" checked type="text" value="{{mision}}">
+                <label>Mision: </label>
+                <input name="mision" id="misionEs" checked type="text" value="{{mision}}">
             </div>
             <div id="vision">
-                <label>vision: </label>
-                <input name="vision" id="visiones" checked type="text" value="{{vision}}">
+                <label>Vision: </label>
+                <input name="vision" id="visions" checked type="text" value="{{vision}}">
             </div>
             {{/each}}
             <div id="editar">

@@ -1,41 +1,36 @@
 <link rel="stylesheet" href="/css/proyecto/proyectoLista.css">
 <form action="/proyecto/Lista/{{user.idUsuarios}}" method="get">
-</form>
-<div id="fondo">
-            <img src="/img/FondoF.png" alt="">
-        </div>
-<div id="contenido">
-    <div class="row">
-        {{#each lista}}
-        <div id="tarjetas">
-            <div id="titulo">
-                <p>Proyecto N° {{proyecto_id}}</p>
-            </div>
-            <div id="nombre_proyectos">
-                <p> {{nombre_proyecto}}</p>
-            </div>
-            <div id="descripcion_proyectos">
-                <p> {{descripcion_proyecto}}</p>
-            </div>
-            <div id="misiones">
-                <p> {{mision}}</p>
-            </div>
-            <div id="visiones">
-                <p> {{vision}}</p>
-            </div>
-            <div id="Editar">
-                <a href="/proyecto/Editar/{{proyecto_id}}" type="button">Editar</a>
-            </div>
-            <div id="eliminar">
-                <a href="/proyecto/Eliminar/{{proyecto_id}}" type="button">Eliminar</a>
-            </div>
-
-        </div>
-        {{/each}}
-        <!--      {{#each listaDetalle}}
-        <div id="objetivos">
-            <p> {{objetivo}}</p>
-        </div>
-        {{/each}}-->
+    <div id="fondo">
+        <img src="/img/FondoF.png" alt="">
     </div>
-</div>
+    <div id="contenido">
+        <div class="row">
+            {{#each lista}}
+            <div id="tarjetas">
+                <div id="titulo">
+                    <p>Proyecto N° {{proyecto_id}}</p>
+                </div>
+                <div id="nombre_proyecto">
+                    <p> {{nombre_proyecto}}</p>
+                </div>
+                <div id="descripcion_proyecto">
+                    <p> {{descripcion_proyecto}}</p>
+                </div>
+                <div id="mision">
+                    <p> {{mision}}</p>
+                </div>
+                <div id="vision">
+                    <p> {{vision}}</p>
+                </div>
+                <div id="Editar">
+                    <a href="/proyecto/Editar/{{proyecto_id}}" type="button">Editar</a>
+                </div>
+                <div id="eliminar" class="col">
+                    <a href="/proyecto/Eliminar/{{proyecto_id}}" type="button">Eliminar</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+</form>

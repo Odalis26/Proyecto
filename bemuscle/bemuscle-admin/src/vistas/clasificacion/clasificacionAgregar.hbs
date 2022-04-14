@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/clasificacion/clasificacion.css">
+<form action="/clasificacion/Agregar/{{user.idUsuarios}}" method="post">
+
+    <div id="contenido">
+        <div id="fondo">
+            <img src="/img/FondoF.png" alt="">
+        </div>
+        <div id="contenedor">
+            <div id="titulo">
+                <p>Clasificacion</p>
+            </div>
+
+            <div id="nombre_clasificacion">
+                <label>Nombre: </label>
+                <input name="nombre_clasificacion">
+            </div>
+
+            <div id="descripcion_clasificacion">
+                <label>Descripción: </label>
+                <input name="descripcion_clasificacion" id="descripcion_clasificaciones" checked type="text">
+            </div>
+            <div id="agregar">
+                <button type="submit">Agregar</button>
+            </div>
+        </div>
+    </div>
+
+</form>

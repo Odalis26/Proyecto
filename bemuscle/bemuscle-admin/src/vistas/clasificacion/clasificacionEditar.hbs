@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/css/clasificacion/clasificacionEditar.css">
+{{#each lista}}
+<form action="/clasificacion/Editar/{{clasificacion_id}}" method="post">
+    {{/each}}
+    <div id="contenido">
+        <div id="fondo">
+            <img src="/img/FondoF.png" alt="">
+        </div>
+        <div id="contenedor">
+
+            <div id="titulo">
+                <p>Clasificacion</p>
+            </div>
+            {{#each lista}}
+
+            <div id="nombre_clasificacion">
+                <label>Nombre: </label>
+                <input name="nombre_clasificacion" id="nombre_clasificaciones" checked type="text"
+                    value="{{nombre_clasificacion}}">
+            </div>
+
+            <div id="descripcion_clasificacion">
+                <label>Descripcion: </label>
+                <input name="descripcion_clasificacion" id="descripcion_clasificaciones" checked type="text"
+                    value="{{descripcion_clasificacion}}">
+            </div>
+            {{/each}}
+            <div id="editar">
+                <button type="submit">Editar</button>
+            </div>
+        </div>
+    </div>
+</form>

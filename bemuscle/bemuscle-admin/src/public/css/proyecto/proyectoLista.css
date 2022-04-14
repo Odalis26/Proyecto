@@ -31,7 +31,7 @@
     color: #f9faf9;
     width: 100%;
     height: auto;
-    max-width: 28%;
+    max-width: 20%;
     max-height: auto;
     background-color: #111;
     text-align: center;
@@ -59,18 +59,12 @@
 }
 
 #editar {
-    margin-left: 0%;
+    margin-left: 8%;
     position: absolute;
     color: #30e7e4;
     text-decoration: none;
 }
 
-#eliminar {
-    margin-left: 7%;
-    position: absolute;
-    color: #30e7e4;
-    text-decoration: none;
-}
 
 a {
     color: #30e7e4;
@@ -89,3 +83,4 @@ a:hover {
     border-bottom-color: #30e7e4;
     text-decoration: none;
 }
+

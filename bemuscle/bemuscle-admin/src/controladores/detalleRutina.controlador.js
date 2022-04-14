@@ -4,7 +4,7 @@ const orm = require('../configuracion_base_datos/base.orm')
 
 const sql = require('../configuracion_base_datos/base.sql')
 
-detalleRutinactl.mostrar = (req, res) => {
+detalleRutinactl.mostrar = async(req, res) => {
     res.render('detalleRutina/detalleRutinaAgregar');
 }
 

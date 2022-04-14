@@ -1,7 +1,8 @@
 form {
     padding: 0%;
 }
-#contenido{
+
+#contenido {
     width: 100%;
     height: 100%;
     max-width: 100%;
@@ -18,6 +19,7 @@ form {
     background-color: #fffafa;
 
 }
+
 #fondo img {
     width: 100%;
     height: 100%;
@@ -25,9 +27,9 @@ form {
     background-size: cover;
 }
 
-#img{
+#img {
     position: absolute;
-    top: 10%; 
+    top: 10%;
     left: 43%;
     width: 100%;
     height: 100%;
@@ -35,14 +37,14 @@ form {
     max-height: 23%;
 }
 
-#img img{
+#img img {
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#contenedor{
+#contenedor {
     background-color: #fffafa;
     position: absolute;
     top: 20%;
@@ -60,38 +62,41 @@ form {
     background-color: #111111;
 
 }
+
 #titulo {
-        text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
-        color: #00ffff;
-        font-style: oblique;
-        font-size: 30px;
-        font-variant: small-caps;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        letter-spacing: 10px;
-        text-align: center;
+    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+    color: #00ffff;
+    font-style: oblique;
+    font-size: 30px;
+    font-variant: small-caps;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 10px;
+    text-align: center;
 }
-    
-#descripcion_clasificacion{
- position: absolute;
+
+#descripcion_clasificacion {
+    position: absolute;
     top: 53%;
     width: 80%;
-    left: 10%; 
+    left: 10%;
 }
-#nombre_clasificacion{
+
+#nombre_clasificacion {
     position: absolute;
-       top: 28%;
-       width: 80%;
-       left: 10%; 
-   }
+    top: 28%;
+    width: 80%;
+    left: 10%;
+}
+
 #agregar {
     position: absolute;
     top: 80%;
     width: 80%;
     left: 10%;
-    
+
 }
 
-label{
+label {
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
     color: #fefefe;
     font-style: oblique;
@@ -117,32 +122,33 @@ input {
 
 }
 
-    input:hover {
-        transition: .8s;
-        border-bottom-color: #00d9ff;
-        box-shadow: 0px 0px 5px #080808, 0px 0px 10px #050505;
-    
-    }
-    
-    input:focus {
-        transition: .8s;
-        background-color: #080808;
-        box-shadow: 0px 0px 5px #f4f8f8, 0px 0px 10px #f3f8f8;
-        border-bottom-color: #00d9ff;
-        color: #f4f8f8;
-    }
+input:hover {
+    transition: .8s;
+    border-bottom-color: #00d9ff;
+    box-shadow: 0px 0px 5px #080808, 0px 0px 10px #050505;
 
-#boton{
+}
+
+input:focus {
+    transition: .8s;
+    background-color: #080808;
+    box-shadow: 0px 0px 5px #f4f8f8, 0px 0px 10px #f3f8f8;
+    border-bottom-color: #00d9ff;
+    color: #f4f8f8;
+}
+
+#boton {
     position: absolute;
     top: 70%;
     width: 80%;
-    left: 10%; 
-    
+    left: 10%;
+
 }
 
-button{
+button {
     width: 100%;
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
+    /* Green */
     border: none;
     color: #f6fbfb;
     padding: 15px 32px;
@@ -156,6 +162,7 @@ button{
     border: 2px solid #e2f8ec;
 
 }
+
 button:hover {
     transition: .8s;
     border-bottom-color: #a9afb0;
@@ -174,5 +181,5 @@ button:focus {
     color: #ede3ed;
     border: 2px solid #e2f8ec;
 
-    
+
 }

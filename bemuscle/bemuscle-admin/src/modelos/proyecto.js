@@ -1,5 +1,5 @@
-const proyecto = (sequelize, type) => {
-    return sequelize.define('proyectos',{
+const proyecto = (sequelize, type)=>{
+    return sequelize.define('proyectos', {
         proyecto_id: {
             type: type.INTEGER,
             primaryKey: true,
@@ -9,13 +9,12 @@ const proyecto = (sequelize, type) => {
         descripcion_proyecto: type.STRING(2500),
         mision: type.STRING(2500),
         vision: type.STRING(2500),
- 
-        creacionProyecto:{
+        creacionproyecto:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        actualizacionProyecto:{
+        actualizacionproyecto:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -25,4 +24,4 @@ const proyecto = (sequelize, type) => {
     })
 }
 
-module.exports = proyecto
+module.exports= proyecto
