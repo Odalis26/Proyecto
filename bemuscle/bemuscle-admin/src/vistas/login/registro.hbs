@@ -1,83 +1,62 @@
-<link rel="stylesheet" href="/css/registro/login.css">
+<link rel="stylesheet" href="/css/login/registro.css">
+<form action="/registro" method="post">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link href="assets/sticky-footer-navbar.css" rel="stylesheet">
-
-<div class="container formulario" id="contenido">
-    <div class="row">
-        <div align="center">
-            <a href="/bemuscle/xgym-master/index.html"><img src="img/ejecutivo_logo.png" class="logo center-block"></a>
+    <div id="contenido">
+      <div id="fondo">
+            <img src="/img/111.png" alt="">
         </div>
-    </div>
-    <div class="espaciado">
+        <div id="img">
+            <img src="/img/ejecutivo_logo.png" alt="">
+        </div>
 
-    </div>
-    <div class="row">
-        <fieldset class="col-xs-10 col-xs-offset-1">
-            <legend class="hidden-xs">
-                <h3>Registro</h3>
-            </legend>
-            <form action="/registro" method="post">
+        <div id="contenedor">
+            <div id="titulo">
+                <h1>Registro</h1>
+            </div>
 
-                <div class="form-group">
-                    <div id="username">
-                        <label class="col-xs-12">Nombre de usuario:</label>
-                        <div class="col-xs-10 col-xs-offset-1">
-                            <input name="username" id="nombreUsuario" class="form-control Input" checked type="text">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div id="password">
-                            <label class="col-xs-12">Contraseña:</label>
-                            <div class="col-xs-10 col-xs-offset-1">
-                                <input name="password" id="contraseña" class="form-control Input" checked type="password">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div id="cedula">
-                            <label class="col-xs-12">Cedula:</label>
-                            <div class="col-xs-10 col-xs-offset-1">
-                                <input name="cedula" id="Cedula" class="form-control Input" checked type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div id="nombre">
-                            <label class="col-xs-12">Nombre:</label>
-                            <div class="col-xs-10 col-xs-offset-1">
-                                <input name="nombre" id="Nombre" class="form-control Input" checked type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div id="apellido">
-                            <label class="col-xs-12">Apellido:</label>
-                            <div class="col-xs-10 col-xs-offset-1">
-                                <input name="apellido" id="Apellido" class="form-control Input" checked type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div id="edad">
-                            <label class="col-xs-12">Edad:</label>
-                            <div class="col-xs-10 col-xs-offset-1">
-                                <input name="edad" id="Edad" class="form-control Input" checked type="number">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div id="guardado">
-                            <button type="submit" class="btn btn-danger center-block">Guardar</button>
-                        </div>
-                    </div>
+            <div id="username">
+                <label id="usernames">Nombre de usuario:</label>
+                <input name="username" id="nombreUsuario" checked type="text">
+            </div>
+            <div id="password">
+                <label id="passwords">Contraseña:</label>
+                <input name="password" id="contraseña" checked type="password">
+
+            </div>
+            <div id="vista">
+                <div id="ojo1">
+                    <button type="button" onclick="boton.cambiar()"><img src="/img/ojo.png" alt=""></button>
                 </div>
-            </form>
-        </fieldset>
-        <div class="form-group">
-            <a style="background-color: rgb(0, 58, 102);padding: 3%;color:white;outline-color: none;text-decoration: none;"
-                href="signup.php">Reg&iacute;strate</a>
+                <div id="ojo2">
+                    <button type="button" onclick="boton.segundoCambio()"><img src="/img/ojo2.png" alt=""></button>
+                </div>
+            </div>
+            <div id="cedula">
+                <label id="cell">Cedula:</label>
+                <input name="cedula" id="cedulas" checked type="text">
+            </div>
+
+            <div id="nombre">
+                <label id="name">Nombre:</label>
+                <input name="nombre" id="nombres" checked type="text">
+            </div>
+
+            <div id="apellido">
+                <label>Apellido:</label>
+                <input name="apellido" id="apellidos" checked type="text">
+            </div>
+            <div id="edad">
+                <label>Edad:</label>
+                <input name="edad" id="edades" checked type="number">
+            </div>
+
+            <div id="guardado">
+                <button type="submit">Guardar</button>
+            </div>
+
         </div>
     </div>
-</div>
+
+</form>
+
+<script src="/js/ojos.js"></script>
