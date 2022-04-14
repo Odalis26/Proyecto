@@ -43,6 +43,7 @@
     padding-left: 3em;
     border: 1px ridge #fbfbfb;
     box-shadow: 0px 0px 5px #03f2fa, 0px 0px 10px #11eff7;
+    margin-bottom: 3%;
 
 }
 
@@ -89,4 +90,3 @@ a:hover {
     border-bottom-color: #30e7e4;
     text-decoration: none;
 }
-

@@ -51,7 +51,7 @@
     text-align: center;
 }
 
-#agregar {
+#editar {
     position: absolute;
     top: 90%;
     width: 80%;
@@ -86,7 +86,6 @@ button {
 
 
 #contenedor {
-    background-color: #fffafa;
     position: absolute;
     top: 5%;
     width: 100%;
@@ -104,9 +103,9 @@ button {
 
 h1 {
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
-    color: #f9fafa;
+    color: #05f0f0;
     font-style: oblique;
-    font-size: 25px;
+    font-size: 40px;
     font-variant: small-caps;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 10px;
@@ -115,6 +114,7 @@ h1 {
 
 
 label {
+    margin-top: 4%;
     text-shadow: 0px 0px 40px #f9fafa, 0px 0px 80px #f9fafa, 3px 3px 80px #f9fafa;
     color: #f6f8f8;
     font-style: oblique;
@@ -127,7 +127,7 @@ label {
 }
 
 input {
-
+    margin-top: 4%;
     border-bottom-color: #006;
     border-bottom-style: groove;
     border-left: none;
