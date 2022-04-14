@@ -52,5 +52,4 @@ detalleEjercicioctl.editar = async (req, res) => {
     res.redirect('/detalleEjercicio/lista/' + ids);
 }
 
-
 module.exports = detalleEjercicioctl
