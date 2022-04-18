@@ -33,7 +33,7 @@
     height: 100%;
     max-width: 100%;
     max-height: 100%;
-    background-color: transparent;
+    background-color: #111;
     text-align: center;
     animation-duration: 4s;
     animation-name: slidein;
@@ -58,6 +58,43 @@
     }
 }
 
+#nombre_proyecto {
+    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+    color: #00ffff;
+    font-style: oblique;
+    font-size: 70px;
+    font-variant: small-caps;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 10px;
+    text-align: center;
+}
+#descripcion_proyecto {
+    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+    color: #f5f8f8;
+    font-style: oblique;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 3px;
+    text-align: justify;
+}
+#mision {
+    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+    color: #f5f8f8;
+    font-style: oblique;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 3px;
+    text-align: justify;
+}
+#vision {
+    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+    color: #f5f8f8;
+    font-style: oblique;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 3px;
+    text-align: justify;
+}
 #editar {
     margin-left: 8%;
     position: absolute;
@@ -83,4 +120,3 @@ a:hover {
     border-bottom-color: #30e7e4;
     text-decoration: none;
 }
-

@@ -25,6 +25,7 @@
 .row {
     gap: 1.5%;
     row-gap: 20px;
+    justify-content: center;
 }
 
 #tarjetas {

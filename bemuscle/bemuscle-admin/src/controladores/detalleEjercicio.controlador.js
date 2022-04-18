@@ -6,15 +6,18 @@ detalleEjercicioctl.mostrar= async(req, res)=>{
     res.render('detalleEjercicio/detalleEjercicioAgregar')
 }
 detalleEjercicioctl.mandar = async (req, res) => {
+    const ids =req.params.id
     const id = req.user.idUsuarios
     const {  comentario } = req.body
     const nuevoDetalleEjercicio = {
-           comentario
+           comentario,
+           usuarioIdUsuarios: id,
+           ejercicioEjercicioId: ids
     }
     await orm.detalleEjercicio.create(nuevoDetalleEjercicio)
     req.flash('success', 'Se guardó correctamente')
 
-    res.redirect('/detalleEjercicio/lista/'+ id );
+    res.redirect('/detalleEjercicio/lista/'+ ids);
 }
 
 detalleEjercicioctl.listar = async (req, res) => {

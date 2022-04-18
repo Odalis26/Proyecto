@@ -1,6 +1,9 @@
 <link rel="stylesheet" href="/css/detalleRutina/detalleRutinaLista.css">
-<form action="/detalleRutina/Lista/{{user.idUsuarios}}" method="get">
+
+{{#each lista}}
+<form action="/detalleRutina/Lista/{{rutina_id}}" method="get">
 </form>
+{{/each}}
 <div id="fondo">
     <img src="/img/FondoF.png" alt="">
 </div>
@@ -18,6 +21,7 @@
             <div id="Editar">
                 <a href="/detalleRutina/Editar/{{detalle_rutina_id}}" type="button">Editar</a>
             </div>
+
             <div id="eliminar">
                 <a href="/detalleRutina/Eliminar/{{detalle_rutina_id}}" type="button">Eliminar</a>
             </div>
