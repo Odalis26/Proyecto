@@ -12,7 +12,7 @@ ejercicioctl.mostrar = async (req, res) => {
 }
 
 ejercicioctl.mandar = async (req, res) => {
-
+    const ids =req.params.id
     const id = req.user.idUsuarios
     const { nombre_ejercicio, descripcion, a, subclasificacion } = req.body
     const nuevoEjercicio = {
@@ -20,12 +20,13 @@ ejercicioctl.mandar = async (req, res) => {
         descripcion,
         clasificacioneClasificacionId: a,
         subClasificacioneSubClasificacionId: subclasificacion,
-        usuarioIdUsuarios: id
+        usuarioIdUsuarios: id,
+        calificacion: ids
     }
     await orm.ejercicio.create(nuevoEjercicio)
     req.flash('success', 'Se guardó correctamente')
 
-    res.redirect('/ejercicio/lista/' + id);
+    res.redirect('/ejercicio/lista/' + ids);
 }
 
 ejercicioctl.listar = async (req, res) => {
