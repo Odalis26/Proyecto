@@ -4,16 +4,26 @@ const mysql = require('mysql2/promise')
 const dbName = process.env.DB_SCHEMAS || "bemuscle";
 
 mysql.createConnection({
-    host: process.env.DB_HOST || "127.0.0.1",
-    port: process.env.DB_PORT || "3306",
-    user     : process.env.DB_USER || "root",
-    password : process.env.DB_PASSWORD || "",
-}).then( connection => {
-    connection.query(`CREATE DATABASE IF NOT EXISTS ${dbName};`).then((res) => {
-        console.info("Base de datos creada o comprobada correctamente");
-    })
+  host: process.env.DB_HOST || "127.0.0.1",
+  port: process.env.DB_PORT || "3306",
+  user: process.env.DB_USER || "root",
+  password: process.env.DB_PASSWORD || "",
+}).then(connection => {
+  connection.query(`CREATE DATABASE IF NOT EXISTS ${dbName};`).then((res) => {
+    console.info("Base de datos creada o comprobada correctamente");
+  })
 })
 
+const usuarioModelo = require('../modelos/usuario')
+const proyectoModelo = require('../modelos/proyecto')
+const detalleEjercicioModelo = require('../modelos/detalle_ejercicio')
+const detalleRutinaModelo = require('../modelos/detalle_rutina')
+const ejercicioModelo = require('../modelos/ejercicio')
+const historialClienteModelo = require('../modelos/historial_cliente')
+const rutinaModelo = require('../modelos/rutina')
+const clasificacionModelo = require('../modelos/clasificacion')
+const subClasificacionModelo = require('../modelos/sub_clasificacion')
+const clienteModelo = require('../modelos/cliente')
 
 const sequelize = new Sequelize(
   'bemuscle',
@@ -45,6 +55,48 @@ sequelize.sync({ force: false })
   })
 
 
+const usuario = usuarioModelo(sequelize, Sequelize)
+const proyecto = proyectoModelo(sequelize, Sequelize)
+const detalleEjercicio = detalleEjercicioModelo(sequelize, Sequelize)
+const detalleRutina = detalleRutinaModelo(sequelize, Sequelize)
+const ejercicio = ejercicioModelo(sequelize, Sequelize)
+const historialCliente = historialClienteModelo(sequelize, Sequelize)
+const rutina = rutinaModelo(sequelize, Sequelize)
+const clasificacion = clasificacionModelo(sequelize, Sequelize)
+const subClasificacion = subClasificacionModelo(sequelize, Sequelize)
+const cliente = clienteModelo(sequelize, Sequelize)
+
+usuario.hasMany(proyecto)
+proyecto.belongsTo(usuario)
+usuario.hasMany(rutina)
+rutina.belongsTo(usuario)
+usuario.hasMany(historialCliente)
+historialCliente.belongsTo(usuario)
+ejercicio.hasMany(rutina)
+rutina.belongsTo(ejercicio)
+
+ejercicio.hasMany(historialCliente)
+historialCliente.belongsTo(ejercicio)
+ejercicio.hasMany(detalleEjercicio)
+detalleEjercicio.belongsTo(ejercicio)
+rutina.hasMany(detalleRutina)
+detalleRutina.belongsTo(rutina)
+ejercicio.hasMany(clasificacion)
+clasificacion.belongsTo(ejercicio)
+clasificacion.hasMany(subClasificacion)
+subClasificacion.belongsTo(clasificacion)
+cliente.hasMany(historialCliente)
+historialCliente.belongsTo(cliente)
+
 module.exports = {
- 
+  usuario,
+  detalleEjercicio,
+  detalleRutina,
+  ejercicio,
+  historialCliente,
+  rutina,
+  proyecto,
+  clasificacion,
+  cliente,
+  subClasificacion
 }

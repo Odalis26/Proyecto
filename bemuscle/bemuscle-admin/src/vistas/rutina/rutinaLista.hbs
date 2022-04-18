@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="/css/rutina/rutinaLista.css">
-<form action="/rutina/Lista/{{user.idUsuarios}}" method="get">
-</form>
+{{#each lista}}
+<form action="/rutina/Lista/{{ejercicioEjercicioId}}" method="get"></form>
+{{/each}}
+
 <div id="fondo">
     <img src="/img/FondoF.png" alt="">
 </div>

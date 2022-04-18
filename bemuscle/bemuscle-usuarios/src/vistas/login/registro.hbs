@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="/css/login/registro.css">
+<form action="/registro" method="post">
+
+    <div id="contenido">
+      <div id="fondo">
+            <img src="/img/FondoF.png" alt="">
+        </div>
+        <div id="img">
+            <img src="/img/ejecutivo_logo.png" alt="">
+        </div>
+
+        <div id="contenedor">
+            <div id="titulo">
+                <h1>Registro</h1>
+            </div>
+
+            <div id="username">
+                <label id="usernames">Nombre de usuario:</label>
+                <input name="username" id="nombreUsuario" checked type="text">
+            </div>
+            <div id="password">
+                <label id="passwords">Contraseña:</label>
+                <input name="password" id="contraseña" checked type="password">
+
+            </div>
+            <div id="vista">
+                <div id="ojo1">
+                    <button type="button" onclick="boton.cambiar()"><img src="/img/ojo.png" alt=""></button>
+                </div>
+                <div id="ojo2">
+                    <button type="button" onclick="boton.segundoCambio()"><img src="/img/ojo2.png" alt=""></button>
+                </div>
+            </div>
+            <div id="cedula">
+                <label id="cell">Cedula:</label>
+                <input name="cedula" id="cedulas" checked type="text">
+            </div>
+
+            <div id="nombre">
+                <label id="name">Nombre:</label>
+                <input name="nombre" id="nombres" checked type="text">
+            </div>
+
+            <div id="apellido">
+                <label>Apellido:</label>
+                <input name="apellido" id="apellidos" checked type="text">
+            </div>
+            <div id="edad">
+                <label>Edad:</label>
+                <input name="edad" id="edades" checked type="number">
+            </div>
+
+            <div id="guardado">
+                <button type="submit">Guardar</button>
+            </div>
+
+        </div>
+    </div>
+
+</form>
+
+<script src="/js/ojos.js"></script>

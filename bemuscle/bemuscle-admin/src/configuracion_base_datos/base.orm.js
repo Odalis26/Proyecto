@@ -23,7 +23,8 @@ const historialClienteModelo = require('../modelos/historial_cliente')
 const rutinaModelo = require('../modelos/rutina')
 const clasificacionModelo = require('../modelos/clasificacion')
 const subClasificacionModelo = require('../modelos/sub_clasificacion')
- 
+const clienteModelo = require('../modelos/cliente')
+
 const sequelize = new Sequelize(
   'bemuscle',
   'root',
@@ -55,14 +56,15 @@ sequelize.sync({ force: false })
 
 
 const usuario = usuarioModelo(sequelize, Sequelize)
-const proyecto= proyectoModelo(sequelize, Sequelize)
-const detalleEjercicio= detalleEjercicioModelo(sequelize, Sequelize)
-const detalleRutina= detalleRutinaModelo(sequelize, Sequelize)
-const ejercicio= ejercicioModelo(sequelize, Sequelize)
-const historialCliente= historialClienteModelo(sequelize, Sequelize)
-const rutina= rutinaModelo(sequelize, Sequelize)
-const clasificacion= clasificacionModelo(sequelize, Sequelize)
-const subClasificacion= subClasificacionModelo(sequelize, Sequelize)
+const proyecto = proyectoModelo(sequelize, Sequelize)
+const detalleEjercicio = detalleEjercicioModelo(sequelize, Sequelize)
+const detalleRutina = detalleRutinaModelo(sequelize, Sequelize)
+const ejercicio = ejercicioModelo(sequelize, Sequelize)
+const historialCliente = historialClienteModelo(sequelize, Sequelize)
+const rutina = rutinaModelo(sequelize, Sequelize)
+const clasificacion = clasificacionModelo(sequelize, Sequelize)
+const subClasificacion = subClasificacionModelo(sequelize, Sequelize)
+const cliente = clienteModelo(sequelize, Sequelize)
 
 usuario.hasMany(proyecto)
 proyecto.belongsTo(usuario)
@@ -83,14 +85,18 @@ ejercicio.hasMany(clasificacion)
 clasificacion.belongsTo(ejercicio)
 clasificacion.hasMany(subClasificacion)
 subClasificacion.belongsTo(clasificacion)
+cliente.hasMany(historialCliente)
+historialCliente.belongsTo(cliente)
 
-  module.exports = {
-    usuario,
-    detalleEjercicio,
-    detalleRutina,
-    ejercicio,
-    historialCliente,
-    rutina,
-    proyecto,
-    clasificacion
-  }
+module.exports = {
+  usuario,
+  detalleEjercicio,
+  detalleRutina,
+  ejercicio,
+  historialCliente,
+  rutina,
+  proyecto,
+  clasificacion,
+  cliente,
+  subClasificacion
+}
