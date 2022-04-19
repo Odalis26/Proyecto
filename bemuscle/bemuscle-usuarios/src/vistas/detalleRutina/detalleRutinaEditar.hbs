@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/css/detalleRutina/detalleRutinaEditar.css">
+{{#each lista}}
+<form action="/detalleRutina/Editar/{{detalle_rutina_id}}" method="post">
+    {{/each}}
+    <div id="contenido">
+        <div id="fondo">
+            <img src="/img/FondoF.png" alt="">
+        </div>
+        <div id="contenedor">
+
+
+            <div id="titulo">
+                <p>Detalle Rutina</p>
+            </div>
+            {{#each lista}}
+            <label>Consejos: </label>
+            <div id="consejos">
+                <input name="consejos"id="consejo" checked type="text" value="{{consejos}}">
+            </div>
+            {{/each}}
+            <div id="editar">
+                <button type="submit">Editar</button>
+            </div>
+        </div>
+    </div>
+
+</form>

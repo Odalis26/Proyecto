@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/detalleRutina/detalleRutinaLista.css">
+
+{{#each lista}}
+<form action="/detalleRutina/Lista/{{rutina_id}}" method="get">
+</form>
+{{/each}}
+<div id="fondo">
+    <img src="/img/FondoF.png" alt="">
+</div>
+<div id="contenido">
+    <div class="row">
+        {{#each lista}}
+        <div id="tarjetas">
+            <div id="titulo">
+                <p>Consejos N° {{detalle_rutina_id}}</p>
+            </div>
+            <div id="consejo">
+                <p> {{consejos}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

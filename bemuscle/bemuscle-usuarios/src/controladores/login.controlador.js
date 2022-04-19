@@ -4,7 +4,7 @@ const sql = require('../configuracion_base_datos/base.sql')
 
 loginctl.mostrar = async(req, res) => {
     const id = req.params.id
-    const usuario= await sql.query('select * from clientes where idClientes=?',[id])
+    const usuario= await sql.query('select * from usuarios where idUsuarios=?',[id])
     res.render('login/login', {usuario});
 }
 
@@ -13,7 +13,7 @@ loginctl.mostrarRegistro = (req, res) => {
 }
 
 loginctl.login = passport.authenticate('local.signin', {
-    successRedirect: '/proyecto/agregar/',
+    successRedirect: '/ejercicio/lista/',
     failureRedirect: '/login',
     failureFlash: true,
 })

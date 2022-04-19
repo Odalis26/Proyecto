@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="/css/proyecto/proyectoLista.css">
+<form action="/proyecto/Lista/{{user.idUsuarios}}" method="get">
+    <div id="fondo">
+        <img src="/img/FondoF.png" alt="">
+    </div>
+    <div id="contenido">
+        <div class="row">
+            {{#each lista}}
+            <div id="tarjetas">
+                <div id="img">
+                    <img src="/img/ejecutivo_logo.png" alt="">
+                </div>
+                <div id="nombre_proyecto">
+                    <p> {{nombre_proyecto}}</p>
+                </div>
+                <div id="descripcion_proyecto">
+                    <p> {{descripcion_proyecto}}</p>
+                </div>
+                <div id="mision">
+                    <p id="misiones"> Mision</p>
+
+                    <p> {{mision}}</p>
+                </div>
+                <div id="vision">
+                    <p id="visiones"> Vision</p>
+                    <p> {{vision}}</p>
+                </div>
+                <div id="Editar">
+                    <a href="/proyecto/Editar/{{proyecto_id}}" type="button">Editar</a>
+                </div>
+                <div id="agregar" class="col">
+                    <a href="/ejercicio/Agregar/{{proyecto_id}}" type="button">Agregar Ejercicios</a>
+                </div>
+                <div id="eliminar" class="col">
+                    <a href="/proyecto/Eliminar/{{proyecto_id}}" type="button">Eliminar</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+</form>

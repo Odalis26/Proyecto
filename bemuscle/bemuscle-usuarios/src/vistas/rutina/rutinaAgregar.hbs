@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/rutina/rutinaAgregar.css">
+<form action="/rutina/Agregar/{{user.idUsuarios}}" method="post">
+
+    <div id="contenido">
+        <div id="fondo">
+            <img src="/img/FondoF.png" alt="">
+        </div>
+        <div id="contenedor">
+
+            <div id="titulo">
+                <p>Rutinas</p>
+            </div>
+            <label id="video">video rutina: </label>
+            <div id="video_rutina">
+                <input name="video_rutina" id="video_rutinas" checked type="text">
+            </div>
+
+            <label id="tiempo">tiempo rutina: </label>
+            <div id="tiempo_rutina">
+                <input name="tiempo_rutina" id="tiempo_rutinas" checked type="text">
+            </div>
+
+            <label id="descripcionc">descripcion: </label>
+            <div id="descripcion">
+                <input name="descripcion" id="descripciones" checked type="text">
+            </div>
+
+            <label id="progresoc">progreso: </label>
+            <div id="progreso">
+                <input name="progreso" id="progresos" checked type="text">
+            </div>
+
+            <div id="agregar">
+                <button type="submit">Agregar</button>
+            </div>
+        </div>
+    </div>
+</form>

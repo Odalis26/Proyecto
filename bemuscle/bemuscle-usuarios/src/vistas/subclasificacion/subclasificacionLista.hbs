@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/css/subclasificacion/subclasificacionLista.css">
+<form action="/subclasificacion/Lista/{{user.idUsuarios}}" method="get">
+<div id="fondo">
+            <img src="/img/FondoF.png" alt="">
+        </div>
+    <div id="contenido">
+        <div class="row">
+            {{#each lista}}
+            <div id="tarjetas">
+                <div id="titulo">
+                    <p>Categoria N° {{sub_clasificacion_id}}</p>
+                </div>
+                <div id="nombre_sub_clasificaciones">
+                    <p> {{nombre_sub_clasificacion}}</p>
+                </div>
+                <div id="descripcion_sub_clasificaciones">
+                    <p> {{descripcion_sub_clasificacion}}</p>
+                </div>
+                <div id="Editar">
+                    <a href="/subclasificacion/Editar/{{sub_clasificacion_id}}" type="button">Editar</a>
+                </div>
+                <div id="eliminar" class="col">
+                    <a href="/subclasificacion/Eliminar/{{sub_clasificacion_id}}" type="button">Eliminar</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+</form>

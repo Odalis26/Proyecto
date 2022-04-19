@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/css/detalle_ejercicio/detalleEjercicioLista.css">
+<form action="/detalleEjercicio/Lista/{{user.idUsuarios}}" method="get">
+</form>
+<div id="fondo">
+    <img src="/img/FondoF.png" alt="">
+</div>
+<div id="contenido">
+    <div class="row">
+        {{#each lista}}
+        <div id="tarjetas">
+            <div id="titulo">
+                <p>Detalle del Ejercicio {{detalle_ejercicio_id}}</p>
+            </div>
+
+            <div id="comentario">
+                <p> {{comentario}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/css/ejercicio/ejercicioLista.css">
+<form action="/ejercicio/Lista/{{user.idUsuarios}}" method="get">
+</form>
+<div id="fondo">
+    <img src="/img/FondoF.png" alt="">
+</div>
+<div id="contenido">
+    <div class="row">
+        {{#each lista}}
+        <div id="tarjetas">
+            <div id="nombre_ejercicios">
+                <p> {{nombre_ejercicio}}</p>
+            </div>
+            <div id="descripciones">
+                <p> {{descripcion}}</p>
+            </div>
+            <div id="calificaciones">
+                <p> {{calificacion}}</p>
+            </div>
+
+            <div id="Agregar_rutina">
+                <a href="/rutina/lista/{{ejercicio_id}}">Ver Rutina</a>
+            </div>
+            <div id="Agregar_rutina">
+                <a href="/detalleEjercicio/lista/{{ejercicio_id}}">Comentarios</a>
+            </div>
+
+        </div>
+        {{/each}}
+    </div>
+    <div id="Agregar">
+        <a href="/ejercicio/Agregar/{{user.idUsuarios}}">+</a>
+    </div>
+</div>

@@ -14,7 +14,7 @@ const app = express();
 require('./lib/passport');
 
 /// archivos compartidos
-app.set('port', process.env.PORT || 5000);
+app.set('port', process.env.PORT || 4000);
 app.set('views', path.join(__dirname, 'vistas'));
 app.engine('.hbs', exphbs({
     defaultLayout: 'main',
@@ -61,6 +61,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 //routers
 app.use(require('./rutas/index.ruta'))
 app.use(require('./rutas/login.ruta'))
+app.use('/ejercicio',require('./rutas/ejercicio.ruta'))
+app.use('/rutina',require('./rutas/rutina.ruta'))
+app.use('/detalleRutina',require('./rutas/detalleRutina.ruta'))
+app.use("/detalleEjercicio", require('./rutas/detalleEjercicio.ruta'))
 
 
 module.exports = app;

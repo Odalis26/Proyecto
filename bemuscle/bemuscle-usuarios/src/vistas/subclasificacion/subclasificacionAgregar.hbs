@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/css/subclasificacion/subclasificacion.css">
+<form action="/subclasificacion/Agregar/{{user.idUsuarios}}" method="post">
+
+    <div id="contenido">
+       <div id="fondo">
+            <img src="/img/FondoF.png" alt="">
+        </div>
+        <div id="contenedor">
+            <div id="titulo">
+                <p>Subclasificacion</p>
+            </div>
+
+            <div id="nombre_sub_clasificacion">
+                <label>Nombre: </label>
+                <input name="nombre_sub_clasificacion" id="nombre_sub_clasificaciones" checked type="text">
+            </div>
+
+            <div id="descripcion_sub_clasificacion">
+                <label>Descripción: </label>
+                <input name="descripcion_sub_clasificacion" id="descripcion_sub_clasificaciones" checked type="text">
+            </div>
+            <div id="agregar">
+                <button type="submit">Agregar</button>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/css/rutina/rutinaLista.css">
+{{#each lista}}
+<form action="/rutina/Lista/{{ejercicioEjercicioId}}" method="get"></form>
+{{/each}}
+
+<div id="fondo">
+    <img src="/img/FondoF.png" alt="">
+</div>
+
+<div id="contenido">
+    <div class="row">
+        {{#each lista}}
+
+        <div id="tarjetas">
+
+            <div id="titulo">
+                <p>Rutinas N° {{rutina_id}}</p>
+            </div>
+
+            <div id="video_rutinas">
+                <p> {{video_rutina}}</p>
+            </div>
+
+            <div id="tiempo_rutinas">
+                <p> {{tiempo_rutina}}</p>
+            </div>
+
+            <div id="descripciones">
+                <p> {{descripcion}}</p>
+            </div>
+
+            <div id="progresos">
+                <p> {{progreso}}</p>
+            </div>
+
+            <div id="Agregar">
+                <a href="/detalleRutina/Lista/{{rutina_id}}" type="button">Ver consejos</a>
+            </div>
+
+        </div>
+        {{/each}}
+    </div>
+
+</div>
