@@ -67,4 +67,5 @@ app.use('/detalleRutina',require('./rutas/detalleRutina.ruta'))
 app.use("/detalleEjercicio", require('./rutas/detalleEjercicio.ruta'))
 
 
+
 module.exports = app;
