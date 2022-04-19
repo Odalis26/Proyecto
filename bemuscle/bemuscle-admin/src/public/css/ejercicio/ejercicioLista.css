@@ -43,7 +43,7 @@
     padding-left: 3em;
     border: 1px ridge #fbfbfb;
     box-shadow: 0px 0px 5px #03f2fa, 0px 0px 10px #11eff7;
-
+    text-align: justify;
 }
 
 @keyframes slidein {
@@ -57,7 +57,10 @@
         width: 100%;
     }
 }
-
+#nombre_ejercicios {
+    text-shadow: 0px 0px 10px #f4f7f895, 0px 0px 20px #eff3f384, 3px 3px 30px #f0f5f6a7;
+    text-align: center;
+}
 #editar {
     margin-left: 0%;
     position: absolute;
@@ -90,6 +93,4 @@ a:hover {
     text-decoration: none;
 }
 
-a:focus{
-
-}
+a:focus {}

@@ -9,19 +9,17 @@ subClasificacionctl.mostrar = (req, res) => {
 }
 
 subClasificacionctl.mandar = async (req, res) => {
-    const ids =req.params.id
     const id = req.user.idUsuarios
     const { nombre_sub_clasificacion, descripcion_sub_clasificacion } = req.body
     const nuevoSubClasificacion = {
         nombre_sub_clasificacion,
         descripcion_sub_clasificacion,
         usuarioIdUsuarios: id,
-        clasificacioneClasificacionId: ids
     }
     await orm.subClasificacion.create(nuevoSubClasificacion)
     req.flash('success', 'Se guardó correctamente')
 
-    res.redirect('/subclasificacion/lista/' + ids);
+    res.redirect('/subclasificacion/lista/' + id);
 }
 
 subClasificacionctl.listar = async (req, res) => {

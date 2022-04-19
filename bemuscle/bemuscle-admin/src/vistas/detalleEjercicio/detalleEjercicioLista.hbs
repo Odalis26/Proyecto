@@ -9,19 +9,23 @@
         {{#each lista}}
         <div id="tarjetas">
             <div id="titulo">
-                <p>Detalle del Ejercicio {{detalle_ejercicio_id}}</p>
+                <p>Comentario {{detalle_ejercicio_id}}</p>
             </div>
 
             <div id="comentario">
                 <p> {{comentario}}</p>
             </div>
-            <div id="Eliminar">
-                <a href="/detalleEjercicio/Eliminar/{{detalle_ejercicio_id}}"> Eliminar</a>
-            </div>
+
             <div id="Editar">
                 <a href="/detalleEjercicio/Editar/{{detalle_ejercicio_id}}">Editar</a>
             </div>
+            <div id="Eliminar">
+                <a href="/detalleEjercicio/Eliminar/{{detalle_ejercicio_id}}"> Eliminar</a>
+            </div>
         </div>
         {{/each}}
+    </div>
+    <div id="Agregar">
+        <a href="/detalleEjercicio/Agregar/{{user.idUsuarios}}">+</a>
     </div>
 </div>

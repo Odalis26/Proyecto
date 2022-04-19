@@ -9,7 +9,6 @@ rutinactl.mostrar = (req, res) => {
 }
 
 rutinactl.mandar = async (req, res) => {
-    const ids =req.params.id
     const id = req.user.idUsuarios
     const { video_rutina, tiempo_rutina, descripcion, progreso} = req.body
     const nuevaRutina = {
@@ -18,12 +17,11 @@ rutinactl.mandar = async (req, res) => {
         descripcion, 
         progreso,
         usuarioIdUsuarios: id,
-        ejercicioEjercicioId : ids
     }
     await orm.rutina.create(nuevaRutina)
     req.flash('success', 'Se guardó correctamente')
 
-    res.redirect('/rutina/lista/' + ids);
+    res.redirect('/rutina/lista/' + id);
 }
 
 rutinactl.listar = async (req, res) => {

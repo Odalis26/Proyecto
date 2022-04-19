@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="/css/subclasificacion/subclasificacionLista.css">
 <form action="/subclasificacion/Lista/{{user.idUsuarios}}" method="get">
-<div id="fondo">
-            <img src="/img/FondoF.png" alt="">
-        </div>
+    <div id="fondo">
+        <img src="/img/FondoF.png" alt="">
+    </div>
     <div id="contenido">
         <div class="row">
             {{#each lista}}
@@ -25,6 +25,9 @@
             </div>
             {{/each}}
         </div>
+            <div id="Agregar">
+        <a href="/subclasificacion/Agregar/{{user.idUsuarios}}">+</a>
+    </div>
     </div>
 
 </form>

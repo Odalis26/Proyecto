@@ -10,13 +10,11 @@ detalleRutinactl.mostrar = async(req, res) => {
 
 detalleRutinactl.mandar = async (req, res) => {
     console.log(req)
-    const idss =req.params.id
     const id = req.user.idUsuarios
     const { consejos} = req.body
     const nuevoDetalleRutina = {
         consejos,
         usuarioIdUsuarios: id,
-        rutinaRutinaId: idss
     }
     await orm.detalleRutina.create(nuevoDetalleRutina)
     
@@ -24,7 +22,7 @@ detalleRutinactl.mandar = async (req, res) => {
     req.flash('success', 'Se guardó correctamente')
 
 
-    res.redirect('/detalleRutina/lista/' + idss);
+    res.redirect('/detalleRutina/lista/' + id);
 }
 
 detalleRutinactl.listar = async (req, res) => {
