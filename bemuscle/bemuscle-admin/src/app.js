@@ -69,6 +69,6 @@ app.use('/detalleRutina',require('./rutas/detalleRutina.ruta'))
 app.use('/subclasificacion',require('./rutas/subclasificacion.ruta'))
 app.use('/rutina',require('./rutas/rutina.ruta'))
 app.use('/proyecto',require('./rutas/proyecto.ruta'))
-
+app.use('/inicio',require('./rutas/inicio.ruta'))
 
 module.exports = app;
