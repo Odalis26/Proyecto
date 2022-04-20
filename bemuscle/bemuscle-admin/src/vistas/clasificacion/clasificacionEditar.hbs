@@ -3,7 +3,7 @@
 <form action="/clasificacion/Editar/{{clasificacion_id}}" method="post">
     {{/each}}
     <div id="img">
-        <img src="/img/ejecutivo_logo.png" alt="">
+        <a href="/proyecto/lista/{{user.idUsuarios}}"><img src="/img/ejecutivo_logo.png" alt=""></a>
     </div>
     <div id="contenido">
 
@@ -30,5 +30,14 @@
                 <button type="submit">Editar</button>
             </div>
         </div>
+
     </div>
+     <a href="/clasificacion/lista/1" />
+    <div class="icon">
+        <div class="arrow">
+
+        </div>
+
+    </div>
+    </a>
 </form>

@@ -1,3 +1,49 @@
+.icon {
+	position: relative;
+
+    margin-top: 500px;
+	left: 10%;
+	transform: translate(-50%,-50%);
+	width: 80px;
+	height: 60px;
+	cursor: pointer;
+	
+  }
+  
+  .arrow {
+	 
+	position: absolute;
+	top: 25px;
+	width: 90%;
+	height: 10px;
+	background-color: rgb(0, 0, 0);
+	box-shadow: 0px 0px 40px #028a8f, 0px 0px 80px #07aab0;
+	
+  }
+  
+  .arrow::after, .arrow::before {
+	content: '';
+	position: absolute;
+	width: 60%;
+	box-shadow: 0px 0px 40px #028a8f, 0px 0px 80px #07aab0;
+	
+	height: 10px;
+	right: 40px;
+	background-color: rgb(0, 0, 0);
+  }
+  
+  .arrow::after {
+	top: -12px;
+	transform: rotate(136deg);
+  }
+  
+  .arrow::before {
+	top: 12px;
+	box-shadow: 0px 0px 40px #028a8f, 0px 0px 80px #07aab0;
+
+	transform: rotate(-136deg);
+  }
+  
 body{
 	margin: 0px;
 	padding: 0px;
@@ -49,15 +95,17 @@ img {
 
 }
 #titulo {
-        text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
-        color: #00ffff;
-        font-style: oblique;
-        font-size: 50px;
-        font-variant: small-caps;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        letter-spacing: 10px;
-        text-align: center;
+    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+    color: #00ffff;
+    font-style: oblique;
+    font-size: 40px;
+    font-variant: small-caps;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 10px;
+    text-align: center;
+    margin-bottom: 10%;
 }
+
     
 #consejos{
  position: absolute;

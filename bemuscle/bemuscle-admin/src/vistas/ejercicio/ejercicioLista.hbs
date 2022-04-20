@@ -1,9 +1,15 @@
 <link rel="stylesheet" href="/css/ejercicio/ejercicioLista.css">
 <form action="/ejercicio/Lista/{{user.idUsuarios}}" method="get">
 </form>
+<<<<<<< HEAD
+<div id="img">
+    <img src="/img/ejecutivo_logo.png" alt="">
+</div>
+=======
     <div id="img">
-        <img src="/img/ejecutivo_logo.png" alt="">
+        <a href="/proyecto/lista/{{user.idUsuarios}}"><img src="/img/ejecutivo_logo.png" alt=""></a>
     </div>
+>>>>>>> adb3acd11339b7e26e11c0dc252044375a64d471
 <div id="contenido">
     <div class="row">
         {{#each lista}}
@@ -29,6 +35,7 @@
         </div>
         {{/each}}
     </div>
+
     <div id="Agregar">
         <a href="/ejercicio/Agregar/{{user.idUsuarios}}">+</a>
     </div>
