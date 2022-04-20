@@ -9,17 +9,18 @@ clasificacionctl.mostrar = (req, res) => {
 }
 
 clasificacionctl.mandar = async (req, res) => {
-
+    const ids =req.params.id
     const id = req.user.idUsuarios
     const { nombre_clasificacion, descripcion_clasificacion} = req.body
     const nuevoClasificacion = {
         nombre_clasificacion,
         descripcion_clasificacion,
-        usuarioIdUsuarios: id
+        usuarioIdUsuarios: id,
+        ejercicioEjercicioId: ids
     }
     await orm.clasificacion.create(nuevoClasificacion)
     req.flash('success', 'Se guardó correctamente')
-    res.redirect('/clasificacion/lista/' + id);
+    res.redirect('/clasificacion/lista/' + ids);
 }
 
 clasificacionctl.listar = async (req, res) => {
