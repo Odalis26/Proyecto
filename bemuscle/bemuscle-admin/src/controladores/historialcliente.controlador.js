@@ -9,7 +9,6 @@ historialclientectl.mostrar = async (req, res) => {
 }
 
 historialclientectl.mandar = async (req, res) => {
-    const ids =req.params.id
     const id = req.user.idUsuarios
     const { lesion_ocea, lesion_muscular, enfermedad_cardiovascular, actividad_deportiva, embarazo, enfermedad } = req.body
     const nuevoHistorialCliente = {
@@ -20,12 +19,11 @@ historialclientectl.mandar = async (req, res) => {
         embarazo,
         enfermedad,
         usuarioIdUsuarios: id,
-        ejercicioEjercicioId: ids
     }
     await orm.historialCliente.create(nuevoHistorialCliente)
     req.flash('success', 'Se guardó correctamente')
 
-    res.redirect('/historialCliente/lista/' + ids);
+    res.redirect('/historialCliente/lista/' + id);
 }
 
 historialclientectl.listar = async (req, res) => {
