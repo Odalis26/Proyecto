@@ -1,13 +1,14 @@
 <link rel="stylesheet" href="/css/navegacion.css">
 {{#if user}}
+<!--
 <nav>
   <div id="nav1">
-    <a  href="/rutina/lista/{{user.idUsuarios}}"> Rutina</a>
+    <a href="/rutina/lista/{{user.idUsuarios}}"> Rutina</a>
   </div>
   <div id="nav2">
     <a href="/detalleRutina/lista/{{user.idUsuarios}}"> Detalle Rutina</a>
   </div>
-    <div id="nav3">
+  <div id="nav3">
     <a href="/historialCliente/lista/{{user.idUsuarios}}"> Historial Cliente</a>
   </div>
   <div id="nav4">
@@ -27,3 +28,39 @@
   </div>
 </nav>
 {{/if}}
+-->
+<nav>
+
+  <ul class="menu">
+
+    <li> <a href="/historialCliente/lista/{{user.idUsuarios}}"> Historial Cliente</a>
+
+    </li>
+    <li> <a href="/rutina/lista/{{user.idUsuarios}}"> Rutina</a>
+      <ul class="menu-vertical">
+        <li> <a href="/detalleRutina/lista/{{user.idUsuarios}}"> Detalle Rutina</a></li>
+
+      </ul>
+    </li>
+    <li> <a href="/ejercicio/Lista/{{user.idUsuarios}}"> Ejercicios</a>
+      <ul class="menu-vertical">
+        <li> <a href="/detalleEjercicio/lista/{{user.idUsuarios}}"> Detalle Ejercicio</a></li>
+
+      </ul>
+
+    </li>
+    <li> <a href="/ejercicioMenu/Menu/"> Menu </a>
+      <ul class="menu-vertical">
+        <li> <a href="/ejercicioMenu/Menu/"> Menu del Ejercicio </a></li>
+      </ul>
+    </li>
+    
+    <li> <a href="/clasificacion/lista/{{user.idUsuarios}}"> Categorías</a>
+      <ul class="menu-vertical">
+        <li> <a href="/subclasificacion/lista/{{user.idUsuarios}}"> Beneficios</a></li>
+
+      </ul>
+    </li>
+    <li> <a href="/CerrarSecion">Cierre la Sesión</a></li>
+  </ul>
+</nav>

@@ -36,7 +36,7 @@
             <div id="Editar">
                 <a href="/rutina/Editar/{{rutina_id}}" type="button">Editar</a>
             </div>
-            <div id="Agregar">
+            <div id="Agregar-detalle">
                 <a href="/detalleRutina/Agregar/{{rutina_id}}" type="button">+Detalle Rutina</a>
             </div>
             <div id="eliminar">
@@ -45,5 +45,7 @@
         </div>
         {{/each}}
     </div>
-
+        <div id="Agregar">
+            <a  href="/rutina/Agregar/{{user.idUsuarios}}">+</a>
+        </div>
 </div>

@@ -1,3 +1,11 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	background: url("/img/FondoF.png");
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: 'Open sans', sans-serif;
+}
 #fondo {
     position: absolute;
     top: 0%;
