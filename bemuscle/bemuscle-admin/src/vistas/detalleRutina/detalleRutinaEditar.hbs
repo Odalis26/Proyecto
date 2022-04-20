@@ -2,7 +2,7 @@
 {{#each lista}}
 <form action="/detalleRutina/Editar/{{detalle_rutina_id}}" method="post">
     {{/each}}
-        <div id="img">
+    <div id="img">
         <img src="/img/ejecutivo_logo.png" alt="">
     </div>
     <div id="contenido">
@@ -16,13 +16,21 @@
             {{#each lista}}
             <label>Consejos: </label>
             <div id="consejos">
-                <input name="consejos"id="consejo" checked type="text" value="{{consejos}}">
+                <input name="consejos" id="consejo" checked type="text" value="{{consejos}}">
             </div>
             {{/each}}
             <div id="editar">
                 <button type="submit">Editar</button>
             </div>
         </div>
-    </div>
 
+    </div>
+    <a href="/detalleRutina/lista/{{user.idUsuarios}}" />
+    <div class="icon">
+        <div class="arrow">
+
+        </div>
+
+    </div>
+    </a>
 </form>
