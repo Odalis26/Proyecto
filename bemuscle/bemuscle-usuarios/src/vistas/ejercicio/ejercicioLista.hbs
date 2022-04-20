@@ -1,32 +1,9 @@
 <link rel="stylesheet" href="/css/ejercicio/ejercicioLista.css">
-<nav>
-		<ul class="menu-horizontal">
-			<li><a href="#">Inicio</a></li>
-			<li>
-				<a href="#">Cursos</a>
-				<ul class="menu-vertical">
-					<li><a href="#">Html</a></li>
-					<li><a href="#">Css</a></li>
-					<li><a href="#">Javascript</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="#">Inscripción</a>
-				<ul class="menu-vertical">
-					<li><a href="#">Anual</a></li>
-					<li><a href="#">Mensual</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Contacto</a></li>
-
-		</ul>
-	</nav>
-</iframe>
 <form action="/ejercicio/Lista/{{user.idUsuarios}}" method="get">
 </form>
-    <div id="img">
-        <img src="/img/ejecutivo_logo.png" alt="">
-    </div>
+<div id="img">
+    <img src="/img/ejecutivo_logo.png" alt="">
+</div>
 <div id="contenido">
     <div class="row">
         {{#each lista}}
@@ -40,19 +17,14 @@
             <div id="calificaciones">
                 <p> {{calificacion}}</p>
             </div>
-            <div id="Eliminar">
-                <a href="/ejercicio/Eliminar/{{ejercicio_id}}"> Eliminar</a>
+            <div id="detalleE">
+                <a href="/detalleEjercicio/lista/' + ids" type="button">Comentarios </a>
             </div>
-            <div id="Agregar_rutina">
-                <a href="/rutina/Agregar/{{ejercicio_id}}">+Rutina</a>
-            </div>
-            <div id="Editar">
-                <a href="/ejercicio/Editar/{{ejercicio_id}}">Editar</a>
+            <div id="Ver">
+                <a href="/ejercicioMenu/Menu/" type="button">Tipos de Ejercicios </a>
             </div>
         </div>
         {{/each}}
     </div>
-    <div id="Agregar">
-        <a href="/ejercicio/Agregar/{{user.idUsuarios}}">+</a>
-    </div>
+
 </div>
