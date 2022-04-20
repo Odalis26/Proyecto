@@ -59,8 +59,9 @@
 #titulo {
         text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
         color: #00ffff;
+
         font-style: oblique;
-        font-size: 50px;
+        font-size: 30px;
         font-variant: small-caps;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         letter-spacing: 10px;

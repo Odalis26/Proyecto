@@ -11,11 +11,11 @@ rutinactl.mostrar = (req, res) => {
 rutinactl.mandar = async (req, res) => {
 
     const id = req.user.idUsuarios
-    const { video_rutina, tiempo_rutina, descripcion, progreso} = req.body
+    const { video_rutina, tiempo_rutina, descripcion, progreso } = req.body
     const nuevaRutina = {
-        video_rutina, 
-        tiempo_rutina, 
-        descripcion, 
+        video_rutina,
+        tiempo_rutina,
+        descripcion,
         progreso,
         usuarioIdUsuarios: id
     }
@@ -50,14 +50,14 @@ rutinactl.traer = async (req, res) => {
 rutinactl.editar = async (req, res) => {
     const ids = req.user.idUsuarios
     const id = req.params.id
-    const { video_rutina, tiempo_rutina, descripcion, progreso} = req.body
+    const { video_rutina, tiempo_rutina, descripcion, progreso } = req.body
     const nuevaRutina = {
-        video_rutina, 
-        tiempo_rutina, 
-        descripcion, 
+        video_rutina,
+        tiempo_rutina,
+        descripcion,
         progreso,
     }
-await sql.query('update rutinas set ? where rutina_id = ?', [nuevaRutina,id])
+    await sql.query('update rutinas set ? where rutina_id = ?', [nuevaRutina, id])
     req.flash('success', 'Se editó correctamente')
     res.redirect('/rutina/lista/' + ids);
 }

@@ -6,18 +6,15 @@ detalleEjercicioctl.mostrar= async(req, res)=>{
     res.render('detalleEjercicio/detalleEjercicioAgregar')
 }
 detalleEjercicioctl.mandar = async (req, res) => {
-    const ids =req.params.id
     const id = req.user.idUsuarios
     const {  comentario } = req.body
     const nuevoDetalleEjercicio = {
-           comentario,
-           usuarioIdUsuarios: id,
-           ejercicioEjercicioId: ids
+           comentario
     }
     await orm.detalleEjercicio.create(nuevoDetalleEjercicio)
     req.flash('success', 'Se guardó correctamente')
 
-    res.redirect('/detalleEjercicio/lista/'+ ids);
+    res.redirect('/detalleEjercicio/lista/'+ id );
 }
 
 detalleEjercicioctl.listar = async (req, res) => {
@@ -30,7 +27,7 @@ detalleEjercicioctl.listar = async (req, res) => {
 detalleEjercicioctl.eliminar = async (req, res) => {
     const id = req.params.id
     const ids = req.user.idUsuarios
-    await orm.detalleEjercicio.destroy({ where: { detalle_ejercicio_id: id } })
+    await orm.detalleRutina.destroy({ where: { detalle_rutina_id: id } })
     req.flash('success', 'Se eliminó correctamente')
     res.redirect('/detalleEjercicio/lista/' + ids);
 
@@ -50,10 +47,13 @@ detalleEjercicioctl.editar = async (req, res) => {
     const nuevoDetalleEjercicio = {
         comentario
     }
-    await sql.query('update detalle_ejercicios set ? where detalle_ejercicio_id = ?', [nuevoDetalleEjercicio,id])
-    req.flash('success', 'Se editó correctamente')
-    res.redirect('/detalleEjercicio/lista/' + ids);
-}
+    await orm.detalleEjercicio.findOne({ where: { detalle_ejercicio_id: id } })
+        .then(actualizardetalleEjercicio => {
+            actualizardetalleEjercicio.update(nuevoDetalleEjercicio)
+            req.flash('success', 'Se editó correctamente')
 
+            res.redirect('/detalleEjercicio/lista/' + ids);
+        })
+}
 
 module.exports = detalleEjercicioctl

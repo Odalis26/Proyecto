@@ -4,27 +4,22 @@ const orm = require('../configuracion_base_datos/base.orm')
 
 const sql = require('../configuracion_base_datos/base.sql')
 
-detalleRutinactl.mostrar = async(req, res) => {
+detalleRutinactl.mostrar = (req, res) => {
     res.render('detalleRutina/detalleRutinaAgregar');
 }
 
 detalleRutinactl.mandar = async (req, res) => {
-    console.log(req)
-    const idss =req.params.id
+
     const id = req.user.idUsuarios
     const { consejos} = req.body
     const nuevoDetalleRutina = {
         consejos,
-        usuarioIdUsuarios: id,
-        rutinaRutinaId: idss
+        usuarioIdUsuarios: id
     }
     await orm.detalleRutina.create(nuevoDetalleRutina)
-    
-
     req.flash('success', 'Se guardó correctamente')
 
-
-    res.redirect('/detalleRutina/lista/' + idss);
+    res.redirect('/detalleRutina/lista/' + id);
 }
 
 detalleRutinactl.listar = async (req, res) => {
