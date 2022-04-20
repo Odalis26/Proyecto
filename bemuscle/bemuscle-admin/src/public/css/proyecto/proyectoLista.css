@@ -1,11 +1,13 @@
-body{
-	margin: 0px;
-	padding: 0px;
-	background: url("/img/FondoF.png");
-	background-size: cover;
-	background-attachment: fixed;
-	font-family: 'Open sans', sans-serif;
-}#img {
+body {
+    margin: 0px;
+    padding: 0px;
+    background: url("/img/FondoF.png");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Open sans', sans-serif;
+}
+
+#img {
     position: absolute;
     top: 2%;
     left: 9.5%;
@@ -23,19 +25,20 @@ body{
     background-attachment: fixed;
 
 }
+
 #contenido {
     position: absolute;
-    top: 5%;
-    left: 3%;
+    top: 30%;
+    left: 0%;
     width: 94%;
     height: auto;
+
 }
 
 .row {
     gap: 1.5%;
     row-gap: 20px;
     justify-content: center;
-
 }
 
 #tarjetas {
@@ -44,7 +47,7 @@ body{
     height: 10%;
     max-width: 90%;
     max-height: 10%;
-    background-color: #111;
+    background-color: #0f0f0f65;
     text-align: center;
     animation-duration: 4s;
     animation-name: slidein;
@@ -53,7 +56,7 @@ body{
     padding-bottom: 2em;
     padding-left: 3em;
     border: 1px ridge #fbfbfb;
-    box-shadow: 0px 0px 5px #03f2fa, 0px 0px 10px #11eff7;
+    box-shadow: 0px 0px 5px #f1f7f7, 0px 0px 10px #e7eded;
 
 }
 
@@ -71,7 +74,7 @@ body{
 
 
 #nombre_proyecto {
-    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+    text-shadow: 0px 0px 1px #03f2fa, 0px 0px 2px #11eff7, 0px 0px 2px #11eff7;
     color: #00ffff;
     font-style: oblique;
     font-size: 70px;
@@ -80,8 +83,8 @@ body{
     letter-spacing: 10px;
     text-align: center;
 }
+
 #descripcion_proyecto {
-    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
     color: #f5f8f8;
     font-style: oblique;
     font-size: 20px;
@@ -89,8 +92,8 @@ body{
     letter-spacing: 3px;
     text-align: justify;
 }
+
 #mision {
-    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
     color: #f5f8f8;
     font-style: oblique;
     font-size: 20px;
@@ -99,8 +102,8 @@ body{
     text-align: justify;
 
 }
+
 #vision {
-    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
     color: #f5f8f8;
     font-style: oblique;
     font-size: 20px;
@@ -111,18 +114,10 @@ body{
 
 
 }
+
 #misiones {
-    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
-    color: #00ffff;
-    font-style: oblique;
-    font-size: 30px;
-    font-variant: small-caps;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: 10px;
-    text-align: center;
-}#visiones {
-    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
-    color: #00ffff;
+    text-shadow: 0px 0px 1px #03f2fa, 0px 0px 2px #11eff7, 0px 0px 2px #11eff7;
+    color: #f3f7f7;
     font-style: oblique;
     font-size: 30px;
     font-variant: small-caps;
@@ -130,9 +125,21 @@ body{
     letter-spacing: 10px;
     text-align: center;
 }
+
+#visiones {
+    text-shadow: 0px 0px 1px #03f2fa, 0px 0px 2px #11eff7, 0px 0px 2px #11eff7;
+    color: #f8f9f9;
+    font-style: oblique;
+    font-size: 30px;
+    font-variant: small-caps;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
 #editar {
     margin-left: 8%;
-    color: #30e7e4;
+    color: #058c8a;
     text-decoration: none;
     position: relative;
     bottom: 19.8em;
