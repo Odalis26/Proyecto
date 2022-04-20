@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .icon {
 	position: relative;
 
@@ -51,15 +51,7 @@ body{
 	background-size: cover;
 	background-attachment: fixed;
 	font-family: 'Open sans', sans-serif;
-=======
-body {
-    margin: 0px;
-    padding: 0px;
-    background: url("/img/FondoF.png");
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: 'Open sans', sans-serif;
->>>>>>> adb3acd11339b7e26e11c0dc252044375a64d471
+
 }
 
 #contenido {
