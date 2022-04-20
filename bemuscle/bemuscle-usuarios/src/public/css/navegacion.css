@@ -273,7 +273,7 @@ nav {
 
 .menu-vertical {
     position: absolute;
-    background-color: rgb(0, 0, 0, .5);
+    background-color: #08080879;
     display: none;
     list-style: none;
     width: 165px;
@@ -286,7 +286,7 @@ nav {
 }
 
 .menu-vertical li:hover {
-    background-color:  #171c36;
+    background-color:  #000415;
 }
 
 .menu-vertical li a {

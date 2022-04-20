@@ -14,6 +14,15 @@
 
 }
 
+body{
+	margin: 0px;
+	padding: 0px;
+	background: url("/img/FondoF.png");
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: 'Open sans', sans-serif;
+}
+
 #titulo {
 	text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
 	color: #00ffff;
