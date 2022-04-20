@@ -5,48 +5,45 @@
         <img src="/img/ejecutivo_logo.png" alt="">
     </div>
 
-<div id="contenido">
+    <div id="contenido">
 
-    <div class="row">
-        {{#each lista}}
-        <div id="tarjetas">
-            <div id="titulo">
-                <h1>Historial Cliente {{historial_cliente_id}}</h1>
-            </div>
+        <div class="row">
+            {{#each lista}}
+            <div id="tarjetas">
+                <div id="titulo">
+                    <h1>Historial Cliente {{historial_cliente_id}}</h1>
+                </div>
 
-            <div id="lesion_ocea">
-                <p> {{lesion_ocea}}</p>
-            </div>
+                <div id="lesion_ocea">
+                    <p> {{lesion_ocea}}</p>
+                </div>
 
-            <div id="lesion_muscular">
-                <p> {{lesion_muscular}}</p>
-            </div>
+                <div id="lesion_muscular">
+                    <p> {{lesion_muscular}}</p>
+                </div>
 
-            <div id="enfermedad_cardiovascular">
-                <p> {{enfermedad_cardiovascular}}</p>
-            </div>
+                <div id="enfermedad_cardiovascular">
+                    <p> {{enfermedad_cardiovascular}}</p>
+                </div>
 
-            <div id="actividad_deportiva">
-                <p> {{actividad_deportiva}}</p>
-            </div>
+                <div id="actividad_deportiva">
+                    <p> {{actividad_deportiva}}</p>
+                </div>
 
-            <div id="embarazo">
-                <p> {{embarazo}}</p>
-            </div>
+                <div id="embarazo">
+                    <p> {{embarazo}}</p>
+                </div>
 
-            <div id="enfermedad">
-                <p> {{enfermedad}}</p>
-            </div>
+                <div id="enfermedad">
+                    <p> {{enfermedad}}</p>
+                </div>
 
-            <div id="Editar">
-                <a href="/historialCliente/Editar/{{historial_cliente_id}}" type="button">Editar</a>
+               
+
+
             </div>
-            <div id="eliminar">
-                <a href="/historialCliente/Eliminar/{{historial_cliente_id}}" type="button">Eliminar</a>
-            </div>
+            {{/each}}
         </div>
-
+      
     </div>
-    {{/each}}
-
-</div>
+</form>

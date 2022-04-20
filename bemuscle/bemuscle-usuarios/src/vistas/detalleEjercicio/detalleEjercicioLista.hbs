@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="/css/detalle_ejercicio/detalleEjercicioLista.css">
 <form action="/detalleEjercicio/Lista/{{user.idUsuarios}}" method="get">
 </form>
-    <div id="img">
-        <img src="/img/ejecutivo_logo.png" alt="">
-    </div>
+<div id="img">
+    <img src="/img/ejecutivo_logo.png" alt="">
+</div>
 <div id="contenido">
     <div class="row">
         {{#each lista}}
@@ -15,16 +15,9 @@
             <div id="comentario">
                 <p> {{comentario}}</p>
             </div>
-            <div id="Eliminar">
-                <a href="/detalleEjercicio/Eliminar/{{detalle_ejercicio_id}}"> Eliminar</a>
-            </div>
-            <div id="Editar">
-                <a href="/detalleEjercicio/Editar/{{detalle_ejercicio_id}}">Editar</a>
-            </div>
+
         </div>
         {{/each}}
     </div>
-    <div id="Agregar">
-        <a href="/detalleEjercicio/Agregar/{{user.idUsuarios}}">+</a>
-    </div>
+
 </div>
