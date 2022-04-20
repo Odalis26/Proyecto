@@ -145,7 +145,15 @@ body {
     bottom: 19.8em;
 }
 
-
+#Agregar {
+    position: absolute;
+    top: 90%;
+    width: 3%;
+    height: 1%;
+    left: 95%;
+    font-size: 58px;
+    background-color: #111;
+}
 a {
     color: #30e7e4;
     border: 1px solid #333333;

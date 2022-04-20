@@ -78,7 +78,15 @@ body {
     color: #30e7e4;
     text-decoration: none;
 }
-
+#Agregar {
+    position: absolute;
+    top: 90%;
+    width: 3%;
+    height: 1%;
+    left: 95%;
+    font-size: 58px;
+    background-color: #111;
+}
 
 a {
     color: #30e7e4;
