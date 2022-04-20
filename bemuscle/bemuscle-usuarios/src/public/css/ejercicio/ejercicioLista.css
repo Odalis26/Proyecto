@@ -27,14 +27,18 @@
     row-gap: 20px;
 }
 
+#nombre_ejercicios {
+    text-align: center;
+}
+
 #tarjetas {
     color: #f9faf9;
-    width: 80%;
+    width: 100%;
     height: auto;
-    max-width: 18%;
+    max-width: 25%;
     max-height: auto;
     background-color: #111;
-    text-align: center;
+    text-align: justify;
     animation-duration: 4s;
     animation-name: slidein;
     padding-top: 2em;
@@ -88,8 +92,4 @@ a:hover {
     border-right-width: 20px;
     border-bottom-color: #30e7e4;
     text-decoration: none;
-}
-
-a:focus{
-
 }

@@ -1,12 +1,12 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-const exphbs = require('express-handlebars');
+const exphbs = require('express-handlebars')
 const session = require('express-session');
 const passport = require('passport');
 const flash = require('connect-flash'); 
 const mysqlstore = require('express-mysql-session')(session);
-const bodyparser = require('body-parser');
+const bodyparser = require('body-parser'); 
 
 const { database } = require('./keys'); 
 
@@ -62,10 +62,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('./rutas/index.ruta'))
 app.use(require('./rutas/login.ruta'))
 app.use('/ejercicio',require('./rutas/ejercicio.ruta'))
-app.use('/rutina',require('./rutas/rutina.ruta'))
-app.use('/detalleRutina',require('./rutas/detalleRutina.ruta'))
+app.use('/clasificacion',require('./rutas/clasificacion.ruta'))
 app.use("/detalleEjercicio", require('./rutas/detalleEjercicio.ruta'))
-
+app.use("/historialCliente", require('./rutas/historialCliente.ruta'))
+app.use('/detalleRutina',require('./rutas/detalleRutina.ruta'))
+app.use('/subclasificacion',require('./rutas/subclasificacion.ruta'))
+app.use('/rutina',require('./rutas/rutina.ruta'))
+app.use('/proyecto',require('./rutas/proyecto.ruta'))
+app.use('/ejercicioMenu',require('./rutas/ejercicioMenu.ruta'))
 
 
 module.exports = app;
