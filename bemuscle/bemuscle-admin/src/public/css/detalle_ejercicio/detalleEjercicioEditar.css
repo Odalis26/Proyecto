@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .icon {
 	position: relative;
 
@@ -50,7 +51,17 @@ body{
 	background-size: cover;
 	background-attachment: fixed;
 	font-family: 'Open sans', sans-serif;
+=======
+body {
+    margin: 0px;
+    padding: 0px;
+    background: url("/img/FondoF.png");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Open sans', sans-serif;
+>>>>>>> adb3acd11339b7e26e11c0dc252044375a64d471
 }
+
 #contenido {
     width: 100%;
     height: 100%;
@@ -77,6 +88,7 @@ body{
     background-attachment: fixed;
 
 }
+
 #contenedor {
     background-color: #fffafa;
     position: absolute;
@@ -108,19 +120,31 @@ body{
 
 }
 
- #comentario{
+#comentario {
     position: absolute;
     top: 47%;
     width: 80%;
     left: 10%;
- }
+}
 
- #editar {
+#editar {
     position: absolute;
     top: 85%;
     width: 80%;
     left: 10%;
 }
+
+#atras {
+    position: absolute;
+    top: 90%;
+    width: 4%;
+    height: 4%;
+    right: 95%;
+    font-size: 58px;
+    background-color: #111;
+}
+
+
 
 label {
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
@@ -172,3 +196,47 @@ input:focus {
 button {
     width: 100%;
 }
+.icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 80px;
+	height: 60px;
+	cursor: pointer;
+	
+  }
+  
+  .arrow {
+	 
+	position: absolute;
+	top: 25px;
+	width: 90%;
+	height: 10px;
+	background-color: rgb(0, 0, 0);
+	box-shadow: 0px 0px 40px #028a8f, 0px 0px 80px #07aab0;
+	
+  }
+  
+  .arrow::after, .arrow::before {
+	content: '';
+	position: absolute;
+	width: 60%;
+	box-shadow: 0px 0px 40px #028a8f, 0px 0px 80px #07aab0;
+	
+	height: 10px;
+	right: 40px;
+	background-color: rgb(0, 0, 0);
+  }
+  
+  .arrow::after {
+	top: -12px;
+	transform: rotate(136deg);
+  }
+  
+  .arrow::before {
+	top: 12px;
+	box-shadow: 0px 0px 40px #028a8f, 0px 0px 80px #07aab0;
+
+	transform: rotate(-136deg);
+  }

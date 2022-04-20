@@ -2,8 +2,8 @@
 {{#each lista}}
 <form action="/ejercicio/Editar/{{ejercicio_id}}" method="post">
     {{/each}}
-        <div id="img">
-        <img src="/img/ejecutivo_logo.png" alt="">
+    <div id="img">
+        <a href="/proyecto/lista/{{user.idUsuarios}}"><img src="/img/ejecutivo_logo.png" alt=""></a>
     </div>
     <div id="contenido">
 
@@ -24,6 +24,9 @@
             <div id="editar">
                 <button type="submit">Editar</button>
             </div>
+        </div>
+        <div id="atras">
+            <a href="/ejercicio/lista/{{user.idUsuarios}}"><img src="/img/ejecutivo_logo.png" alt=""></a>
         </div>
     </div>
      <a href="/ejercicio/lista/1" />
