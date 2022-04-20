@@ -1,0 +1,166 @@
+#container {
+    background: url(../../img/FondoF.png);
+    background-size:contain;
+    margin-top: -5%;
+    height: 1800px;
+}
+
+ #fondo {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0%;
+    background-color: #fffafa;
+}
+
+#fondo img {
+    width: 500%;
+    height: 500%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#bemuscle {
+    color: aqua;
+    position: relative;
+    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+}
+
+h2 {
+    position: relative;
+}
+
+p {
+    position: relative;
+    color: #f5f3f3;
+    text-align: center;
+}
+
+#navbar {
+    background-color: #18121E;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+ul {
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+
+}
+
+li {
+    display: inline-block;
+
+}
+
+#navbar ul li a {
+    color: aliceblue;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+
+}
+
+#cabecera{
+    margin-top: 1%;
+    margin-left: 10%;
+}
+
+
+
+#parrafo1{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+#parrafo1{
+    top: 5%;
+    width: 100%;
+    height: 100%;
+    max-width: 40%;
+    max-height: 40%;
+    text-align: center;
+    padding: 2%;
+    background-color: #070606c3;
+    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+    float: right;
+    margin: 2% 2% 2% 2%;
+          
+}
+
+#boton{
+    border: 0px solid;
+    background-color:  #070606c3;
+    width: 10%;
+    margin-left: 25%;
+    margin-top: 5%;
+    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+}
+a{
+    margin-left: 10px;
+    color: #fffbfb;
+    font-weight:100;
+}
+
+h2{
+    color: aqua;
+}
+
+#objetivos{
+    background-color: #070606c3;
+    margin-top: 25%;
+    width: 970px;
+    height: 300;
+    margin-left: 20%;
+    text-align: center;
+    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+    
+}
+
+#mision{
+    background-color: #070606c3;
+    width: 75px;
+    padding-top: 2%;
+    padding-left: 25px;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+}
+#vision{
+    background-color: #070606c3 ;
+    width: 75px;
+    padding-top: 2%;
+    margin: 2% 2% 2% 2%;
+    margin-left: 10%;
+    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+          
+
+}
+
+#valores{
+    background-color: #070606c3;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-bottom: 2%;
+    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+}
+
+#logo{
+    width: 6%;
+    height: 10%;
+    top: 0%;
+}
