@@ -23,12 +23,9 @@
 
             <div>
                 <label id="clasificacion"> categoría: </label>
-                <select name="a" id="clasificaciones">
-                    {{#each clasificacicion}}
-                    <option value="{{clasificacion_id}}">{{nombre_clasificacion}}</option>
-                    {{/each}}
-                </select>
+                <input name="a" id="clasificaciones" placeholder="Fuerza" checked type="text">
             </div>
+           
 
             <div>
                 <label id="subclasificacion"> Beneficio: </label>
@@ -38,20 +35,12 @@
                     {{/each}}
                 </select>
             </div>
-           <!--<div id="comentarios">
-                <label>Comentarios:</label>
-                <input type="text" id="numeros" placeholder="Ingrese su número de comentarios" checked>
-            </div> 
 
-           <1--<div id="listaComentarios"></div>-->
-
-           <!--< <div id="boton">
-                <button type="button" onclick="comentarios.crear()">Crear Comentarios</button>
-            </div> -->
             <div id="agregar">
                 <button type="submit">Agregar</button>
             </div>
         </div>
     </div>
-</form><script src="/js/comentarios.js"></script>
-<script src="/js/numero.js"></script> 
+</form>
+<script src="/js/comentarios.js"></script>
+<script src="/js/numero.js"></script>
