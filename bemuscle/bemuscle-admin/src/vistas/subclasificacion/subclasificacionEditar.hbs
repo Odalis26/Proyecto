@@ -2,7 +2,7 @@
 {{#each lista}}
 <form action="/subclasificacion/Editar/{{sub_clasificacion_id}}" method="post">
     {{/each}}
-        <div id="img">
+    <div id="img">
         <img src="/img/ejecutivo_logo.png" alt="">
     </div>
     <div id="contenido">
@@ -26,8 +26,11 @@
             </div>
             {{/each}}
             <div id="editar">
-                <button type="submit" >Editar</button>
+                <button type="submit">Editar</button>
             </div>
+        </div>
+        <div id="atras">
+            <a href="/subclasificacion/lista/{{user.idUsuarios}}"><img src="/img/ejecutivo_logo.png" alt=""></a>
         </div>
     </div>
 </form>
