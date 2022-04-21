@@ -19,14 +19,14 @@ loginctl.login = passport.authenticate('local.signin', {
 })
 
 loginctl.registro = passport.authenticate('local.signup', {
-    successRedirect: '/CerrarSecion',
+    successRedirect: '/CerrarSesion/',
     failureRedirect: '/registro',
     failureFlash: true,
 })
 
 loginctl.cerrarSesion=(req, res)=>{
     req.logOut()
-    res.redirect('/')
+    res.redirect('/inicio/')
 }
 
 module.exports = loginctl

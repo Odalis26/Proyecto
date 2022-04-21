@@ -19,7 +19,7 @@ inicioctl.mandar = async (req, res) => {
         usuarioIdUsuarios: id
     }
     await orm.inicio('success', 'Se guardó correctamente')
-    res.redirect('/inicio');
+    res.redirect('/inicio/');
 }
 
 // inicioctl.listar = async (req, res) => {
