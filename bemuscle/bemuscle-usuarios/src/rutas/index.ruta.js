@@ -3,8 +3,8 @@ const ruta = express.Router()
 
 const {mostrar, verificar}= require('../controladores/index.controlador')
 
-ruta.get('/', mostrar)
+ruta.get('/index/', mostrar)
 
-ruta.post('/', verificar)
+ruta.post('/index/', verificar)
 
 module.exports = ruta
