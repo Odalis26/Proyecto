@@ -13,7 +13,7 @@ loginctl.mostrarRegistro = (req, res) => {
 }
 
 loginctl.login = passport.authenticate('local.signin', {
-    successRedirect: '/proyecto/agregar/',
+    successRedirect: '/ejercicio/Lista/{{user.idUsuarios}}',
     failureRedirect: '/login',
     failureFlash: true,
 })
@@ -26,7 +26,7 @@ loginctl.registro = passport.authenticate('local.signup', {
 
 loginctl.cerrarSesion=(req, res)=>{
     req.logOut()
-    res.redirect('/')
+    res.redirect('/inicio/')
 }
 
 module.exports = loginctl

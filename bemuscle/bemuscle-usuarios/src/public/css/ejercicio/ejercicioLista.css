@@ -1,11 +1,12 @@
-body{
-	margin: 0px;
-	padding: 0px;
-	background: url("/img/FondoF.png");
-	background-size: cover;
-	background-attachment: fixed;
-	font-family: 'Open sans', sans-serif;
+body {
+    margin: 0px;
+    padding: 0px;
+    background: url("/img/FondoF.png");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Open sans', sans-serif;
 }
+
 #img {
     position: absolute;
     top: 2%;
@@ -24,6 +25,7 @@ body{
     background-attachment: fixed;
 
 }
+
 #contenido {
     position: absolute;
     top: 25%;
@@ -88,6 +90,7 @@ body{
     color: #30e7e4;
     text-decoration: none;
 }
+
 #Agregar {
     position: absolute;
     top: 90%;
@@ -97,6 +100,7 @@ body{
     font-size: 58px;
     background-color: #111;
 }
+
 a {
     color: #30e7e4;
     border: 1px solid #333333;
@@ -114,4 +118,3 @@ a:hover {
     border-bottom-color: #30e7e4;
     text-decoration: none;
 }
-
