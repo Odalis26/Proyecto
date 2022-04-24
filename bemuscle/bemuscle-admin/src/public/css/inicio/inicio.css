@@ -188,3 +188,15 @@ h2{
     margin-bottom: 10%;
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
 }
+#CS{
+    text-align: center;
+    margin-top:100px;
+    margin-left: 60%;
+    position: relative;
+	left: 25%;
+    border: 0px solid;
+    background-color:  #070606c3;
+    width: 10%;
+
+    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+}
