@@ -71,7 +71,7 @@ app.use('/subclasificacion',require('./rutas/subclasificacion.ruta'))
 app.use('/rutina',require('./rutas/rutina.ruta'))
 app.use('/proyecto',require('./rutas/proyecto.ruta'))
 app.use('/ejercicioMenu',require('./rutas/ejercicioMenu.ruta'))
-
+app.use(require('./rutas/contacto.ruta'))
 app.use(function(req, res){
     res.status(404).render("inicio/inicio.hbs", { title: "No encontrado" });
 });

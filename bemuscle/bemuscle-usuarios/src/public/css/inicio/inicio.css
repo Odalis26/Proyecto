@@ -3,6 +3,8 @@
     background-size:contain;
     margin-top: -5%;
     height: 1800px;
+    transform: translate(0px, -22px);
+
 }
 
 #contenido{
