@@ -1,19 +1,24 @@
-#container {
-    background: url(../../img/FondoF.png);
-    background-size:contain;
-    margin-top: -5%;
-    height: 1800px;
-    transform: translate(0px, -22px);
-
+*{
+    margin-right: 0.5%;
 }
 
-#contenido{
+body{
+    background: url(/img/FondoF.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+#container {
+    background-size: cover;
+    transform: translate(0px, -42px);
+    background-attachment: fixed;
+}
+
+#contenido {
     width: 100%;
     height: 100%;
     max-width: 100%;
     max-height: 100%;
 }
-
 
 #img img {
     width: 100%;
@@ -21,8 +26,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-
 }
+
 #bemuscle {
     color: aqua;
     position: relative;
@@ -40,9 +45,10 @@ p {
 }
 
 #navbar {
+    margin: auto;
     background-color: #18121E;
     margin: auto;
-    padding: 10px 0;
+    padding: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,33 +56,37 @@ p {
 }
 
 ul {
-    list-style: none;
     margin: 0%;
     padding: 0%;
 
 }
 
 li {
+    margin-left: -2%;
+    margin-right: 1%;
     display: inline-block;
 
 }
 
+
 #navbar ul li a {
+    width: auto;
+
     color: aliceblue;
     display: block;
-    padding: 10px;
+    padding: 5px;
     text-decoration: none;
 
 }
 
-#cabecera{
-    margin-top: 1%;
+#cabecera {
+    margin-top: 10%;
     margin-left: 10%;
 }
 
 
 
-#parrafo1{
+#parrafo1 {
     width: 100%;
     height: 100%;
     max-width: 100%;
@@ -84,7 +94,7 @@ li {
 }
 
 
-#parrafo1{
+#parrafo1 {
     top: 5%;
     width: 100%;
     height: 100%;
@@ -96,29 +106,30 @@ li {
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
     float: right;
     margin: 2% 2% 2% 2%;
-          
+
 }
 
-#boton{
+#boton {
     text-align: center;
     border: 0px solid;
-    background-color:  #070606c3;
+    background-color: #070606c3;
     width: 10%;
     margin-left: 25%;
     margin-top: 5%;
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
 }
-a{
+
+a {
     margin-left: 10px;
     color: #fffbfb;
-    font-weight:100;
+    font-weight: 100;
 }
 
-h2{
+h2 {
     color: aqua;
 }
 
-#objetivos{
+#objetivos {
     background-color: #070606c3;
     margin-top: 25%;
     width: 970px;
@@ -126,10 +137,10 @@ h2{
     margin-left: 20%;
     text-align: center;
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
-    
+
 }
 
-#mision{
+#mision {
     background-color: #070606c3;
     width: 75px;
     padding-top: 2%;
@@ -140,18 +151,19 @@ h2{
     margin-bottom: 2%;
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
 }
-#vision{
-    background-color: #070606c3 ;
+
+#vision {
+    background-color: #070606c3;
     width: 75px;
     padding-top: 2%;
     margin: 2% 2% 2% 2%;
     margin-left: 10%;
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
-          
+
 
 }
 
-#valores{
+#valores {
     background-color: #070606c3;
     text-align: center;
     margin-top: 5%;
@@ -161,31 +173,33 @@ h2{
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
 }
 
-#logo{
+#logo {
     width: 6%;
     height: 10%;
     top: 0%;
 }
-#buton{
-    
+
+#buton {
+
     margin-top: -25%;
     margin-left: 60%;
     position: relative;
-	left: 10%;
+    left: 10%;
     border: 0px solid;
-    background-color:  #070606c3;
+    background-color: #070606c3;
     width: 10%;
     margin-bottom: 10%;
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
 }
-#button{
+
+#button {
     text-align: center;
     margin-top: 5px;
     margin-left: 60%;
     position: relative;
-	left: 10%;
+    left: 10%;
     border: 0px solid;
-    background-color:  #070606c3;
+    background-color: #070606c3;
     width: 10%;
     margin-bottom: 10%;
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
