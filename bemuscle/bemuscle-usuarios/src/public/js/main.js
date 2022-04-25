@@ -1,60 +1,43 @@
-const fila = document.querySelector('.contenedor-carousel');
-const peliculas = document.querySelectorAll('.pelicula');
+const progressBar = document.getElementById("progress-bar");
+const progressNext = document.getElementById("progress-next");
+const progressPrev = document.getElementById("progress-prev");
+const steps = document.querySelectorAll(".step");
+let active = 1;
 
-const flechaIzquierda = document.getElementById('flecha-izquierda');
-const flechaDerecha = document.getElementById('flecha-derecha');
-
-// ? ----- ----- Event Listener para la flecha derecha. ----- -----
-flechaDerecha.addEventListener('click', () => {
-	fila.scrollLeft += fila.offsetWidth;
-
-	const indicadorActivo = document.querySelector('.indicadores .activo');
-	if(indicadorActivo.nextSibling){
-		indicadorActivo.nextSibling.classList.add('activo');
-		indicadorActivo.classList.remove('activo');
+progressNext.addEventListener("click", () => {
+	active++;
+	if (active > steps.length) {
+	  active = steps.length;
 	}
-});
-
-// ? ----- ----- Event Listener para la flecha izquierda. ----- -----
-flechaIzquierda.addEventListener('click', () => {
-	fila.scrollLeft -= fila.offsetWidth;
-
-	const indicadorActivo = document.querySelector('.indicadores .activo');
-	if(indicadorActivo.previousSibling){
-		indicadorActivo.previousSibling.classList.add('activo');
-		indicadorActivo.classList.remove('activo');
+	updateProgress();
+  });
+  
+  progressPrev.addEventListener("click", () => {
+	active--;
+	if (active < 1) {
+	  active = 1;
 	}
-});
-
-// ? ----- ----- Paginacion ----- -----
-const numeroPaginas = Math.ceil(peliculas.length / 5);
-for(let i = 0; i < numeroPaginas; i++){
-	const indicador = document.createElement('button');
-
-	if(i === 0){
-		indicador.classList.add('activo');
-	}
-
-	document.querySelector('.indicadores').appendChild(indicador);
-	indicador.addEventListener('click', (e) => {
-		fila.scrollLeft = i * fila.offsetWidth;
-
-		document.querySelector('.indicadores .activo').classList.remove('activo');
-		e.target.classList.add('activo');
+	updateProgress();
+  });
+  const updateProgress = () => {
+	// toggle active class on list items
+	steps.forEach((step, i) => {
+	  if (i < active) {
+		step.classList.add("active");
+	  } else {
+		step.classList.remove("active");
+	  }
 	});
-}
-
-// ? ----- ----- Hover ----- -----
-peliculas.forEach((pelicula) => {
-	pelicula.addEventListener('mouseenter', (e) => {
-		const elemento = e.currentTarget;
-		setTimeout(() => {
-			peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
-			elemento.classList.add('hover');
-		}, 300);
-	});
-});
-
-fila.addEventListener('mouseleave', () => {
-	peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
-});
+	// set progress bar width  
+	progressBar.style.width = 
+	  ((active - 1) / (steps.length - 1)) * 100 + "%";
+	// enable disable prev and next buttons
+	if (active === 1) {
+	  progressPrev.disabled = true;
+	} else if (active === steps.length) {
+	  progressNext.disabled = true;
+	} else {
+	  progressPrev.disabled = false;
+	  progressNext.disabled = false;
+	}
+  };

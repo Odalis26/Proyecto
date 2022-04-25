@@ -1,42 +1,166 @@
 <link rel="stylesheet" href="/css/rutina/rutinaLista.css">
-{{#each lista}}
-<form action="/rutina/Lista/{{ejercicioEjercicioId}}" method="get"></form>
-{{/each}}
-
-    <div id="img">
-        <img src="/img/ejecutivo_logo.png" alt="">
-    </div>
-
+<form action="/rutina/Lista/1" method="get"> </form>
 <div id="contenido">
-    <div class="row">
-        {{#each lista}}
+    <div id="contenedor">
 
-        <div id="tarjetas">
-
+        <div id="contenedor">
             <div id="titulo">
-                <p>Rutinas N° {{rutina_id}}</p>
+                <p>Rutina de ejercicios</p>
             </div>
 
-            <div id="video_rutinas">
-                <p> {{video_rutina}}</p>
+
+            <div id="Progress_Status">
+                <div id="myprogressBar">1%</div>
             </div>
 
-            <div id="tiempo_rutinas">
-                <p> {{tiempo_rutina}}</p>
+            <br>
+            <button id="p10" onclick="update10()">10%</button>
+            <button id="p20" onclick="update20()">20%</button>
+            <button id="p30" onclick="update30()">30%</button>
+            <button id="p40" onclick="update40()">40%</button>
+            <button id="p50" onclick="update50()">50%</button>
+            <button id="p60" onclick="update60()">60%</button>
+            <button id="p70" onclick="update70()">70%</button>
+            <button id="p80" onclick="update80()">80%</button>
+            <button id="p90" onclick="update90()">90%</button>
+            <button id="p100" onclick="update100()">100%</button>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+
+                        <div class="carousel center-align">
+                            <div class="carousel-item">
+                                <h2 class="subtitulo">RUTINA de ejercicios para ADELGAZAR - Cardio INTENSO HIIT </h2>
+                                <div class="linea-division"></div>
+                                <p class="sabor">20 MINUTOS</p>
+                                <iframe id="video1" width="350" height="315"
+                                    src="https://www.youtube.com/embed/yOkFhJBEKwo" title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <div class="carousel-item">
+                                <h2 class="subtitulo">¿Quieres entrenar TODO TU CUERPO en POCO TIEMPO? - LA MEJOR RUTINA
+                                    FULL
+                                    BODY</h2>
+                                <div class="linea-division"></div>
+                                <p class="sabor">26 MINUTOS</p>
+                                <iframe id="video2" width="350" height="315"
+                                    src="https://www.youtube.com/embed/XLgRF_v4z0U" title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <div class="carousel-item">
+                                <h2 class="subtitulo">EJERCICIOS para BRAZOS FUERTES SIN PESAS - RUTINA para BICEPS y
+                                    TRICEPS
+                                </h2>
+                                <div class="linea-division"></div>
+                                <p class="sabor">13 MINUTOS</p>
+                                <iframe id="video3" width="350" height="315"
+                                    src="https://www.youtube.com/embed/_WVDX4NDCv4" title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <div class="carousel-item">
+                                <h2 class="subtitulo">Rutina en Casa Para Marcar Abdominales</h2>
+                                <div class="linea-division"></div>
+                                <p class="sabor"> 15 Minutos</p>
+                                <iframe id="video4" width="350" height="315"
+                                    src="https://www.youtube.com/embed/dg5NFMrqbqY" title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <div class="carousel-item">
+                                <h2 class="subtitulo">Ejercicios Para Piernas En Casa - Rutina Para Endurecer Piernas
+                                    Sin equipo
+                                </h2>
+                                <div class="linea-division"></div>
+                                <p class="sabor">18 MIN</p>
+                                <iframe id="video5" width="350" height="315"
+                                    src="https://www.youtube.com/embed/SasACgGscHg" title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <div class="carousel-item">
+                                <h2 class="subtitulo">Ejercicio en casa para principiantes - Rutina de bajo impacto Para
+                                    Rodillas Sensibles</h2>
+                                <div class="linea-division"></div>
+                                <p class="sabor">10 Minutos</p>
+                                <iframe id="video6" width="350" height="315"
+                                    src="https://www.youtube.com/embed/weTlqKiO7cA" title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <div class="carousel-item">
+                                <h2 class="subtitulo">Rutina Hiit Grasa Gratinada - Cardio Intenso y Abdomen en Casa
+                                </h2>
+                                <div class="linea-division"></div>
+                                <p class="sabor">20 Minutos</p>
+                                <iframe id="video7" width="350" height="315"
+                                    src="https://www.youtube.com/embed/8p4fzjdO3io" title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <div class="carousel-item">
+                                <h2 class="subtitulo">Rutina Intensa para tonificar Gluteos y Cadera + CARDIO</h2>
+                                <div class="linea-division"></div>
+                                <p class="sabor">18 MINUTOS</p>
+                                <iframe id="video8" width="350" height="315"
+                                    src="https://www.youtube.com/embed/wd2r1CyPTRA" title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <div class="carousel-item">
+                                <h2 class="subtitulo">Las ÚNICAS 3 Cosas que NECESITAS para Ponerte EN FORMA</h2>
+                                <div class="linea-division"></div>
+                                <p class="sabor">9 MINUTOS</p>
+                                <iframe id="video9" width="350" height="315"
+                                    src="https://www.youtube.com/embed/oN5C9auCgMM" title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div id="descripciones">
-                <p> {{descripcion}}</p>
-            </div>
-
-            <div id="progresos">
-                <p> {{progreso}}</p>
-            </div>
-            <div id="Ver">
-                <a href="/detalleRutina/Lista/{{rutina_id}}" type="button">Cosejos </a>
-            </div>
         </div>
-        {{/each}}
     </div>
-     
 </div>
+</div>
+</div>
+
+
+
+
+
+
+<script src="/js/rutina.js"></script>
