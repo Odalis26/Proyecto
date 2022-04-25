@@ -47,7 +47,7 @@ body {
     height: 10%;
     max-width: 90%;
     max-height: 10%;
-    background-color: #0f0f0f65;
+    background-color: #0f0f0fc5;
     text-align: center;
     animation-duration: 4s;
     animation-name: slidein;
@@ -56,7 +56,7 @@ body {
     padding-bottom: 2em;
     padding-left: 3em;
     border: 1px ridge #fbfbfb;
-    box-shadow: 0px 0px 5px #f1f7f7, 0px 0px 10px #e7eded;
+    box-shadow: 0px 0px 5px #f1f7f7, 0px 0px 10px #e7eded, 0px 0px 15px #d9f6f6, 0px 0px 100px #04fbfb;
 
 }
 
@@ -82,6 +82,9 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 10px;
     text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
 }
 
 #descripcion_proyecto {
@@ -91,6 +94,8 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 3px;
     text-align: justify;
+    width: 70%;
+    margin-bottom: 5%;
 }
 
 #mision {
@@ -100,7 +105,10 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 3px;
     text-align: justify;
-
+    width: 70%;
+margin-left: 17%;
+margin-top: 5%;
+margin-bottom: 5%;
 }
 
 #vision {
@@ -110,14 +118,13 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 3px;
     text-align: justify;
-
-
-
+    width: 70%;
+    margin-left: 17%;
 }
 
 #misiones {
     text-shadow: 0px 0px 1px #03f2fa, 0px 0px 2px #11eff7, 0px 0px 2px #11eff7;
-    color: #f3f7f7;
+    color: #00ffff;
     font-style: oblique;
     font-size: 30px;
     font-variant: small-caps;
@@ -128,7 +135,7 @@ body {
 
 #visiones {
     text-shadow: 0px 0px 1px #03f2fa, 0px 0px 2px #11eff7, 0px 0px 2px #11eff7;
-    color: #f8f9f9;
+    color: #00ffff;
     font-style: oblique;
     font-size: 30px;
     font-variant: small-caps;
@@ -150,9 +157,10 @@ body {
     top: 90%;
     width: 3%;
     height: 1%;
-    left: 95%;
+    left: 98%;
     font-size: 58px;
     background-color: #111;
+    color: #111;
 }
 a {
     color: #30e7e4;
@@ -161,6 +169,8 @@ a {
     border-right-width: 10px;
     border-bottom-color: #faf9f9;
     text-decoration: none;
+    box-shadow: 0px 0px 5px #f1f7f7, 0px 0px 10px #e7eded, 0px 0px 15px #d9f6f6, 0px 0px 100px #04fbfb;
+
 }
 
 a:hover {
@@ -170,4 +180,15 @@ a:hover {
     border-right-width: 20px;
     border-bottom-color: #30e7e4;
     text-decoration: none;
+}
+#img3 {
+    position: absolute;
+    top: 23%;
+    left: 68%;
+    width: 100%;
+    height: 100%;
+    max-width: 25%;
+    max-height: 23%;
+    box-shadow: 0px 0px 5px #f1f7f7, 0px 0px 10px #e7eded, 0px 0px 25px #d9f6f6, 0px 0px 90px #04fbfb;
+
 }

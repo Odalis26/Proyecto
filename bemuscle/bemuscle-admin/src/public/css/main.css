@@ -1,7 +1,6 @@
 input {
     text-align: center;
-    font-style: italic;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
 }
 
 button {
