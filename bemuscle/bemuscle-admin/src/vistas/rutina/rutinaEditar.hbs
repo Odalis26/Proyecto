@@ -16,24 +16,24 @@
             </div>
             {{#each lista}}
 
-            <label id="video">video rutina: </label>
             <div id="video_rutina">
-                <input name="video_rutina" id="video_rutinas" checked type="text" value="{{video_rutina}}">
+                <label id="video">video rutina: </label>
+                <input name="video_rutina" id="video_rutinas" checked type="url" value="{{video_rutina}}">
             </div>
 
-            <label id="tiempo">tiempo rutina: </label>
             <div id="tiempo_rutina">
-                <input name="tiempo_rutina" id="tiempo_rutinas" checked type="text" value="{{tiempo_rutina}}">
+                <label id="tiempo">tiempo rutina: </label>
+                <input name="tiempo_rutina" id="tiempo_rutinas" checked type="time" value="{{tiempo_rutina}}">
             </div>
 
-            <label id="descripcionc">descripcion: </label>
             <div id="descripcion">
-                <input name="descripcion" id="descripciones" checked type="text" value="{{descripcion}}">
+                <label id="descripcionc">descripcion: </label>
+                <textarea name="descripcion" id="descripciones" checked type="text" value="{{descripcion}}"></textarea>
             </div>
 
-            <label id="progresoc">progreso: </label>
             <div id="progreso">
-                <input name="progreso" id="progresos" checked type="text" value="{{progreso}}">
+                <label id="progresoc">progreso: </label>
+                <input name="progreso" id="progresos" checked type="range" value="{{progreso}}">
             </div>
             {{/each}}
 
@@ -43,7 +43,7 @@
         </div>
 
     </div>
-     <a href="/rutina/lista/{{user.idUsuarios}}" />
+    <a href="/rutina/lista/{{user.idUsuarios}}" />
     <div class="icon">
         <div class="arrow">
 

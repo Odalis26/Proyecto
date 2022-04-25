@@ -1,7 +1,10 @@
-#container {
+body{
     background: url(/img/FondoF.png);
     background-size: cover;
-    height: 1800px;
+    background-attachment: fixed;
+}
+#container {
+    background-size: cover;
     transform: translate(0px, -42px);
     background-attachment: fixed;
 }
@@ -45,6 +48,7 @@ p {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    width: auto;
 }
 
 ul {
@@ -56,7 +60,6 @@ ul {
 
 li {
     display: inline-block;
-
 }
 
 #navbar ul li a {
