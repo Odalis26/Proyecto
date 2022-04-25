@@ -30,9 +30,13 @@ body{
 
 #bemuscle {
     color: aqua;
-    position: relative;
+    position:fixed;
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+    align-items: center;
+    left: 60%;
+    top: 5%;
 }
+
 
 h2 {
     position: relative;
@@ -71,7 +75,6 @@ li {
 
 #navbar ul li a {
     width: auto;
-
     color: aliceblue;
     display: block;
     padding: 5px;
@@ -137,6 +140,7 @@ h2 {
     margin-left: 20%;
     text-align: center;
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+    padding: 3%;
 
 }
 
@@ -150,6 +154,7 @@ h2 {
     margin-right: 10%;
     margin-bottom: 2%;
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+    padding: 3%;
 }
 
 #vision {
@@ -159,6 +164,7 @@ h2 {
     margin: 2% 2% 2% 2%;
     margin-left: 10%;
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+    padding: 3%;
 
 
 }
@@ -167,10 +173,11 @@ h2 {
     background-color: #070606c3;
     text-align: center;
     margin-top: 5%;
-    margin-left: 35%;
-    margin-right: 35%;
+    margin-left: 40%;
+    margin-right: 40%;
     margin-bottom: 2%;
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+    padding: 2%;
 }
 
 #logo {
