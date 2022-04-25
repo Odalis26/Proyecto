@@ -1,56 +1,12 @@
-.icon {
-	position: relative;
-
-    margin-top: 500px;
-	left: 10%;
-	transform: translate(-50%,-50%);
-	width: 80px;
-	height: 60px;
-	cursor: pointer;
-	
-  }
-  
-  .arrow {
-	 
-	position: absolute;
-	top: 25px;
-	width: 90%;
-	height: 10px;
-	background-color: rgb(0, 0, 0);
-	box-shadow: 0px 0px 40px #028a8f, 0px 0px 80px #07aab0;
-	
-  }
-  
-  .arrow::after, .arrow::before {
-	content: '';
-	position: absolute;
-	width: 60%;
-	box-shadow: 0px 0px 40px #028a8f, 0px 0px 80px #07aab0;
-	
-	height: 10px;
-	right: 40px;
-	background-color: rgb(0, 0, 0);
-  }
-  
-  .arrow::after {
-	top: -12px;
-	transform: rotate(136deg);
-  }
-  
-  .arrow::before {
-	top: 12px;
-	box-shadow: 0px 0px 40px #028a8f, 0px 0px 80px #07aab0;
-
-	transform: rotate(-136deg);
-  }
-body{
-	margin: 0px;
-	padding: 0px;
-	background: url("/img/FondoF.png");
-	background-size: cover;
-	background-attachment: fixed;
-	font-family: 'Open sans', sans-serif;
+body {
+    margin: 0px;
+    padding: 0px;
+    background: url("/img/FondoF.png");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Open sans', sans-serif;
 }
+
 form {
     padding: 0%;
 }
@@ -61,6 +17,7 @@ form {
     max-width: 100%;
     max-height: 100%;
 }
+
 #img {
     position: absolute;
     top: 2%;
@@ -79,6 +36,7 @@ form {
     background-attachment: fixed;
 
 }
+
 #contenedor {
     background-color: #fffafa;
     position: absolute;
@@ -86,10 +44,9 @@ form {
     width: 100%;
     height: 100%;
     max-width: 40%;
-    max-height: 70%;
+    max-height: 86%;
     left: 30%;
     box-shadow: 0px 0px 40px #028a8f, 0px 0px 80px #07aab0;
-    text-align: center;
     border-top: 5px solid #fffafa;
     border-bottom: 5px solid #fffafa;
     border: 4px ridge #03f2fa;
@@ -125,9 +82,9 @@ form {
 
 #editar {
     position: absolute;
-    top: 84%;
-    width: 80%;
-    left: 10%;
+    top: 87%;
+    width: 72%;
+    left: 18%;
 
 }
 
@@ -140,11 +97,14 @@ label {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 10px;
     text-align: center;
-
+    margin-top: 3px;
+    margin-left: 15%;
+    left: 5%;
 }
 
 input {
-    width: 100%;
+    width: 80%;
+    height: 35px;
     border-color: #006;
     border-bottom-color: #006;
     border-bottom-style: groove;
@@ -154,7 +114,14 @@ input {
     border-width: 4px;
     box-shadow: 0px 0px 5px #03f2fa, 0px 0px 10px #11eff7;
     margin-bottom: 2%;
-
+    margin-top: 5px;
+    margin-left: 15%;
+    font-size: 88%;
+    font-weight:lighter;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 input:hover {
@@ -173,8 +140,9 @@ input:focus {
 }
 
 textarea {
-    width: 100%;
-    height: 35px;
+    width: 80%;
+    height: 40px;
+    max-height: 65px;  
     border-color: #006;
     border-bottom-color: #006;
     border-bottom-style: groove;
@@ -184,7 +152,15 @@ textarea {
     border-width: 4px;
     box-shadow: 0px 0px 5px #03f2fa, 0px 0px 10px #11eff7;
     margin-bottom: 2%;
-
+    margin-top: 5px;
+    margin-left: 15%;
+    font-size: 88%;
+    text-align: center;
+    font-weight:lighter;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 textarea:hover {
@@ -212,8 +188,6 @@ textarea:focus {
 
 button {
     width: 100%;
-    background-color: #4CAF50;
-    /* Green */
     border: none;
     color: #f6fbfb;
     padding: 15px 32px;
@@ -221,7 +195,7 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    background-color: #293032;
+    background-color: #16191a;
     border-radius: 4px;
     box-shadow: 0px 0px 5px #fdf8f8, 0px 0px 10px #f0e9e9;
     border: 2px solid #e2f8ec;
@@ -232,7 +206,7 @@ button:hover {
     transition: .8s;
     border-bottom-color: #a9afb0;
     box-shadow: 0px 0px 5px #f5f1f4, 0px 0px 10px #9ba6bf;
-    background-color: #346b93;
+    background-color: #02233a;
     border: 2px solid #e2f8ec;
 
 
@@ -240,7 +214,7 @@ button:hover {
 
 button:focus {
     transition: .8s;
-    background-color: #346b93;
+    background-color: #02233a;
     box-shadow: 0px 0px 5px #d2c3d1, 0px 0px 10px #99a1be;
     border-bottom-color: #ede5ec;
     color: #ede3ed;
@@ -248,3 +222,51 @@ button:focus {
 
 
 }
+
+
+.icon {
+	position: relative;
+
+    margin-top: 500px;
+	left: 10%;
+	transform: translate(-50%,-50%);
+	width: 80px;
+	height: 60px;
+	cursor: pointer;
+	
+  }
+  
+  .arrow {
+	 
+	position: absolute;
+	top: 25px;
+	width: 90%;
+	height: 10px;
+	background-color: #fefefe;
+	box-shadow: 0px 0px 40px #04696c, 0px 0px 80px #04676b;
+	
+  }
+  
+  .arrow::after, .arrow::before {
+	content: '';
+	position: absolute;
+	width: 60%;
+	box-shadow: 0px 0px 40px #045e61, 0px 0px 80px #047579;
+	
+	height: 10px;
+	right: 40px;
+	background-color: #fefefe;
+  }
+  
+  .arrow::after {
+	top: -12px;
+	transform: rotate(136deg);
+  }
+  
+  .arrow::before {
+	top: 12px;
+	box-shadow: 0px 0px 40px #01595c, 0px 0px 80px #046569;
+
+	transform: rotate(-136deg);
+  }
+

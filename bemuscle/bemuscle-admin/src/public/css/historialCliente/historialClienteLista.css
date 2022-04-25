@@ -31,11 +31,13 @@ body{
     left: 3%;
     width: 94%;
     height: auto;
+
 }
 
 .row {
     gap: 1.5%;
     row-gap: 20px;
+justify-content: center;
 }
 
 #tarjetas {
