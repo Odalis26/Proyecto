@@ -26,7 +26,6 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs');
 /// archivos compartidos
 
-
 //midlewars
 app.use(morgan('dev'));
 app.use(bodyparser.urlencoded({
