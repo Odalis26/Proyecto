@@ -37,8 +37,6 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 0px 0px 40px #feffff, 0px 0px 80px #f1f5f5;
-    border: 2px ridge #f0f6f7;
     height: auto;
 }
 
