@@ -45,9 +45,6 @@ body {
 
 }
 
-
-
-
 .titulo {
     font-size: 70px;
     font-family: 'Dancing Script', cursive;
@@ -68,7 +65,7 @@ body {
     text-shadow: 2px 2px 1px rgba(24, 191, 233, 0.788);
 }
 
-.sabor { 
+.sabor {
     color: #fff;
     margin: 7px 0;
     font-size: 30px;
@@ -83,12 +80,7 @@ body {
     background-color: #0fedf5;
 }
 
-/* ------------------------- */
-/* Estilos de Materialize */
-/* ------------------------- */
-.carousel {
-    min-height: 500px;
-}
+
 
 .carousel .carousel-item {
     display: flex;
@@ -117,6 +109,7 @@ body {
     margin: 0 15px;
     background: #a81b1b;
 }
+
 #Progress_Status {
     width: 50%;
     background-color: rgb(255, 255, 255);
@@ -140,7 +133,8 @@ body {
     position: relative;
     left: 0%;
 }
-#p10{
+
+#p10 {
     color: #0a0a0a;
     background-color: #fafcfc;
     border: 3px ridge #848686;
@@ -148,7 +142,8 @@ body {
     position: relative;
     left: 26%;
 }
-#p20{
+
+#p20 {
     color: #0a0a0a;
     background-color: #fafcfc;
     border: 3px ridge #848686;
@@ -156,7 +151,8 @@ body {
     position: relative;
     left: 26.5%;
 }
-#p30{
+
+#p30 {
     color: #0a0a0a;
     background-color: #fafcfc;
     border: 3px ridge #848686;
@@ -164,7 +160,8 @@ body {
     position: relative;
     left: 27%;
 }
-#p40{
+
+#p40 {
     color: #0a0a0a;
     background-color: #fafcfc;
     border: 3px ridge #848686;
@@ -172,7 +169,8 @@ body {
     position: relative;
     left: 27.5%;
 }
-#p50{
+
+#p50 {
     color: #0a0a0a;
     background-color: #fafcfc;
     border: 3px ridge #848686;
@@ -180,7 +178,8 @@ body {
     position: relative;
     left: 28%;
 }
-#p60{
+
+#p60 {
     color: #0a0a0a;
     background-color: #fafcfc;
     border: 3px ridge #848686;
@@ -188,14 +187,17 @@ body {
     position: relative;
     left: 28.5%;
 }
-#p70{
+
+#p70 {
     color: #0a0a0a;
     background-color: #fafcfc;
     border: 3px ridge #848686;
     font-weight: bolder;
     position: relative;
     left: 29%;
-}#p80{
+}
+
+#p80 {
     color: #0a0a0a;
     background-color: #fafcfc;
     border: 3px ridge #848686;
@@ -203,7 +205,8 @@ body {
     position: relative;
     left: 29.5%;
 }
-#p90{
+
+#p90 {
     color: #0a0a0a;
     background-color: #fafcfc;
     border: 3px ridge #848686;
@@ -211,7 +214,8 @@ body {
     position: relative;
     left: 30%;
 }
-#p100{
+
+#p100 {
     color: #0a0a0a;
     background-color: #fafcfc;
     border: 3px ridge #848686;
@@ -219,18 +223,8 @@ body {
     position: relative;
     left: 30.5%;
 }
-#video1{
-    background-color: #09e5f5;
-    text-align: center;
-    line-height: 28px;
-    color: rgb(36, 33, 33);
-    background: linear-gradient(135deg, #ecf0f0 0%, #838385 100%);
-    font-weight: bolder;
-    border-radius: 5ch;
-    position: relative;
-    left: 0%;
-}
-#video2{
+
+#video1 {
     background-color: #09e5f5;
     text-align: center;
     line-height: 28px;
@@ -242,7 +236,7 @@ body {
     left: 0%;
 }
 
-#video3{
+#video2 {
     background-color: #09e5f5;
     text-align: center;
     line-height: 28px;
@@ -253,7 +247,8 @@ body {
     position: relative;
     left: 0%;
 }
-#video4{
+
+#video3 {
     background-color: #09e5f5;
     text-align: center;
     line-height: 28px;
@@ -264,7 +259,8 @@ body {
     position: relative;
     left: 0%;
 }
-#video5{
+
+#video4 {
     background-color: #09e5f5;
     text-align: center;
     line-height: 28px;
@@ -275,7 +271,8 @@ body {
     position: relative;
     left: 0%;
 }
-#video6{
+
+#video5 {
     background-color: #09e5f5;
     text-align: center;
     line-height: 28px;
@@ -286,7 +283,8 @@ body {
     position: relative;
     left: 0%;
 }
-#video7{
+
+#video6 {
     background-color: #09e5f5;
     text-align: center;
     line-height: 28px;
@@ -297,7 +295,8 @@ body {
     position: relative;
     left: 0%;
 }
-#video8{
+
+#video7 {
     background-color: #09e5f5;
     text-align: center;
     line-height: 28px;
@@ -308,7 +307,8 @@ body {
     position: relative;
     left: 0%;
 }
-#video9{
+
+#video8 {
     background-color: #09e5f5;
     text-align: center;
     line-height: 28px;
@@ -319,3 +319,35 @@ body {
     position: relative;
     left: 0%;
 }
+
+#video9 {
+    background-color: #09e5f5;
+    text-align: center;
+    line-height: 28px;
+    color: rgb(36, 33, 33);
+    background: linear-gradient(135deg, #ecf0f0 0%, #838385 100%);
+    font-weight: bolder;
+    border-radius: 5ch;
+    position: relative;
+    left: 0%;
+}
+
+#container1 {
+    margin-top: -143%;
+    margin-right: -30%;
+    padding-left: -5%;
+  
+}
+
+#container2 {
+    margin-right: 20%;
+    margin-top: 5%;
+margin-left: 5%;
+}
+
+#botones {
+ 
+    margin-left: 7%;
+  
+}
+

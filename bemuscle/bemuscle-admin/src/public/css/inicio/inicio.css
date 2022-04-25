@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+*{
+    margin-right: 0.5%;
+}
+>>>>>>> da6171eef926f353f3f6c3040c87eb8b3cf8fb00
 
 body{
     background: url(/img/FondoF.png);
@@ -28,13 +34,16 @@ body{
 #bemuscle {
     color: aqua;
     position:fixed;
-    text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
+    text-shadow: 0px 0px 40px #6d6d6d, 0px 0px 80px #00f7ff, 3px 3px 80px #11eff7;
     align-items: center;
     left: 60%;
     top: 5%;
+   
 }
 
-
+h1 {
+    font-size: 70px;
+}
 h2 {
     position: relative;
 }
@@ -133,7 +142,6 @@ h2 {
     background-color: #070606c3;
     margin-top: 25%;
     width: 970px;
-    height: 300;
     margin-left: 20%;
     text-align: center;
     text-shadow: 0px 0px 40px #03f2fa, 0px 0px 80px #11eff7, 3px 3px 80px #11eff7;
