@@ -24,12 +24,14 @@
 
 #img {
     position: absolute;
-    top: 2%;
-    left: 6%;
+    top: 10%;
+    left: 39%;
     width: 100%;
     height: 100%;
-    max-width: 11%;
-    max-height: 14%;
+    max-width: 23%;
+    max-height: 26%;
+
+    
 }
 
 #img img {
@@ -37,6 +39,7 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+
     height: auto;
 }
 
